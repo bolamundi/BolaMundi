@@ -1,0 +1,22 @@
+Lucas - UPDATE usuarios SET nome='Pedro queixada', email='pedro@gmail.com', acesso='Admin' WHERE id=2 - 10/04/2022 - 02:48:23
+Lucas - UPDATE usuarios SET nome='Flamengo', email='rubroNegro@gmail.com', acesso='Usuario' WHERE id=33 - 10/04/2022 - 02:49:01
+Lucas - DELETE FROM usuarios WHERE id=41 - 10/04/2022 - 02:52:28
+Lucas - DELETE FROM usuarios WHERE id=40 - 10/04/2022 - 02:52:31
+Lucas - DELETE FROM usuarios WHERE id=42 - 10/04/2022 - 02:58:34
+ - INSERT INTO usuarios(nome,email,senha,acesso) values('LUCAS CASTELANO DOS SANTOS','Lucas@afe.co','123','Admin') - 10/04/2022 - 02:59:00
+Lucas - DELETE FROM usuarios WHERE id=43 - 10/04/2022 - 03:01:03
+Lucas - INSERT INTO usuarios(nome,email,senha,acesso) values('LUCAS CASTELANO DOS SANTOS','Lucas@dw.com','123','Admin') - 10/04/2022 - 03:01:20
+Lucas - DELETE FROM usuarios WHERE id=44 - 10/04/2022 - 03:01:50
+Lucas - DELETE FROM usuarios WHERE id=51 - 13/04/2022 - 15:01:54
+Lucas - DELETE FROM usuarios WHERE id=48 - 13/04/2022 - 15:02:00
+Lucas - DELETE FROM usuarios WHERE id=49 - 13/04/2022 - 15:02:03
+Lucas - DELETE FROM usuarios WHERE id=50 - 13/04/2022 - 15:02:05
+Lucas - DELETE FROM usuarios WHERE id=52 - 13/04/2022 - 15:02:08
+Lucas - DELETE FROM usuarios WHERE id=47 - 13/04/2022 - 15:02:11
+Lucas - DELETE FROM usuarios WHERE id=46 - 13/04/2022 - 15:02:14
+Lucas - DELETE FROM usuarios WHERE id=45 - 13/04/2022 - 15:02:16
+Lucas - DELETE FROM usuarios WHERE id=54 - 13/04/2022 - 15:02:24
+Lucas - DELETE FROM usuarios WHERE id=53 - 13/04/2022 - 15:02:28
+Didico - INSERT INTO usuarios(nome,email,senha,acesso) values('Joao pé de feijçao','feijao@joao.com','123','Admin') - 24/04/2022 - 21:32:57
+Lucas - DELETE FROM usuarios WHERE id=57 - 27/04/2022 - 18:57:34
+Lucas - DELETE FROM usuarios WHERE id=56 - 27/04/2022 - 18:57:38
