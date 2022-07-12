@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<style>
+    *{margin:0; padding:0; box-sizing:border-box ;}
+input[type=button]{
+background: url("enviar.png") ;
+width:79px ;
+height:51px;
+
+}
+
+</style>
+    </head> 
+<body>
+<form>
+<label ><b>Área do torcedor</b></label> <br>
+
+
+
+<textarea id="texto"cols="30" rows="10" placeholder="Digite aqui seu comentário" style="resize:none;"></textarea>
+<input type="button" id="enviar" value="" onclick="botao()">
+</form>
+
+<div id="coments" >
+
+</div>
+
+</body>
+<script>
+    //Emular o nome do usuario que vai ser tirado do banco de dados
+    var usuario="Lucas"
+    var coments=document.getElementById("coments")
+var texto= document.getElementById("texto")
+var data= new Date()
+function botao(){
+    if(texto.value!=""){
+coments.innerHTML+="<br>"+"<h4>"+usuario+"<img src='brasil.png'>"+"</h4>"
+coments.innerHTML+=texto.value+"<br> <br>"
+coments.innerHTML+="Comentado em "+ String(data.getDate()) + '/' + String(data.getMonth()+1) + '/' + String(data.getFullYear())+"<br>"
+    }else{
+window.alert("Faça um comentário para poder clicar em enviar")
+
+    }
+texto.value=""
+}
+
+
+</script>
+
+
+</html>
