@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Jul-2022 às 04:23
+-- Generation Time: 18-Jul-2022 às 02:55
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -76,6 +76,14 @@ CREATE TABLE `jogadores` (
   `Pais` varchar(54) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `jogadores`
+--
+
+INSERT INTO `jogadores` (`Id`, `Nome`, `Numero`, `Posicao`, `Id_selecao`, `Pais`) VALUES
+(1, 'Neymar ', 10, 'Meia', 1, 'Brasil'),
+(2, 'VinÃ­cius Junior', 20, 'Ponta esquerda', 1, 'Brasil');
+
 -- --------------------------------------------------------
 
 --
@@ -109,7 +117,7 @@ CREATE TABLE `usuarios` (
   `Senha` varchar(400) NOT NULL,
   `Acesso` varchar(10) NOT NULL,
   `Data` date NOT NULL,
-  `Status` varchar(100) NOT NULL,
+  `Status` varchar(100) NOT NULL DEFAULT 'Ativo',
   `Rank` varchar(100) NOT NULL DEFAULT '0',
   `Saldo` int(100) NOT NULL DEFAULT '0',
   `Xp` int(100) NOT NULL DEFAULT '0'
@@ -120,7 +128,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Status`, `Rank`, `Saldo`, `Xp`) VALUES
-(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '0', 0, 0);
+(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '0', 0, 0),
+(58, 'Carol', 'general@bolamundi.com', '$2y$10$YgyM5zRCA4EO8IroShYsg.oVrsavqt8SBUnJLvZrLdx6/eTO1s5Em', 'Admin', '2022-07-17', 'Ativo', '0', 0, 0),
+(59, 'Dj Regerinho', 'djrogerinho@gmail.com', '$2y$10$ck1xzNc7eAwIwUn7/kUqme1BJMFXpWkXkC5LO/2tmBwP/AqHA7G02', 'Admin', '2022-07-18', 'Ativo', '0', 0, 0),
+(60, 'Wesley SafadÃ£o ', 'contatowesleysafadao@gmail.com', '$2y$10$Tc/jS6TwrxbM1vNIyKyeyuu3z5NyjOmutQzUT6hK55R3vye.DwvOm', 'Admin', '2022-07-18', 'Ativo', '0', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -174,7 +185,7 @@ ALTER TABLE `comentarios`
 -- AUTO_INCREMENT for table `jogadores`
 --
 ALTER TABLE `jogadores`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `selecoes`
 --
@@ -184,7 +195,7 @@ ALTER TABLE `selecoes`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;COMMIT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
