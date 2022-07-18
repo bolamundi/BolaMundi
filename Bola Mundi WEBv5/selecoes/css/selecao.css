@@ -1,0 +1,200 @@
+/* Base */
+
+body {
+    background-image: url("fundo.jpg");
+}
+
+div.tabela {
+  margin: 130px;
+  border: 3px solid grey;
+  background-color: white;
+  border-radius: 25px;
+}
+
+div.tabela h1 {
+  text-align: center;
+}
+
+/* Tabela */
+
+#jogadores {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#jogadores td, #jogadores th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#jogadores tr:nth-child(even){background-color: #f2f2f2;}
+
+#jogadores tr:hover {background-color: #ddd;}
+
+#jogadores th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Comentários e Avaliação */
+
+.sessaoavaliar{
+display:none;    
+background-color:green;  
+width:400px;
+height:175px;
+border-radius:40px;
+position:relative;
+left:70%;
+top:125%;
+transform:translate(-50%,-50%);
+
+}
+.avaliacaovizualizador{
+    margin:0 auto;
+}
+
+.divsair{
+position:relative;    
+right:4%;
+top:4%;
+    border:0px;
+}
+.btnsair{
+    border:0px;
+    border-radius:25px;
+}
+.btnsair:hover{
+    border:solid;
+    
+}
+
+.estrelas{
+    position:relative;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa{
+  font-size: 2.5em
+}
+.estrelas label i.fa:before {
+    content:'★';
+  color: rgb(255, 238, 0);
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: rgb(0, 0, 0);
+}
+
+.btnavaliar{
+position:relative;
+left:8.7%;
+top:120%;
+transform:translate(-50%,-50%);
+border:0px;
+background-color:yellow;
+}
+
+.btnavaliar:hover{
+border: solid;
+    
+}
+   
+.enviar{
+
+width:79px ;
+height:51px;
+
+}
+    
+   
+
+.texto{
+	
+display:flex;
+padding:30px;
+}
+
+.coments{
+
+  position:relative;
+  left:3.8%;
+  top:10%;
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;    
+}
+
+/* Denuncie */
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

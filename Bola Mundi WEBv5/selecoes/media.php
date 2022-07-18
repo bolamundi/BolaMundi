@@ -1,0 +1,12 @@
+<?php
+
+require 'C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\conexao.php';
+
+$idsel=$_SESSION['idsel'];
+$sql="SELECT AVG(Estrelas) as media FROM avaliacoes WHERE Id_selecao=$idsel";
+
+$result=$conn->query($sql);
+$row=$result->fetch_assoc();
+
+$media=$row["media"];
+?>
