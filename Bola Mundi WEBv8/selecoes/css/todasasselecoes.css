@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  background: url(https://bolamundi2022.000webhostapp.com/img/selecoes/selecoeswallpaper.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  -webkit-perspective: 2500px;
+  perspective: 2500px;
+  -webkit-perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
+}
+.wrap .img {
+  /*border: #fffefe 10px solid;
+  background: url("https://res.cloudinary.com/malaika/image/upload/e_grayscale/v1564579524/d7isyf5-137c7a98-d161-496f-9753-f96f530be3be_1.png") no-repeat; */
+  margin-left: 0;
+  width: 450px;
+  height: 600px;
+  bottom: 0%;
+  top: 10%;
+  position: absolute;
+}
+.wrap h1 {
+  left: -5%;
+  transform: rotate(-49deg);
+  color: white;
+  font-size: 4em;
+  font-family: Raleway, sans-serif;
+  top: 25%;
+  position: absolute;
+}
+
+.wrap .list {
+  width: 80%;
+  height: 150vh;
+  overflow-x: hidden;
+  webkit-transform: rotateX(35deg) rotateY(3deg) rotateZ(27deg);
+  transform: rotateX(35deg) rotateY(3deg) rotateZ(27deg);
+  margin: 0 0 0 200px;
+  padding: 150px 100px 500px 0;
+  scrollbar-width: none;
+}
+.wrap .list::-webkit-scrollbar {
+  display: none;
+}
+.wrap .list::-webkit-scrollbar {
+  display: none;
+}
+.wrap .list::-webkit-scrollbar {
+  display: block;
+}
+.wrap .list .item {
+  width: 30%;
+  height: 400px;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+}
+/*.wrap .list .item::after {
+  content: "";
+  position: absolute;
+  z-index: 150;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3960c8e1-d90e-4e60-8522-816b41b93892/d84vq6v-5985a860-c6c3-453c-a0ae-e80e5e5abf06.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM5NjBjOGUxLWQ5MGUtNGU2MC04NTIyLTgxNmI0MWI5Mzg5MlwvZDg0dnE2di01OTg1YTg2MC1jNmMzLTQ1M2MtYTBhZS1lODBlNWU1YWJmMDYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.G2ljZtN3fPs4NhvF-fCGxl_97BA4w8kvt_qGyJH1RNI");
+  opacity: 0.1;
+} */
+.wrap .list .item .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 1px 1px 50px 0 #000;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  z-index: 10;
+  position: relative;
+  box-shadow: 5px 5px rgba(255, 72, 47, 0.4),
+    10px 10px rgba(214, 221, 244, 0.3), 15px 15px rgba(214, 221, 244, 0.2),
+    20px 20px rgba(214, 221, 244, 0.1), 25px 25px rgba(214, 221, 244, 0.05);
+}
+
+button {
+  border: 2px solid black;
+  padding: 10px;
+  z-index: 9999;
+  top: -300px;
+  position: relative;
+  display: inline;
+  margin-left: -60px;
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .img {
+    background: url(https://res.cloudinary.com/malaika/image/upload/v1564328867/Gabriella-Wilde-PNG-HD_1_2.png) no-repeat cover fixed;
+  }
+
+  h1 {
+    display: none;
+  }
+}

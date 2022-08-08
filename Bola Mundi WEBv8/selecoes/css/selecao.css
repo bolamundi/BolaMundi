@@ -1,0 +1,289 @@
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url('../fonts/source-sans-pro/SourceSansPro-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.otf'); 
+}
+
+/* Base */
+
+body {
+    background-image: url("fundo.jpg");
+  
+}
+
+div.tabela {
+  margin: 130px;
+  border: 3px solid grey;
+  background-color: white;
+  border-radius: 25px;
+}
+
+div.tabela h1 {
+  text-align: center;
+  font-size: 100px;
+  font-family: SourceSansPro-Regular, sans-serif;
+}
+
+div.tabela h3 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Tabela */
+
+#jogadores {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow:hidden;
+  border: solid white 3px;
+   -webkit-border-radius: 25px;
+       -moz-border-radius: 25px;
+            border-radius: 25px;
+}
+
+#jogadores td, #jogadores th {
+  padding: 8px;
+  text-align: center;
+}
+
+#jogadores tr:nth-child(even){background-color: #f2f2f2;}
+
+#jogadores tr:hover {background-color: #ddd;}
+
+#jogadores th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+} 
+
+
+/* Comentários e Avaliação */
+
+.sessaoavaliar{
+display:none;    
+background-color:#4CAF50;  
+width:400px;
+height:125px;
+border-radius:25px;
+position:relative;
+margin-left:635px;
+margin-top:-150px;
+}
+.avaliacaovizualizador{
+    margin:0 auto;
+}
+.divenviaravaliacao{
+    display:flex;
+ margin-top:55px;
+ margin-left:65px;
+}
+#enviaravaliacao{
+    border-radius:25px;
+    border:0px;
+    height:30px;
+    border-color: #4CAF50;
+}
+
+.divsair{
+display:flex;
+border:0px;
+    margin-left:350px;
+    margin-top:10px;
+}
+.btnsair{
+    border:0px;
+    border-radius:25px;
+    height:30px;
+    width:40px;
+}
+.btnsair:hover{
+    border:solid;
+    
+}
+#enviaravaliacao:hover{
+    border:solid;
+    
+}
+.estrelas{
+   display:flex;
+   margin-top:30px;
+   margin-left:-280px;
+}
+
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa{
+  font-size: 2.5em
+}
+.estrelas label i.fa:before {
+    content:'★';
+  color: rgb(255, 238, 0);
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: rgb(0, 0, 0);
+}
+
+.btnavaliar{
+display:flex;
+border:0px;
+background-color:yellow;
+margin-left:30px;
+margin-bottom:-28px;
+border-radius:5px;
+}
+
+.btnavaliar:hover{
+border: solid;
+    
+}
+
+#h3{
+  display:flex;  
+  margin:30px;
+}
+   
+.enviar{
+
+width:79px ;
+height:51px;
+margin-top:59px;
+border-radius:5px;
+margin-left: 10px;
+}
+.formcoment{
+    display:flex;
+    margin:30px;
+}  
+   
+.coments{
+
+  position:relative;
+  top:10%;
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.avisoRecompensa{
+    margin:30px;
+    display:none;
+    font-family: Helvetica, Arial, sans-serif;
+    
+}
+.limiteRecompensa{
+    margin:30px;
+    display:none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* Denuncie */
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  border-radius:5px;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius:5px;
+}
+
+.form-container .cancel {
+  background-color: red;
+  border-radius:5px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.form-container label {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.form-container placeholder {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Paginação */
+
+.pagination {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
