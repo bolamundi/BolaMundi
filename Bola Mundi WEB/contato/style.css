@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h1,
+form {
+    text-align: center;
+}
+
+select,
+input {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 0;
+    border-width: 1px;
+    border-color: black;
+}
+
+input {
+    cursor: pointer;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 0, 0, 0.1);
+    width: 500px;
+    padding: 20px;
+}
+
+.mensagem {
+    text-align: justify;
+}
