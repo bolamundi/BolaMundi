@@ -1,0 +1,5 @@
+ - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='anacsouza2005@gmail.com' and validador=88919068 - 18/08/2022 - 14:50:03
+ - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='anacsouza2005@gmail.com' and validador=88919068 - 18/08/2022 - 14:52:20
+ - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='penguimgeneral@gmail.com' and validador=93845595 - 18/08/2022 - 14:55:31
+ - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='anacsouza2005@gmail.com' and validador=88971765 - 22/08/2022 - 11:00:59
+ - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='anacsouza2005@gmail.com' and validador=88971765 - 22/08/2022 - 11:01:27
