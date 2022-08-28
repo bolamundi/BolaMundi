@@ -57,8 +57,7 @@ include_once("../conexao.php");
     $resultado_contato = mysqli_query($conn, $result_contato);
 
     while($row_mensagem = mysqli_fetch_assoc($resultado_contato)){
-        echo "<div><p class='nome'>Id: " . $row_mensagem['id'] . "<p> ";
-        echo "<p class='nome'>Nome: " . $row_mensagem['nome'] . "<p> ";
+        echo "<div><p class='nome'>Nome: " . $row_mensagem['nome'] . "<p> ";
         echo "<p class='email'>Email: " . $row_mensagem['email'] . "<p>";
         echo "<p class='assunto'>Assunto: " . $row_mensagem['assunto'] . "<p>";
         echo "<p class='mensagem'>" . $row_mensagem['conteudo'] . "<p></div> <hr>";

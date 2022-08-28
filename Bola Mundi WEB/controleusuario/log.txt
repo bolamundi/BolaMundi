@@ -61,3 +61,7 @@ Lucas - DELETE FROM usuarios WHERE id=76 - 12/08/2022 - 14:19:36
 Lucas - DELETE FROM usuarios WHERE id=75 - 12/08/2022 - 14:19:43
 Lucas - DELETE FROM usuarios WHERE id=68 - 12/08/2022 - 14:19:50
 Lucas - DELETE FROM usuarios WHERE id=69 - 12/08/2022 - 14:19:57
+Lucas - DELETE FROM usuarios WHERE id=81 - 18/08/2022 - 14:02:06
+Lucas - DELETE FROM usuarios WHERE id=82 - 18/08/2022 - 14:02:17
+Lucas - DELETE FROM usuarios WHERE id=83 - 18/08/2022 - 14:19:02
+Lucas - DELETE FROM usuarios WHERE id=84 - 18/08/2022 - 14:51:54

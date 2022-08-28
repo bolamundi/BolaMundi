@@ -118,9 +118,9 @@
 
         <div id="modal01" class="w3-modal w3-animate-zoom w3-center" onclick="this.style.display='none'">
             <img class="w3-modal-content" src="ranks/ranks.jpg" alt="Ranks">
-            <p style="background-color: white; width: 900px; border: 1px dashed red; padding: 50px; margin-left: 215px; margin-right: 235px;"> teste</p>
+            <p style="background-color: white; width: 900px; border: 1px dashed red; padding: 50px; left: 200%; "> teste</p>
         </div>
-        <!-- <h3>Seu Xp: <?php //echo $xp; ?></h3> -->
+        <h3>Seu Xp: <?php echo $xp; ?></h3> 
       </div>
 
       <div class="w3-container w3-card w3-white">

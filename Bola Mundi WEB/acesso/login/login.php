@@ -25,7 +25,11 @@ $resultado=password_verify($camposenha,$row["Senha"]);
 			$_SESSION['acesso'] = $row["Acesso"];
 			$_SESSION['idusuario'] = $row["Id"];
 			$_SESSION['moeda'] = $row["Saldo"];
-			//$_SESSION['xp'] = $row["Xp"];//
+			$_SESSION['xp'] = $row["Xp"];
+			$_SESSION['nível'] = $row["Nível"];
+			$_SESSION['país'] = $row["País"];
+			$_SESSION['rank'] = $row["Rank"];
+			$_SESSION['data'] = $row["Data"];
             header('Location: /index.php');
             exit;
         }else{

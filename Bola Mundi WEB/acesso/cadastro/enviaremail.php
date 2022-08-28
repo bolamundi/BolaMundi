@@ -17,7 +17,7 @@ $mail = new PHPMailer(true);
 
 try {
     //Ative esta linha para usar o Debug e descobrir erros.
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
     
     //Vamos usar o protocolo SMTP para o envio.
     $mail->isSMTP();
@@ -60,7 +60,7 @@ try {
     //Envio
     $mail->send();
     
-    echo 'Messagem enviada';
+    echo 'Messagem enviada com sucesso';
 } catch (Exception $e) {
     echo "Messagem não foi enviada. Mailer Error: {$mail->ErrorInfo}";
 }

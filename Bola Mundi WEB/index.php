@@ -11,7 +11,7 @@
 
    if(isset($_SESSION['nome'])){
     $nome=$_SESSION['nome'];
-      $recepcao=$_SESSION['nome'];
+    $recepcao=$_SESSION['nome'];
    }else{
    $nome="Usuário não logado";
      $recepcao="";
@@ -1046,7 +1046,6 @@
                                </table>
                             </div>
                         </div>  
-
                     </div> 
                 </div>
             </div>
@@ -1058,7 +1057,7 @@
 
            
             <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/map-bg.png);">
-            <div class="cover"></div>
+            <div id="contact" class="cover"></div>
             
                 <!-- Header -->
                 <div class="page-header-wrapper">
@@ -1103,6 +1102,12 @@
                                         </div>
                                         <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Enviar</button>
                                     </form>
+                                    <?php
+                                    if(isset($_SESSION['msg'])){
+                                        echo "<h5 style = 'color: green; font-weight: 400; text-align: center; margin: 10px;'>" . $_SESSION['msg'] . "</h5>";
+                                        unset($_SESSION['msg']);
+                                    }
+                                    ?>
                                 </div>  
                             </div>
                                                                                 
@@ -1233,9 +1238,6 @@ echo "
    login.style.display='none'
    deslogar.style.display='block'
 </script>
-
-
-
 ";
 
 if ($_SESSION["acesso"]=="Admin"){

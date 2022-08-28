@@ -99,7 +99,7 @@
       </div>
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:51%; top:71%; transform: translate(-50%, -50%);">
-        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=13">
+        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=12">
             <img src="../bandeiras/bandeiraDinamarca.jpg" alt="Dinamarca">
         </a>
         <div class="desc">Seleção Dinamarquesa</div>
@@ -113,7 +113,7 @@
       </div>
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:70%; top:76%; transform: translate(-50%, -50%);">
-        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=17">
+        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=16">
             <img src="../bandeiras/bandeiraFrança2.png" alt="França">
         </a>
         <div class="desc">Seleção Francesa</div>
@@ -134,7 +134,7 @@
       </div>
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:38%; top:76%; transform: translate(-50%, -50%);">
-        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=20">
+        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=19">
             <img src="../bandeiras/bandeiraInglaterra2.png" alt="Inglaterra">
         </a>
         <div class="desc">Seleção Inglesa</div>
@@ -148,14 +148,14 @@
       </div>
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:27%; top:31%; transform: translate(-50%, -50%);">
-        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=19">
+        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=17">
             <img src="../bandeiras/bandeiraHolanda2.png" alt="Países Baixos">
         </a>
         <div class="desc">Seleção Holandesa</div>
       </div>
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:27%; top:63%; transform: translate(-50%, -50%);">
-        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=21">
+        <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=20">
             <img src="../bandeiras/bandeiraIrã2.jpg" alt="Irã">
         </a>
         <div class="desc">Seleção Iraniana</div>

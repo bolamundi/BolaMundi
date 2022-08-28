@@ -9,14 +9,24 @@ $validador = filter_input(INPUT_GET, 'validador');
 require '../../conexao.php';
 
 //Sql que altera um registro da tabela usuários
-$sql = "UPDATE usuarios SET Status='ativo' WHERE Status='aguardando' and email='" . $campoemail . "' and validador=" . $validador;
+$sql = "UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='" . $campoemail . "' and validador=" . $validador;
 
 //Executa o sql e faz tratamento de erro.
 if ($conn->query($sql) === TRUE) {
   echo "Registro atualizado.";
   
-  //Grava alteração no log.
-  include 'log.php';
+   //Abre o arquivo log.txt, a opção "a" é para adicionar 
+   $log = fopen("log.txt", "a") or die("Não abriu");
+  
+  //Como será a String gravada no log
+    $txt = $_SESSION['Status'] . " - $sql - " . 
+    date("d/m/Y") . " - " . date("H:i:s") . "\n";
+
+  //Escreve a String no objeto que representa o arquivo
+  fwrite($log, $txt);
+  
+  //Fecha o objeto
+  fclose($log);
   
 } else {
   echo "Erro: " . $conn->error;

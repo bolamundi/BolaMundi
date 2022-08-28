@@ -22,6 +22,7 @@
     <meta name="description" content="">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="../inc/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/arena/fontawesome.css">
@@ -49,7 +50,7 @@
 
    <section class="section main-banner" id="top" data-section="section1">
       <video autoplay muted loop id="bg-video">
-          <source src="../img/friendsarena/video.mp4" type="video/mp4" />
+          <source src="../img/arena/video2.mp4" type="video/mp4" />
       </video>
 
       <div class="video-overlay header-text">

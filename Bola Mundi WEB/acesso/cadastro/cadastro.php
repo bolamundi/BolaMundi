@@ -25,7 +25,7 @@ $rownome=$retornonome->fetch_assoc();
 $rowemail=$retornoemail->fetch_assoc();
 
 if($rowemail["Email"]===$campoemail || $rownome["Nome"]===$camponome){
-   header("refresh:30 ;url=cadastrar.html");
+   header("refresh:2 ;url=cadastrar.html");
  
   echo " <script>
   window.alert('Email ou nome já cadastrados')
@@ -43,14 +43,14 @@ $sql = "INSERT INTO usuarios(nome,email,senha,acesso, Status,Data,Validador) val
 
 if($conn->query($sql) === TRUE ){
 	//Se o cadastro acontecer corretamente
-	header("refresh:30 ;url=/index.php");
+	header("refresh:2 ;url=/index.php");
 	echo "<script>window.alert('Gravado com sucesso')</script>";
 	
 	//Envie email para validar a conta.
     require 'enviaremail.php';  
 
 //Conteúdo do email de validação
-$texto = "Olá, boa tarde.<br> Agradecemos seu cadastro, seja bem-vindo ao Bola Mundi <br> usuariovalidaremail.php: " . $campoemail . "<br> validador= " . $validador ."" ;
+$texto = "Olá, boa tarde.<br> Agradecemos seu cadastro, seja bem-vindo ao Bola Mundi. <br> usuariovalidaremail.php: " . $campoemail . "<br> validador= " . $validador ."" ;
 
 enviaremail($camponome, $campoemail, 'Validar conta', $texto);
 
