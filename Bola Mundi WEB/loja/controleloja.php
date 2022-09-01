@@ -8,7 +8,7 @@ session_start();
 //Faz a conexão com o BD.
 require '../conexao.php';
 $id = $_GET["pag"];
-$idsel=$_GET["idsel"];
+
 
 //Quantidade de registros a serem exibidos
 $total = 5;
@@ -22,10 +22,10 @@ if($id!=1){
 $id--;
 
 //Cria o SQL com limites de página ordenado por id
-$sql = "SELECT * FROM jogadores ORDER BY id LIMIT $id, $total";
+$sql = "SELECT * FROM produtos ORDER BY id LIMIT $id, $total";
 
 //Conta a quantidade total de registros
-$sql1 = "SELECT count(*) as contagem FROM jogadores";
+$sql1 = "SELECT count(*) as contagem FROM produtos";
 
 //Executa o SQL
 $result = $conn->query($sql);
@@ -51,7 +51,7 @@ if($contagem%$total==0){
 <title>Tela Principal</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/controleusuario/tabelacontrole.css">
+<link rel="stylesheet" href="/css/controleusuario/tabelacontrole.css">
 
 
 
@@ -63,14 +63,14 @@ if($contagem%$total==0){
 <div class="content">
 
 
-			<h1>Lista de jogadores</h1>
+			<h1>Lista de produtos</h1>
 			<table>
-<tr><th>Id</th><th>Nome</th><th>País</th><th>Número</th><th>Posição</th><th>Id_selecao</th><th colspan="3">Ações</th></tr>
+<tr><th>Id</th><th>Nome</th><th>Preço</th><th>Número de vendas</th><th colspan="3">Ações</th></tr>
 				
 <?php
 	  while($row = $result->fetch_assoc()) {
-		echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Pais"] . "</td><td>" . $row["Numero"] . "</td><td>" . $row["Posicao"] . "</td><td>" . $row["Id_selecao"] . "</td>";
-		echo "<td><a href='controleselecao/jogadoreditarform.php?id=" . $row["Id"] . "'><img src='img/controleselecao/editar.png' alt='Editar Jogador'></a></td><td><a href='controleselecao/jogadorexcluir.php?id=" . $row["Id"] . "'><img src='img/controleselecao/excluir.png' alt='Excluir Jogador'></a></td></tr>";
+		echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Preco"] . "</td><td>" . $row["Numero_vendas"] . "</td>";
+		echo "<td><a href='controleloja/produtoeditarform.php?id=" . $row["Id"] . "'><img src='/img/controleusuario/editar.png' alt='Editar Jogador'></a></td><td><a href='controleloja/produtoexcluir.php?id=" . $row["Id"] . "'><img src='/img/controleusuario/excluir.png' alt='Excluir Jogador'></a></td></tr>";
 	  }
 	?>				
 				
@@ -81,8 +81,18 @@ if($contagem%$total==0){
             echo "<a href='controleselecao.php?pag=$i' class='pag'>$i </a>";
     } 
 	?>  
-			<a href="controleselecao/addjogador.php?idsel=<?php echo $idsel;?>"><img src='img/controleselecao/incluir.png' alt='Add Jogador'></a>
+			<a href="controleloja/addproduto.php"><img src='/img/controleusuario/incluir.png' alt='Add Jogador'></a>
 </div>
+
+<div class="wrapper">
+        <canvas id="chartVendas" height='300'></canvas>
+       </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  
+
+<script src="/relatorios/chartvendas.php"></script>
 
 </body>
 </html>

@@ -91,7 +91,7 @@
                             <li><a class="page-scroll" href="#placar-section">Placar</a></li>
                             <li><a class="page-scroll" href="#classificacao-section">Classificação</a></li>
                             <li><a class="page-scroll" href="friendsarena.php">Friends Arena</a></li>
-                            <li><a class="page-scroll" href="loja.php">Loja</a></li>
+                            <li><a class="page-scroll" href="loja/loja.php">Loja</a></li>
                             <li><a class="page-scroll" data-toggle="dropdown" href="#"><?php echo $nome; ?><span class="caret"></span></a>
                               <ul class="dropdown-menu">
                                <li><a href="perfil/perfil.php">Seu Perfil</a></li>

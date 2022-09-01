@@ -50,7 +50,9 @@ if($conn->query($sql) === TRUE ){
     require 'enviaremail.php';  
 
 //Conteúdo do email de validação
-$texto = "Olá, boa tarde.<br> Agradecemos seu cadastro, seja bem-vindo ao Bola Mundi. <br> usuariovalidaremail.php: " . $campoemail . "<br> validador= " . $validador ."" ;
+$texto = "Olá, boa tarde.<br> Agradecemos seu cadastro, seja bem-vindo ao Bola Mundi. <br> Antes de fazer o login, precisamos confirmar seu email. Por favor copie e cole o seguinte link na barra de navegação e faça as mudanças requisitadas. <br> Na barra de pesquisa do site apague o INDEX.PHP e adicione:
+/acesso/cadastro/usuariovalidaremail.php?id=()&validador=()<br>
+No ID, apague os parenteses e escreva seu email: ". $campoemail ." <br> No validador, apague os parênteses e coloque os seguintes números " . $validador ."" ;
 
 enviaremail($camponome, $campoemail, 'Validar conta', $texto);
 

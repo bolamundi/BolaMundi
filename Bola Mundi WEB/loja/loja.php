@@ -68,10 +68,10 @@
                       <div class="slider_item-detail">
                         <div>
                           <h2 class="slider_heading">
-                            olá querido <br />
-                          capitalista</h2>
+                            Bem-Vindo a<br />
+                          loja do bola mundi!</h2>
                           <p>
-                           compre, compre, compre...até não ter nada
+                             
                           </p>
                         </div>
                       </div>
@@ -98,7 +98,7 @@
                            Personalize seu perfil<br />
                         com itens exclusivos</h2>
                           <p>
-                            bela frase genérica 2
+                            
                           </p>
                         </div>
                       </div>
@@ -177,8 +177,8 @@
   <!-- PRODUTOS -->
   <section class="products_section">
     <div class="heading_container">
-      <h2>TEXTO</h2>
-      <p>TEXTO</p>
+      <h2></h2>
+      <p></p>
     </div>
     <div class="container layout_padding">
       <div class="product_container">
@@ -325,10 +325,10 @@
               </div>
               <div class="col-sm-6">
                 <h3>
-                  texto<br />
-texto                </h3>
+                  Continue interagindo com<br />
+o site para conseguir mais moedas.              </h3>
                 <p>
-texto                </p>
+Volte sempre!             </p>
               </div>
             </div>
           </div>
