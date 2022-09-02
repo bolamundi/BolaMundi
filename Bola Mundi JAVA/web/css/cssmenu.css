@@ -13,7 +13,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #535353;
 }
 
 li {
@@ -29,7 +29,8 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: grey;
+  color: black;
 }
 
 li.dropdown {
@@ -61,8 +62,58 @@ li.dropdown {
 
 /* Style the content */
 .content {
-  background-color: #ddd;
-  
+  background-color: white;
   padding: 10px;
+}
 
+.content h2 {
+  text-align: center;
+  
+}
+
+.headertext h1{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);
+    color: white;
+    font-size: 80px;    
+}
+
+#table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 50px;
+}
+
+#table th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background: #f1f1f1;
+}
+
+#table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background: white;
+}
+
+#table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#table tr.header, table tr:hover {
+  background-color: #f1f1f1;
+}
+
+input {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 50px;
 }

@@ -6,7 +6,10 @@
 package dao;
 
 import classes.Usuario;
+import classes.Jogador;
+import classes.Produto;
 import classes.Comentario;
+import static dao.Dao.getConnection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -28,7 +31,7 @@ public class Dao {
     Connection con = null;
     try{
         Class.forName("com.mysql.jdbc.Driver");       
-        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/id18524654_loginbolamundi","root","");
+        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/id19270301_id18524654_loginbolamundi","root","");
     }catch(Exception erro){
         System.out.println(erro);
     }
@@ -56,6 +59,26 @@ public class Dao {
     }      
         return usuario;
     }
+    
+     public static List<Usuario> getRelatorio() {
+	    List<Usuario> list = new ArrayList<Usuario>();
+	    try{
+	        Connection con = getConnection();
+	        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT * FROM usuarios");
+	        ResultSet rs = ps.executeQuery();
+	        while(rs.next()){
+	            Usuario usuario = new Usuario();
+	            usuario.setId(rs.getInt("id"));
+	            usuario.setNome(rs.getString("nome"));
+	            usuario.setEmail(rs.getString("email"));          
+	            usuario.setAcesso(rs.getString("acesso")); 
+	            list.add(usuario);
+	        }       
+	    }catch(Exception erro){
+	        System.out.println(erro);
+	    }
+	    return list;
+	    }
     
     
    public static int editarUsuario(Usuario usuario){
@@ -277,7 +300,221 @@ public class Dao {
     }      
        return status;
    }
+        
+        public static Jogador getJogadorById(int id){
+           Jogador jogador=null;
+    try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("select * from jogadores where Id=?");
+        ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+             jogador = new Jogador();
+            jogador.setId(rs.getInt("Id"));
+            jogador.setNome(rs.getString("Nome"));
+            jogador.setPais(rs.getString("Pais"));         
+            jogador.setNumero(rs.getInt("Numero"));   
+            jogador.setPosicao(rs.getString("Posicao")); 
+            jogador.setIdselecao(rs.getInt("Id_selecao")); 
+        }
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+      
+        return jogador;
+    }
+
+public static List<Jogador> getJogadores(int inicio, int total) {
+    List<Jogador> list = new ArrayList<Jogador>();
+    try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT * FROM jogadores ORDER BY id LIMIT " + (inicio - 1) + " ," + total);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            Jogador jogador = new Jogador();
+            jogador.setId(rs.getInt("Id"));
+            jogador.setNome(rs.getString("Nome"));
+            jogador.setPais(rs.getString("Pais"));         
+            jogador.setNumero(rs.getInt("Numero"));   
+            jogador.setPosicao(rs.getString("Posicao")); 
+            jogador.setIdselecao(rs.getInt("Id_selecao")); 
+            list.add(jogador);
+        }
+    }catch(Exception erro){
+        System.out.println(erro);
+    }
+    return list;
+    }
+
+public static int excluirJogador(Jogador jogador){
+       int status = 0;  
+   try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("DELETE FROM jogadores WHERE id=?");
+        ps.setInt(1, jogador.getId());         
+        status = ps.executeUpdate();
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+       return status;
+   }
+    
+    
+   public static int cadastrarJogador(Jogador jogador){
+       int status = 0;  
+   try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("INSERT INTO JOGADORES(NOME,PAIS,NUMERO,POSICAO,ID_SELECAO) VALUES(?,?,?,?,?)");
+        ps.setString(1, jogador.getNome());
+        ps.setString(2, jogador.getPais());
+        ps.setInt(3, jogador.getNumero());        
+        ps.setString(4, jogador.getPosicao()); 
+        ps.setInt(5, jogador.getIdselecao());          
+        status = ps.executeUpdate();
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+       return status;
+   }
+
+  public static int editarJogador(Jogador jogador){
+       int status = 0;  
+   try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("UPDATE jogadores SET Nome=?, Pais=?, Numero=?, Posicao=?, Id_selecao=? WHERE id=?");
+        ps.setString(1, jogador.getNome());
+        ps.setString(2, jogador.getPais());
+        ps.setInt(3, jogador.getNumero());
+        ps.setString(4, jogador.getPosicao()); 
+        ps.setInt(6, jogador.getIdselecao());         
+        ps.setInt(5, jogador.getId());   
+        status = ps.executeUpdate();
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+       return status;
+   }
+        
+   public static int getContagemJogadores() {
+        int contagem = 0;
+        try{
+            Connection con = getConnection();
+            PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT count(*) AS contagem FROM jogadores");
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                contagem = rs.getInt("contagem");
+            }   
+        }catch(Exception erro){
+            System.out.println(erro);
+        }
+        return contagem;
+    }
+   
+   public static Produto getProdutoById(int id){
+           Produto produto=null;
+    try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("select * from produtos where Id=?");
+        ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+             produto = new Produto();
+            produto.setId(rs.getInt("Id"));
+            produto.setNome(rs.getString("Nome"));
+            produto.setPreco(rs.getInt("Preco"));   
+            produto.setNumero_vendas(rs.getInt("Numero_vendas")); 
+        }
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+      
+        return produto;
+    }
+
+public static List<Produto> getProdutos(int inicio, int total) {
+    List<Produto> list = new ArrayList<Produto>();
+    try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT * FROM produtos ORDER BY id LIMIT " + (inicio - 1) + " ," + total);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            Produto produto = new Produto();
+            produto.setId(rs.getInt("Id"));
+            produto.setNome(rs.getString("Nome"));
+            produto.setPreco(rs.getInt("Preco"));   
+            produto.setNumero_vendas(rs.getInt("Numero_vendas")); 
+            list.add(produto);
+        }
+    }catch(Exception erro){
+        System.out.println(erro);
+    }
+    return list;
+    }
+
+public static int excluirProduto(Produto produto){
+       int status = 0;  
+   try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("DELETE FROM produtos WHERE id=?");
+        ps.setInt(1, produto.getId());         
+        status = ps.executeUpdate();
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+       return status;
+   }
+    
+    
+   public static int cadastrarProduto(Produto produto){
+       int status = 0;  
+   try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("INSERT INTO PRODUTOS(NOME,PRECO) VALUES(?,?)");
+        ps.setString(1, produto.getNome());
+        ps.setInt(2, produto.getPreco());                  
+        status = ps.executeUpdate();
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+       return status;
+   }
+
+  public static int editarProduto(Produto produto){
+       int status = 0;  
+   try{
+        Connection con = getConnection();
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("UPDATE produtos SET Nome=?, Numero_vendas=?, Preco=? WHERE id=?");
+        ps.setString(1, produto.getNome());       
+        ps.setInt(2, produto.getNumero_vendas());    
+        ps.setInt(3, produto.getPreco()); 
+        ps.setInt(4, produto.getId());   
+        status = ps.executeUpdate();
+    }catch(Exception erro){
+        System.out.println(erro);
+    }      
+       return status;
+   }
+        
+   public static int getContagemProdutos() {
+        int contagem = 0;
+        try{
+            Connection con = getConnection();
+            PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT count(*) AS contagem FROM produtos");
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                contagem = rs.getInt("contagem");
+            }   
+        }catch(Exception erro){
+            System.out.println(erro);
+        }
+        return contagem;
+    }
+            
 }
+
+
+
+
 
     
 

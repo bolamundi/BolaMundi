@@ -1,0 +1,46 @@
+h1 {
+   margin: 20px;
+   text-align: center;
+}
+
+div.gallery {
+  margin: 20px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  height: auto;
+  width: 178px;
+  height: 160px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+div.loja {
+  margin: 130px;
+  border: 3px solid green;
+  background-color: white;
+  border-radius: 25px;
+  
+}
+
+div.loja h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: SourceSansPro-Regular, sans-serif;
+}
+
+div.loja h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  margin-left: 20px;
+}
+
