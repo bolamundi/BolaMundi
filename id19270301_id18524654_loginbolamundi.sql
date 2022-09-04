@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 28-Ago-2022 às 00:53
+-- Tempo de geração: 04-Set-2022 às 20:49
 -- Versão do servidor: 10.5.16-MariaDB
 -- versão do PHP: 7.3.32
 
@@ -172,7 +172,8 @@ INSERT INTO `comentarios` (`Id`, `Comentario`, `Nome`, `Data`, `Id_usuario`, `Id
 (170, '~hn~]0n=]n0~]', 'Lucas', '2022-08-17', 57, 1),
 (172, 'srgrSDTHDTHTHT', 'Lucas', '2022-08-17', 57, 1),
 (173, 'OUYFD', 'Lucas', '2022-08-17', 57, 1),
-(174, 'SFJF', 'Lucas', '2022-08-17', 57, 1);
+(174, 'SFJF', 'Lucas', '2022-08-17', 57, 1),
+(175, 'uepa', 'Lucas', '2022-08-31', 57, 6);
 
 -- --------------------------------------------------------
 
@@ -495,23 +496,37 @@ INSERT INTO `jogadores` (`Id`, `Nome`, `Pais`, `Numero`, `Posicao`, `Id_selecao`
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `Id` int(11) NOT NULL,
+  `Id_usuario` int(11) NOT NULL,
+  `Id_produto` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `produtos`
 --
 
 CREATE TABLE `produtos` (
   `Id` int(11) NOT NULL,
   `Nome` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `Numero_vendas` int(11) NOT NULL,
-  `Preco` int(11) NOT NULL
+  `Numero_vendas` int(11) NOT NULL DEFAULT 0,
+  `Preco` int(11) NOT NULL,
+  `Imagem` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
-INSERT INTO `produtos` (`Id`, `Nome`, `Numero_vendas`, `Preco`) VALUES
-(1, 'Camisa Amarale Neymar', 4, 50),
-(2, 'Camisa Azul Neymar', 7, 55);
+INSERT INTO `produtos` (`Id`, `Nome`, `Numero_vendas`, `Preco`, `Imagem`) VALUES
+(1, 'Camisa Amarale Neymar', 4, 50, NULL),
+(2, 'Camisa Azul Neymar', 7, 55, NULL),
+(5, ' Camisa Amarela Gabriel Jesus', 0, 50, NULL);
 
 -- --------------------------------------------------------
 
@@ -593,7 +608,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Status`, `País`, `PaísTorcedor`, `Nível`, `Rank`, `Saldo`, `Xp`, `RecompensaTimestamp`, `Validador`) VALUES
-(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 0, '0', 180, 190, '2022-08-17 08:15:26', 0),
+(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 0, '0', 185, 200, '2022-08-31 13:22:33', 0),
 (58, 'Carol', 'general@bolamundi.com', 'gabigol9', 'Admin', '2022-07-17', 'Ativo', '', '', 0, '0', 5, 0, '2022-08-05 11:52:12', 0),
 (59, 'Dj Regerinho', 'djrogerinho@gmail.com', '$2y$10$ck1xzNc7eAwIwUn7/kUqme1BJMFXpWkXkC5LO/2tmBwP/AqHA7G02', 'Admin', '2022-07-18', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0),
 (61, 'Vinícius Junior', 'vinijr@gmail.com', '$2y$10$UoSoa8AD0ArFqKDCEDq8.ulIMZieh4sb.fHwS.zkLrd6Us6Xgkude', 'Admin', '2022-07-21', 'Ativo', '', '', 0, '0', 10, 0, '2022-08-08 07:47:00', 0),
@@ -605,9 +620,12 @@ INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Statu
 (71, 'dgaggg', 'nada', '$2y$10$H5TF4iOmNWnbgv9mN7BIOOAu9Kv6nV8quHxXcm6dabIaFzqE1uWmS', 'Usuario', '2022-08-08', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 86030424),
 (73, 'salmandra2', 'samandra@gmail.com', '$2y$10$hP8i5Czo0xrgkt1LFezVy.hq/eCWzcPRAF9zLaXWeCXygW9.D2Mcu', 'Usuario', '2022-08-09', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 89270055),
 (74, 'alvin', 'alvineesquilos@gmail.com', '$2y$10$MBJPEaI1dlnHWx.afH8m.uSHFC4TXPAayVNgBXwPa2GKwA/TEBrBS', 'Usuario', '2022-08-12', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 39367525),
-(85, 'Penguim', 'penguimgeneral@gmail.com', '$2y$10$OxTuu7aAtHjKkW7ITEuo4enQL9Pc39qG06qlRW1wnq9m2Pn8H/GdO', 'Usuario', '2022-08-18', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 93845595),
+(95, 'li', 'penguimgeneral@gmail.com', '$2y$10$RyWtXMQLm3mspQK7bc6z4O0oRp6RigLRh5OxVYWRm9yORKIIirQ8.', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 43732394),
 (86, 'ffffffffffffffffffffff', 'ffffffffffffffffffffff@gmail.com', '$2y$10$Giv6A0H4uHUOUM8QOwWXsO.3UAkXcAWQRa1fff5tFCssdSJLu0uOm', 'Usuario', '2022-08-22', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 80589415),
-(87, 'anya', 'anacsouza2005@gmail.com', '$2y$10$ubNdXMaiseIcRDx6z8lRnOZSyjfNOFN/05W9wlcevufRrJ3uVfsIe', 'Usuario', '2022-08-22', 'Ativo', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 88971765);
+(87, 'anya', 'anacsouza2005@gmail.com', '$2y$10$ubNdXMaiseIcRDx6z8lRnOZSyjfNOFN/05W9wlcevufRrJ3uVfsIe', 'Usuario', '2022-08-22', 'Ativo', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 88971765),
+(90, 'teste', 'teste@teste.com', '$2y$10$ZiWVr4hBFUIgNB88il5DyOSEWNCtkUWw1jKRB/lYg5HGaIGxEXcCK', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 61711407),
+(91, 'Guilherme', 'guilherme.chafim@gmail.com', '$2y$10$CJVKH0leh7LKlqJqjxj8y.eMmZkem7j4YNCT/DFmqsQlFcLYkeA72', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 23164674),
+(93, 'south', 'anasofianorth@gmail.com', '$2y$10$.2y0pqZWiL5HorZ4DmFSY.bdPkmtfoeE9U2AfaOF5Mrl6C6wxE4y2', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 75476145);
 
 --
 -- Índices para tabelas despejadas
@@ -635,6 +653,12 @@ ALTER TABLE `contato`
 -- Índices para tabela `jogadores`
 --
 ALTER TABLE `jogadores`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Índices para tabela `pedidos`
+--
+ALTER TABLE `pedidos`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -669,7 +693,7 @@ ALTER TABLE `avaliacoes`
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=175;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 
 --
 -- AUTO_INCREMENT de tabela `contato`
@@ -684,10 +708,16 @@ ALTER TABLE `jogadores`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;
 
 --
+-- AUTO_INCREMENT de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `selecoes`
@@ -699,7 +729,7 @@ ALTER TABLE `selecoes`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
