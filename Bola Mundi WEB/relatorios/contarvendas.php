@@ -25,7 +25,6 @@ echo "Nenhum resultado ";
 
 
 
-print_r($nomeProduto);
 
 ?> 
 

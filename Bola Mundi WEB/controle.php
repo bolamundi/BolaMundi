@@ -86,9 +86,6 @@ if($contagem%$total==0){
  <div class="wrapper">
         <canvas id="chartPorTempo" height='300'></canvas>
        </div>
- <div class="wrapper">
-        <canvas id="chartVendas" height='300'></canvas>
-       </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -97,7 +94,7 @@ if($contagem%$total==0){
 
 
 <script src="relatorios/chartcadastroporsemana.php"></script> 
-<script src="relatorios/chartvendas.php"></script>
+
 </body>
 </html>
 <?php
