@@ -6,8 +6,8 @@
     int i = Dao.cadastrarUsuario(u);
     
     if(i>0){
-        response.sendRedirect("usuarioscontrolar.jsp");
+        response.sendRedirect("usuarioscontrolar.jsp?pag=1");
     }else{
-        response.sendRedirect("usuariocadastrarerro.jsp");        
+        response.sendRedirect("usuarioserro.jsp");        
     }
 %>
