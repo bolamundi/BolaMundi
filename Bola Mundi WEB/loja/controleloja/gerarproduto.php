@@ -7,7 +7,7 @@ $path=2; //var para ativar uma condição no validarAcesso
 
   $campoNome=$_POST["nome"];
   $campoPreco=$_POST['preco'];
-
+$campoImagem=$_POST['imagem'];
   
   
 require '../../conexao.php';
@@ -16,7 +16,7 @@ require '../../conexao.php';
   
    
 
-      $sql="INSERT INTO produtos(nome,preco) values(' $campoNome','$campoPreco')";
+      $sql="INSERT INTO produtos(nome,preco,imagem) values(' $campoNome','$campoPreco','$campoImagem')";
       if($conn->query($sql) === TRUE ){
 	   //Abre o arquivo log.txt, a opção "a" é para adicionar 
       $log = fopen("log.txt", "a") or die("Não abriu");

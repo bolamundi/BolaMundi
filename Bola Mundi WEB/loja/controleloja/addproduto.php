@@ -42,11 +42,14 @@ $path=2; //var para ativar uma condição no validarAcesso
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 validate-input m-b-20" data-validate="Preencha preço">
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Preencha o preço">
 					<input class="input100" type="text" name="preco" placeholder="Preço">
 					<span class="focus-input100"></span>
 				</div>
-
+	<div class="wrap-input100 validate-input m-b-20" data-validate="Preencha o caminho para a imagem do produto">
+					<input class="input100" type="text" name="imagem" placeholder="Foto">
+					<span class="focus-input100"></span>
+				</div>
 
 				
 

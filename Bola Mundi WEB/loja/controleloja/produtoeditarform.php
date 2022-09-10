@@ -48,7 +48,9 @@ require '../../conexao.php';
         <h3>Editar Produto Id: <?php echo $row["Id"]; ?></h3>
         <input type="hidden" name="id" value="<?php echo $row["Id"]; ?>">
         <input type="text" name="nome" value="<?php echo $row["Nome"]; ?>" placeholder="Nome..." required>		
-        <input type="text" name="numero_vendas" value="<?php echo $row["Numero_vendas"]; ?>" placeholder="Número de vendas..." required>	<input type="text" name="preco" value="<?php echo $row["Preco"];  ?>" placeholder="Preço..." required>     
+        <input type="text" name="numero_vendas" value="<?php echo $row["Numero_vendas"]; ?>" placeholder="Número de vendas..." required>	
+        <input type="text" name="preco" value="<?php echo $row["Preco"];  ?>" placeholder="Preço..." required>     
+         <input type="text" name="imagem" value="<?php echo $row["Imagem"];  ?>" placeholder="Imagem..." required>     
         <input type="submit" value="Editar">
     </form>
 

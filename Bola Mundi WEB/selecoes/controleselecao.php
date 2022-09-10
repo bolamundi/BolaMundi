@@ -51,7 +51,7 @@ if($contagem%$total==0){
 <title>Tela Principal</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/controleusuario/tabelacontrole.css">
+<link rel="stylesheet" href="/css/controleusuario/tabelacontrole.css">
 
 
 

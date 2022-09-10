@@ -45,6 +45,7 @@
         <link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons -->
         <link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
         <link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
+       
 
         <!-- Base CSS -->
 
@@ -119,51 +120,9 @@
                     <header class="w3-container w3-red"> 
                         <span onclick="document.getElementById('id01').style.display='none'" 
                         class="w3-button w3-red w3-xlarge w3-display-topright">&times;</span>
-                        <h2>Configurações</h2>
                     </header>
 
-            <div class="w3-bar w3-border-bottom">
-                <button class="tablink w3-bar-item w3-button" style="color: red;" onclick="openPerfil(event, 'Usuário')">Usuário</button>
-                <button class="tablink w3-bar-item w3-button" onclick="openPerfil(event, 'E-mail')">E-mail</button>
-                <button class="tablink w3-bar-item w3-button" onclick="openPerfil(event, 'Senha')">Senha</button>
-            </div>
-
-            <div id="Usuário" class="w3-container dado">
-                <h3>Trocar Nickname</h3>
-                <form class="w3-container" action="/action_page.php">
-                    <div class="w3-section">
-                        <label><b>Digite seu novo nome</b></label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Novo nome" name="usrname" required>
-                        <button class="w3-button w3-block w3-red w3-section w3-padding" type="submit">Enviar</button>
-                    </div>
-                </form>
-            </div>
-
-            <div id="E-mail" class="w3-container dado">
-                <h3>Trocar E-mail</h3>
-                <form class="w3-container" action="/action_page.php">
-                    <div class="w3-section">
-                        <label><b>Digite seu e-mail atual</b></label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="E-mail atual" name="usrname" required>
-                        <label><b>Digite seu novo e-mail</b></label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Novo e-mail" name="usrname" required>
-                        <button class="modalbotao" type="submit">Enviar</button>
-                    </div>
-                </form>
-            </div>
-
-            <div id="Senha" class="w3-container dado">
-                <h3>Trocar Senha</h3>
-                <form class="w3-container" action="/action_page.php">
-                    <div class="w3-section">
-                        <label><b>Digite sua senha atual</b></label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Senha atual" name="usrname" required>
-                        <label><b>Digite sua nova senha</b></label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Nova senha" name="usrname" required>
-                        <button class="w3-button w3-block w3-red w3-section w3-padding" type="submit">Enviar</button>
-                    </div>
-                </form>
-            </div>
+            
 
             <div class="w3-container w3-light-grey w3-padding">
                 <button class="w3-button w3-right w3-white w3-border" 

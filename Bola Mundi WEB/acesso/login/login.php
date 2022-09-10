@@ -20,6 +20,7 @@ $result = $conn->query($sql);
 $resultado=password_verify($camposenha,$row["Senha"]);
 //$resultado=true;
         if($resultado and $row["Status"]=="Ativo"){
+            $_SESSION["Id_usuario"]=$row['Id'];
             $_SESSION["nome"]=$row['Nome'];
 			$_SESSION['email'] = $row["Email"];
 			$_SESSION['acesso'] = $row["Acesso"];

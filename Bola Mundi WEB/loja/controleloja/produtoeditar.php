@@ -10,11 +10,11 @@ $campoid = $_POST["id"];
 $campoNome = $_POST["nome"];
 $campoNumeroVendas = $_POST["numero_vendas"];
 $campoPreco = $_POST["preco"];
-
+$campoImagem = $_POST["imagem"];
 //Faz a conexão com o BD.
 require '../../conexao.php';
 //Sql que altera um registro da tabela usuários
-$sql = "UPDATE produtos SET nome='" . $campoNome . "', numero_vendas='" . $campoNumeroVendas . "', preco='" . $campoPreco . "'  WHERE id=" . $campoid;
+$sql = "UPDATE produtos SET nome='" . $campoNome . "', numero_vendas='" . $campoNumeroVendas . "', preco='" . $campoPreco . "',imagem='". $campoImagem ."'  WHERE id=" . $campoid;
 
 //Executa o sql e faz tratamento de erro.
 if ($conn->query($sql) === TRUE) {

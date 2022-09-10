@@ -114,7 +114,7 @@
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:70%; top:76%; transform: translate(-50%, -50%);">
         <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=16">
-            <img src="../bandeiras/bandeiraFrança2.png" alt="França">
+            <img src="../bandeiras/bandeiraFrança2.jpg" alt="França">
         </a>
         <div class="desc">Seleção Francesa</div>
       </div>
@@ -128,7 +128,7 @@
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:75%; top:48%; transform: translate(-50%, -50%);">
         <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=29">
-            <img src="../bandeiras/bandeiraSérvia.jpg" alt="Sérvia">
+            <img src="../bandeiras/bandeiraSérvia2.jpg" alt="Sérvia">
         </a>
         <div class="desc">Seleção Sérvia</div>
       </div>
@@ -142,7 +142,7 @@
       
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:17%; top:47%; transform: translate(-50%, -50%);">
         <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=30">
-            <img src="../bandeiras/bandeiraSuíça2.png" alt="Suíça">
+            <img src="../bandeiras/bandeiraSuíça2.jpg" alt="Suíça">
         </a>
         <div class="desc">Seleção Suíça</div>
       </div>
