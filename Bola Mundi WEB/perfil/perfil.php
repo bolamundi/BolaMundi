@@ -32,6 +32,7 @@
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/senharequisitos.css">
+		<link rel="stylesheet" type="text/css" href="css/inventario.css">
       
 	<style>
       
@@ -55,6 +56,11 @@
       	<div class="w3-white w3-text-grey w3-card-4">
         	<div class="w3-display-container">
           	<img src="imagemteste.jpg" style="width:100%" alt="Avatar">
+          	<div class='inventario'>
+          	    
+          	   <?php include 'inventario.php';?> 
+          	    
+          	</div>
           	<div class="w3-display-bottomleft w3-container w3-text-black">
             	<h2><?php echo $nome; ?><i onclick="document.getElementById('id03').style.display='block'" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>
             	</h2>

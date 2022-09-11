@@ -1,5 +1,14 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['nome'])){
+    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=loja.php");
+ 
+  echo '<script> window.alert("Você precisa estar logado para comprar") </script>';
+    exit;
+    
+    
+}
 $idProduto=$_GET['prod'];
 $idUsuario=$_SESSION['Id_usuario'];
 
