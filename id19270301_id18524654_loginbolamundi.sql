@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 04-Set-2022 às 20:49
+-- Tempo de geração: 12-Set-2022 às 02:28
 -- Versão do servidor: 10.5.16-MariaDB
 -- versão do PHP: 7.3.32
 
@@ -80,7 +80,10 @@ INSERT INTO `avaliacoes` (`Id`, `Estrelas`, `Id_usuario`, `Id_selecao`) VALUES
 (38, 5, 57, 2),
 (39, 5, 57, 1),
 (40, 5, 57, 1),
-(41, 5, 57, 2);
+(41, 5, 57, 2),
+(42, 5, 57, 1),
+(43, 5, 57, 1),
+(44, 5, 57, 1);
 
 -- --------------------------------------------------------
 
@@ -107,7 +110,6 @@ INSERT INTO `comentarios` (`Id`, `Comentario`, `Nome`, `Data`, `Id_usuario`, `Id
 (66, 'Thales, onde quem é vc??????', 'Didico', '2022-04-17', 5, 0),
 (67, 'quem é**', 'Didico', '2022-04-17', 5, 0),
 (68, 'teste', 'Lucas', '2022-04-19', 3, 0),
-(69, 'Comentario', 'Lucas', '2022-07-07', 57, 1),
 (71, 'fefefe', 'Lucas', '2022-07-27', 57, 1),
 (73, 'scce', 'Lucas', '2022-07-27', 57, 1),
 (74, 'dffd', 'Lucas', '2022-07-27', 57, 1),
@@ -173,7 +175,9 @@ INSERT INTO `comentarios` (`Id`, `Comentario`, `Nome`, `Data`, `Id_usuario`, `Id
 (172, 'srgrSDTHDTHTHT', 'Lucas', '2022-08-17', 57, 1),
 (173, 'OUYFD', 'Lucas', '2022-08-17', 57, 1),
 (174, 'SFJF', 'Lucas', '2022-08-17', 57, 1),
-(175, 'uepa', 'Lucas', '2022-08-31', 57, 6);
+(175, 'uepa', 'Lucas', '2022-08-31', 57, 6),
+(176, 'teste', 'Lucas', '2022-09-07', 57, 1),
+(177, 'thffg', 'Lucas', '2022-09-08', 57, 1);
 
 -- --------------------------------------------------------
 
@@ -467,7 +471,7 @@ INSERT INTO `jogadores` (`Id`, `Nome`, `Pais`, `Numero`, `Posicao`, `Id_selecao`
 (232, 'Son Heung-min', 'Coreia do sul', 7, 'Atacante', 9),
 (233, 'Song Min-kyu', 'Coreia do sul', 13, 'Atacante', 9),
 (234, 'Antony', 'Brasil', 11, 'Atacante', 1),
-(235, 'Aarón Cruz', '', 18, 'Goleiro', 10),
+(235, 'Aarón Cruz', 'Costa Rica', 18, 'Goleiro', 10),
 (236, 'Keylor Navas', 'Costa Rica', 1, 'Goleiro', 10),
 (237, 'Leonel Moreira', 'Costa Rica', 23, 'Goleiro', 10),
 (238, 'Bryan Oviedo', 'Costa Rica', 8, 'Lateral-esquerdo', 10),
@@ -491,7 +495,82 @@ INSERT INTO `jogadores` (`Id`, `Nome`, `Pais`, `Numero`, `Posicao`, `Id_selecao`
 (256, 'Alonso Martínez', 'Costa Rica', 16, 'Atacante', 10),
 (257, 'Jewison Bennette', 'Costa Rica', 9, 'Atacante', 10),
 (258, 'José Guillermo Ortiz', ' Costa Rica', 77, 'Atacante', 10),
-(259, 'Joel Campbell ', 'Costa Rica', 12, 'Atacante', 10);
+(259, 'Joel Campbell ', 'Costa Rica', 12, 'Atacante', 10),
+(260, 'Dominik Livakovic', 'Croácia', 1, 'Goleiro', 11),
+(261, 'Ivo Grbic', 'Croácia', 1, 'Goleiro', 11),
+(262, 'Simon Sluga', 'Croácia', 23, 'Goleiro', 11),
+(263, 'Borna Barišić', 'Croácia', 3, 'Zagueiro', 11),
+(264, 'Dejan Lovren', 'Croácia', 6, 'Zagueiro', 11),
+(265, 'Domagoj Vida', 'Croácia', 21, 'Zagueiro', 11),
+(266, 'Josip Juranović', 'Croácia', 22, 'Lateral-direito', 11),
+(267, 'Josip Šutalo ', 'Croácia', 6, 'Zagueiro', 11),
+(268, 'Josip Stanišić', 'Croácia', 3, 'Zagueiro', 11),
+(269, 'Martin Erlić', 'Croácia', 20, 'Zagueiro', 11),
+(270, 'Šime Vrsaljko', 'Croácia', 2, 'Lateral-direito', 11),
+(271, 'Ivan Perišić ', 'Croácia', 4, 'Meia', 11),
+(272, 'Josip Brekalo', 'Croácia', 7, 'Meia', 11),
+(273, 'Kristijan Jakić', 'Croácia', 16, 'Meia', 11),
+(274, 'Lovro Majer', 'Croácia', 11, 'Meia', 11),
+(275, 'Luka Modrić ', 'Croácia', 10, 'Meia', 11),
+(276, 'Luka Ivanušec ', 'Croácia', 26, 'Meia', 11),
+(277, 'Marcelo Brozović', 'Croácia', 11, 'Meia', 11),
+(278, 'Mario Pašalić', 'Croácia', 15, 'Meia', 11),
+(279, 'Mateo Kovačić', 'Croácia', 8, 'Meia', 11),
+(280, 'Bruno Petković', 'Croácia', 20, 'Atacante', 11),
+(281, 'Andrej Kramarić ', 'Croácia', 9, 'Atacante', 11),
+(282, 'Ante Budimir', 'Croácia', 14, 'Atacante', 11),
+(283, 'Marko Livaja', 'Croácia', 14, 'Atacante', 11),
+(284, 'Mislav Oršić', 'Croácia', 18, 'Atacante', 11),
+(285, 'Frederik Rönnow', 'Dinamarca', 22, 'Goleiro', 12),
+(286, 'Kasper Schmeichel', 'Dinamarca', 1, 'Goleiro', 12),
+(287, 'Oliver Christensen', 'Dinamarca', 1, 'Goleiro', 12),
+(288, 'Andreas Christensen', 'Dinamarca', 6, 'Zagueiro', 12),
+(289, 'Jannik Vestergaard ', 'Dinamarca', 3, 'Zagueiro', 12),
+(290, 'Joakim Mæhle ', 'Dinamarca', 5, 'Lateral-direito', 12),
+(291, 'Jens Stryger Larsen', 'Dinamarca', 17, 'Zagueiro', 12),
+(292, 'Rasmus Kristensen', 'Dinamarca', 13, 'Lateral-direito', 12),
+(293, 'Simon Kjaer', 'Dinamarca', 4, 'Zagueiro', 12),
+(294, 'Christian Nørgaard', 'Dinamarca', 15, 'Meia', 12),
+(295, 'Daniel Wass', 'Dinamarca', 18, 'Meia', 12),
+(296, 'Jesper Lindstrøm', 'Dinamarca', 18, 'Meia', 12),
+(297, 'Oliver Abildgaard', 'Dinamarca', 28, 'Meia', 12),
+(298, 'Pierre-Emile Højbjerg', 'Dinamarca', 23, 'Meia', 12),
+(299, 'Mathias Jensen', 'Dinamarca', 24, 'Meia', 12),
+(300, 'Thomas Delaney', 'Dinamarca', 8, 'Meia', 12),
+(301, 'Andreas Cornelius', 'Dinamarca', 21, 'Atacante', 12),
+(302, 'Andreas Skov Olsen', 'Dinamarca', 11, 'Atacante', 12),
+(303, 'Jacob Bruun Larsen', 'Dinamarca', 9, 'Atacante', 12),
+(304, 'Jonas Wind', 'Dinamarca', 19, 'Atacante', 12),
+(305, 'Kasper Dolberg', 'Dinamarca', 12, 'Atacante', 12),
+(306, 'Martin Braithwaite', 'Dinamarca', 9, 'Atacante', 12),
+(307, 'Mikkel Damsgaard', 'Dinamarca', 14, 'Atacante', 12),
+(308, 'Mohamed Daramy', 'Dinamarca', 15, 'Atacante', 12),
+(309, 'Yussuf Poulsen', 'Dinamarca', 20, 'Atacante', 12),
+(310, 'Alexander Domínguez ', 'Equador', 22, 'Goleiro', 13),
+(311, 'Hernán Galíndez', 'Equador', 1, 'Goleiro', 13),
+(312, 'Wellington Ramírez', 'Brasil', 1, 'Goleiro', 13),
+(313, 'Ángelo Preciado ', 'Equador', 17, 'Lateral-direito', 13),
+(314, 'Byron Castillo', 'Equador', 6, 'Lateral-direito', 13),
+(315, 'Diego Palacios', 'Equador', 27, 'Lateral-esquerdo', 13),
+(316, 'Félix Torres', 'Equador', 2, 'Zagueiro', 13),
+(317, 'Luis Fernando Leon', 'Equador', 24, 'Zagueiro', 13),
+(318, 'Pervis Estupiñan', 'Equador', 7, 'Lateral-esquerdo', 13),
+(319, 'Piero Hincapie', 'Equador', 3, 'Zagueiro', 13),
+(320, 'Robert Arboleda', 'Equador', 4, 'Zagueiro', 13),
+(321, 'Xavier Arreaga ', 'Equador', 14, 'Zagueiro', 13),
+(322, 'Carlos Gruezo', 'Equador', 10, 'Meia', 13),
+(323, 'José Cifuentes', 'Equador', 8, 'Meia', 13),
+(324, 'Jhegson Méndez', 'Equador', 20, 'Meia', 13),
+(325, 'Michael Carcelén', 'Equador', 16, 'Meia', 13),
+(326, 'Moisés Caicedo', 'Equador', 23, 'Meia', 13),
+(327, 'Ángel Mena', 'Equador', 15, 'Atacante', 13),
+(328, 'Enner Valencia', 'Equador', 13, 'Atacante', 13),
+(329, 'Gonzalo Plata', 'Equador', 19, 'Atacante', 13),
+(330, 'João Rojas', 'Equador', 9, 'Atacante', 13),
+(331, 'Jordy Caicedo', 'Equador', 26, 'Atacante', 13),
+(332, 'Romário Ibarra', 'Equador', 8, 'Atacante', 13),
+(333, 'Alan Franco', 'Equador', 21, 'Meia', 13),
+(334, 'Leonardo Campana', 'Equador', 9, 'Atacante', 13);
 
 -- --------------------------------------------------------
 
@@ -504,6 +583,16 @@ CREATE TABLE `pedidos` (
   `Id_usuario` int(11) NOT NULL,
   `Id_produto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `pedidos`
+--
+
+INSERT INTO `pedidos` (`Id`, `Id_usuario`, `Id_produto`) VALUES
+(1, 57, 1),
+(2, 57, 2),
+(3, 57, 5),
+(12, 57, 6);
 
 -- --------------------------------------------------------
 
@@ -524,9 +613,10 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`Id`, `Nome`, `Numero_vendas`, `Preco`, `Imagem`) VALUES
-(1, 'Camisa Amarale Neymar', 4, 50, NULL),
-(2, 'Camisa Azul Neymar', 7, 55, NULL),
-(5, ' Camisa Amarela Gabriel Jesus', 0, 50, NULL);
+(1, 'Camisa Amarela Neymar', 4, 50, 'p1.jpg'),
+(2, 'Camisa Azul Neymar', 7, 55, 'p5.jpg'),
+(5, ' Camisa Amarela Gabriel Jesus', 0, 50, 'p2.jpg'),
+(6, ' Camisa Amarela Raphinha', 0, 50, 'p3.jpg');
 
 -- --------------------------------------------------------
 
@@ -600,32 +690,33 @@ CREATE TABLE `usuarios` (
   `Saldo` int(100) NOT NULL DEFAULT 0,
   `Xp` int(100) NOT NULL DEFAULT 0,
   `RecompensaTimestamp` timestamp NULL DEFAULT '0000-00-00 00:00:00',
-  `Validador` int(11) NOT NULL
+  `Validador` int(11) NOT NULL,
+  `Perfil` varchar(60) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Status`, `País`, `PaísTorcedor`, `Nível`, `Rank`, `Saldo`, `Xp`, `RecompensaTimestamp`, `Validador`) VALUES
-(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 0, '0', 185, 200, '2022-08-31 13:22:33', 0),
-(58, 'Carol', 'general@bolamundi.com', 'gabigol9', 'Admin', '2022-07-17', 'Ativo', '', '', 0, '0', 5, 0, '2022-08-05 11:52:12', 0),
-(59, 'Dj Regerinho', 'djrogerinho@gmail.com', '$2y$10$ck1xzNc7eAwIwUn7/kUqme1BJMFXpWkXkC5LO/2tmBwP/AqHA7G02', 'Admin', '2022-07-18', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0),
-(61, 'Vinícius Junior', 'vinijr@gmail.com', '$2y$10$UoSoa8AD0ArFqKDCEDq8.ulIMZieh4sb.fHwS.zkLrd6Us6Xgkude', 'Admin', '2022-07-21', 'Ativo', '', '', 0, '0', 10, 0, '2022-08-08 07:47:00', 0),
-(72, 'salmandra', 'salmandra@gmail.com', '$2y$10$Rm19xYOO.5O02mgeGn7LP.MgxUkiiejKVYqLGNxaNf15tVen16Cle', 'Usuario', '2022-08-09', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 22634477),
-(63, 'TIMESTAMP', 'timestamp@gmail.com', '$2y$10$xA8crjgh/ajRE0lmj0EErusKWdj14m4YGzGrQbW2ZuEOW/YwLtH9S', 'Usuario', '2022-07-25', 'Ativo', '', '', 0, '0', 10, 50, '2022-08-15 08:33:32', 0),
-(66, 'Lucas343', 'lucas@gmail.com', '$2y$10$bKrs.0IXlMXPjdiZDKdWUOTMasNkbvqQOFPHw4HJoXPdeUDAurLwW', 'Usuario', '2022-07-25', 'Ativo', '', '', 0, '0', 485, 0, '2022-08-15 07:58:48', 0),
-(67, 'bruno henrique', 'brunohenrique@bolamundi.com', '$2y$10$CgODEfoHCHq3IJB/ZlB7B.seWoUner3J0lE62H9oCXBSb0bW9a9Wa', 'Usuario', '2022-07-27', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0),
-(70, '1234', 'helpterapia@gmail.com', '$2y$10$1AeZpLjsPDrWjS7UZEjw5OPIZbjw1kUnEKKMqWvGJ8Q4u1RdEIHey', 'Usuario', '2022-08-02', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0),
-(71, 'dgaggg', 'nada', '$2y$10$H5TF4iOmNWnbgv9mN7BIOOAu9Kv6nV8quHxXcm6dabIaFzqE1uWmS', 'Usuario', '2022-08-08', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 86030424),
-(73, 'salmandra2', 'samandra@gmail.com', '$2y$10$hP8i5Czo0xrgkt1LFezVy.hq/eCWzcPRAF9zLaXWeCXygW9.D2Mcu', 'Usuario', '2022-08-09', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 89270055),
-(74, 'alvin', 'alvineesquilos@gmail.com', '$2y$10$MBJPEaI1dlnHWx.afH8m.uSHFC4TXPAayVNgBXwPa2GKwA/TEBrBS', 'Usuario', '2022-08-12', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 39367525),
-(95, 'li', 'penguimgeneral@gmail.com', '$2y$10$RyWtXMQLm3mspQK7bc6z4O0oRp6RigLRh5OxVYWRm9yORKIIirQ8.', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 43732394),
-(86, 'ffffffffffffffffffffff', 'ffffffffffffffffffffff@gmail.com', '$2y$10$Giv6A0H4uHUOUM8QOwWXsO.3UAkXcAWQRa1fff5tFCssdSJLu0uOm', 'Usuario', '2022-08-22', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 80589415),
-(87, 'anya', 'anacsouza2005@gmail.com', '$2y$10$ubNdXMaiseIcRDx6z8lRnOZSyjfNOFN/05W9wlcevufRrJ3uVfsIe', 'Usuario', '2022-08-22', 'Ativo', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 88971765),
-(90, 'teste', 'teste@teste.com', '$2y$10$ZiWVr4hBFUIgNB88il5DyOSEWNCtkUWw1jKRB/lYg5HGaIGxEXcCK', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 61711407),
-(91, 'Guilherme', 'guilherme.chafim@gmail.com', '$2y$10$CJVKH0leh7LKlqJqjxj8y.eMmZkem7j4YNCT/DFmqsQlFcLYkeA72', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 23164674),
-(93, 'south', 'anasofianorth@gmail.com', '$2y$10$.2y0pqZWiL5HorZ4DmFSY.bdPkmtfoeE9U2AfaOF5Mrl6C6wxE4y2', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 75476145);
+INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Status`, `País`, `PaísTorcedor`, `Nível`, `Rank`, `Saldo`, `Xp`, `RecompensaTimestamp`, `Validador`, `Perfil`) VALUES
+(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 0, '0', 140, 210, '2022-09-07 17:58:38', 0, 'p5.jpg'),
+(58, 'Carol', 'general@bolamundi.com', 'gabigol9', 'Admin', '2022-07-17', 'Ativo', '', '', 0, '0', 5, 0, '2022-08-05 11:52:12', 0, NULL),
+(59, 'Dj Regerinho', 'djrogerinho@gmail.com', '$2y$10$ck1xzNc7eAwIwUn7/kUqme1BJMFXpWkXkC5LO/2tmBwP/AqHA7G02', 'Admin', '2022-07-18', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0, NULL),
+(61, 'Vinícius Junior', 'vinijr@gmail.com', '$2y$10$UoSoa8AD0ArFqKDCEDq8.ulIMZieh4sb.fHwS.zkLrd6Us6Xgkude', 'Admin', '2022-07-21', 'Ativo', '', '', 0, '0', 10, 0, '2022-08-08 07:47:00', 0, NULL),
+(72, 'salmandra', 'salmandra@gmail.com', '$2y$10$Rm19xYOO.5O02mgeGn7LP.MgxUkiiejKVYqLGNxaNf15tVen16Cle', 'Usuario', '2022-08-09', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 22634477, NULL),
+(63, 'TIMESTAMP', 'timestamp@gmail.com', '$2y$10$xA8crjgh/ajRE0lmj0EErusKWdj14m4YGzGrQbW2ZuEOW/YwLtH9S', 'Usuario', '2022-07-25', 'Ativo', '', '', 0, '0', 10, 50, '2022-08-15 08:33:32', 0, NULL),
+(66, 'Lucas343', 'lucas@gmail.com', '$2y$10$bKrs.0IXlMXPjdiZDKdWUOTMasNkbvqQOFPHw4HJoXPdeUDAurLwW', 'Usuario', '2022-07-25', 'Ativo', '', '', 0, '0', 485, 0, '2022-08-15 07:58:48', 0, NULL),
+(67, 'bruno henrique', 'brunohenrique@bolamundi.com', '$2y$10$CgODEfoHCHq3IJB/ZlB7B.seWoUner3J0lE62H9oCXBSb0bW9a9Wa', 'Usuario', '2022-07-27', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0, NULL),
+(70, '1234', 'helpterapia@gmail.com', '$2y$10$1AeZpLjsPDrWjS7UZEjw5OPIZbjw1kUnEKKMqWvGJ8Q4u1RdEIHey', 'Usuario', '2022-08-02', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0, NULL),
+(71, 'dgaggg', 'nada', '$2y$10$H5TF4iOmNWnbgv9mN7BIOOAu9Kv6nV8quHxXcm6dabIaFzqE1uWmS', 'Usuario', '2022-08-08', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 86030424, NULL),
+(73, 'salmandra2', 'samandra@gmail.com', '$2y$10$hP8i5Czo0xrgkt1LFezVy.hq/eCWzcPRAF9zLaXWeCXygW9.D2Mcu', 'Usuario', '2022-08-09', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 89270055, NULL),
+(74, 'alvin', 'alvineesquilos@gmail.com', '$2y$10$MBJPEaI1dlnHWx.afH8m.uSHFC4TXPAayVNgBXwPa2GKwA/TEBrBS', 'Usuario', '2022-08-12', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 39367525, NULL),
+(95, 'li', 'penguimgeneral@gmail.com', '$2y$10$RyWtXMQLm3mspQK7bc6z4O0oRp6RigLRh5OxVYWRm9yORKIIirQ8.', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 43732394, NULL),
+(86, 'ffffffffffffffffffffff', 'ffffffffffffffffffffff@gmail.com', '$2y$10$Giv6A0H4uHUOUM8QOwWXsO.3UAkXcAWQRa1fff5tFCssdSJLu0uOm', 'Usuario', '2022-08-22', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 80589415, NULL),
+(87, 'anya', 'anacsouza2005@gmail.com', '$2y$10$ubNdXMaiseIcRDx6z8lRnOZSyjfNOFN/05W9wlcevufRrJ3uVfsIe', 'Usuario', '2022-08-22', 'Ativo', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 88971765, NULL),
+(90, 'teste', 'teste@teste.com', '$2y$10$ZiWVr4hBFUIgNB88il5DyOSEWNCtkUWw1jKRB/lYg5HGaIGxEXcCK', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 61711407, NULL),
+(91, 'Guilherme', 'guilherme.chafim@gmail.com', '$2y$10$CJVKH0leh7LKlqJqjxj8y.eMmZkem7j4YNCT/DFmqsQlFcLYkeA72', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 23164674, NULL),
+(93, 'south', 'anasofianorth@gmail.com', '$2y$10$.2y0pqZWiL5HorZ4DmFSY.bdPkmtfoeE9U2AfaOF5Mrl6C6wxE4y2', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 75476145, NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -687,13 +778,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `avaliacoes`
 --
 ALTER TABLE `avaliacoes`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- AUTO_INCREMENT de tabela `contato`
@@ -705,19 +796,19 @@ ALTER TABLE `contato`
 -- AUTO_INCREMENT de tabela `jogadores`
 --
 ALTER TABLE `jogadores`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=335;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `selecoes`
