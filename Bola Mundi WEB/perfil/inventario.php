@@ -17,11 +17,11 @@ while($row=$resultado->fetch_assoc()){
     if ($res->num_rows>0){
     while($rowFoto=$res->fetch_assoc()){
 echo "
-<div class=inventario>
-
-<img src='../loja/images/".$rowFoto['Imagem']."'>
-
+<div>
+<a href='trocarImagem.php?prod=".$idProd ."' class='quadro'><img src='../loja/images/".$rowFoto['Imagem']."'></a>
+<p>".$rowFoto['Nome']."</p>
 </div>
+
 
 ";
        

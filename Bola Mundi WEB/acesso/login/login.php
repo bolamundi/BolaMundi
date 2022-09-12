@@ -31,6 +31,7 @@ $resultado=password_verify($camposenha,$row["Senha"]);
 			$_SESSION['país'] = $row["País"];
 			$_SESSION['rank'] = $row["Rank"];
 			$_SESSION['data'] = $row["Data"];
+			$_SESSION['perfil']=$row['Perfil'];
             header('Location: /index.php');
             exit;
         }else{
