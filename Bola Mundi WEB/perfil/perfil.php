@@ -55,17 +55,14 @@
         <!-- Informações básicas do usuário -->    
       	<div class="w3-white w3-text-grey w3-card-4">
         	<div class="w3-display-container">
-          	<?php echo "<img src='../loja/images/".$_SESSION['perfil']."' style='width:100%;' alt='Avatar'>" ?>
-          	<section class='inventario'>
-          	    
-          	   <?php include 'inventario.php';?> 
-          	    
-          	</section>
+          	<?php echo "<img src='../loja/images/".$_SESSION['perfil']."' style='width:100%;' alt='Avatar'> " ?>
           	<div class="w3-display-bottomleft w3-container w3-text-black">
             	<h2><?php echo $nome; ?><i onclick="document.getElementById('id03').style.display='block'" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>
+            	<i onclick="document.getElementById('id04').style.display='block'" class="fa fa-image fa-fw w3-large w3-text-red" style = "margin-left: 250px;"></i>
             	</h2>
           	</div>
         	</div>
+        	
         	<div class="w3-container">
           		<p><i class="fa fa-caret-right fa-fw w3-margin-right w3-large w3-text-red"></i>Torcedor do </p>
           		<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>Brasil</p>
@@ -124,7 +121,7 @@
 
         <div id="modal01" class="w3-modal w3-animate-zoom w3-center" onclick="this.style.display='none'">
             <img class="w3-modal-content" src="ranks/ranks.jpg" alt="Ranks">
-            <p style="background-color: white; width: 900px; border: 1px dashed red; padding: 50px; left: 200%; "> teste</p>
+            <p style="background-color: white; width: 900px; border: 1px dashed red; padding: 50px; left: 20%; "> teste</p>
         </div>
         <h3>Seu Xp: <?php echo $xp; ?></h3> 
       </div>
@@ -213,6 +210,15 @@
 		</div>
       </div>
       
+      <!-- Modal mudar foto-->
+      <div id="id04" class="w3-modal">
+    	<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+    	    
+      		<div class="w3-center"><br>
+      		   <h3>Selecione a sua foto de perfil abaixo:</h3>
+          	   <?php include 'inventario.php';?> 
+        		<span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      		</div>
     	<script type="text/javascript" src="js/jspalpites.js"></script>
       <script>
 

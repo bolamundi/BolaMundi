@@ -1,29 +1,50 @@
 .inventario{
-    position:absolute;
+
 display:flex;
 border-radius:10px;    
 flex-wrap:wrap;
 margin:0 auto;
 max-width:600px;
-background-color:blue;
+background-color:white;
+border:solid;
 width:700px;
 height:800px;
+
 }
 
-.inventario >div{
+
+
+.botaoModal{
+ background: linear-gradient(90deg,#7f00ff, #e100ff);  
+    height:5vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.botaoModal a {
+    display: inline-block;
+    text-decoration:none;
+    background-color:none;
+    padding:15px;
+    border-radius:3px;
+    text-transform:uppercase;
+    color:#585858;
+}
+
+.divImagemEscolha{
 flex: 1 1 200px;
 margin:10px;
+
+  
     
 }
 
-img{
+.imagemEscolha{
     display:block;
     max-width:100%;
-width:50%;    
-height:80%;
+ margin-left:32.5%;
+width:200px;    
+height:200px;
 }
-img::hover{
-border:50px solid;    
-    
-    
-}
+  
+

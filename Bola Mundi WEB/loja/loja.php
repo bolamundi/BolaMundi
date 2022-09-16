@@ -204,7 +204,7 @@
               <div class="col-sm-6">
                 <h3>
                   Continue interagindo com<br />
-o site para conseguir mais moedas.              </h3>
+o site para conseguir mais moedas!            </h3>
                 <p>
 Volte sempre!             </p>
               </div>

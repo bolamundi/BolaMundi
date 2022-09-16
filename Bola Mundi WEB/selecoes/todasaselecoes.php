@@ -6,7 +6,41 @@
       
     <title>Bola Mundi - Todas as Seleções</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="todasasselecoes.css">
+    <link rel="stylesheet" href="css/todasasselecoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+    
+        .navbar {
+          width: 100%;
+          background-color: #555;
+          overflow: auto;
+        }
+        
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover {
+          background-color: #000;
+        }
+        
+        .active {
+          background-color: #04AA6D;
+        }
+        
+        @media screen and (max-width: 500px) {
+          .navbar a {
+            float: none;
+            display: block;
+          }
+        }
+        
+    </style>
       
   </head>
   
@@ -14,7 +48,14 @@
       
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     
-    <h1>CONHEÇA TODAS AS SELEÇÕES</h1>    
+    
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i>Todas as Seleções</a> 
+      <a href="#"><i class="fa fa-fw fa-search"></i> Seleções Mandantes</a> 
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Loja</a> 
+    </div>
+    
+    <h1>TODAS AS SELEÇÕES</h1>    
     
     <section class="hero-section">
         
@@ -250,7 +291,5 @@
       <div>
           
     </section>
-
-
   </body>
 </html>

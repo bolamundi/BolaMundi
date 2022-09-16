@@ -36,6 +36,7 @@ body {
 /*header section*/
 .hero_area {
   background-image: url("https://bolamundi2022.000webhostapp.com/loja/images/bgloja.jpg");
+  background-size: 100% 80%;
 }
 
 .hero_area.sub_pages {

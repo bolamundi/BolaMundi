@@ -14,7 +14,7 @@ body {
     background-image: url('https://bolamundi2022.000webhostapp.com/img/selecoes/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    background-size: 100% 100%;
+    background-size: 100% 80%;
   
 }
 
@@ -40,7 +40,7 @@ div.tabela h3 {
 #jogadores {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 95%;
+  width: 100%;
   margin-left: 30px;
   margin-right: 30px;
   overflow:hidden;
@@ -192,6 +192,7 @@ margin-left: 10px;
 }
 /* Denuncie */
 
+/* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
   color: white;
@@ -203,9 +204,9 @@ margin-left: 10px;
   bottom: 23px;
   right: 28px;
   width: 280px;
-  border-radius:5px;
 }
 
+/* The popup chat - hidden by default */
 .chat-popup {
   display: none;
   position: fixed;
@@ -215,12 +216,14 @@ margin-left: 10px;
   z-index: 9;
 }
 
+/* Add styles to the form container */
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
+/* Full-width textarea */
 .form-container textarea {
   width: 100%;
   padding: 15px;
@@ -231,11 +234,13 @@ margin-left: 10px;
   min-height: 200px;
 }
 
+/* When the textarea gets focus, do something */
 .form-container textarea:focus {
   background-color: #ddd;
   outline: none;
 }
 
+/* Set a style for the submit/send button */
 .form-container .btn {
   background-color: #04AA6D;
   color: white;
@@ -245,24 +250,16 @@ margin-left: 10px;
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
-  border-radius:5px;
 }
 
+/* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
-  border-radius:5px;
 }
 
+/* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
-}
-
-.form-container label {
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-.form-container placeholder {
-    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Paginação */

@@ -101,7 +101,7 @@ Mitchell Langerak 12
 Zagueiro
 Aziz Behich 16
 Bailey Wright 8
-Fran Karačić 3
+Fran Karacic 3
 Nathaniel Atkinson 2
 Harry Souttar 19
 Trent Sainsbury 20
@@ -116,7 +116,7 @@ Jackson Irvine 22
 James Jeggo 5
 Kenneth Dougall 23
 Martin Boyle 6
-Tom Rogić 23
+Tom Rogic 23
 
 
 Atacante
@@ -278,7 +278,8 @@ Jewison Bennette 	9 	Atacante
 José Guillermo Ortiz 	77 	Atacante
 Joel Campbell 	12 	Atacante
 
-croácia
+
+Croácia
 
 Goleiro
 Dominik Livakovic 1
@@ -314,6 +315,10 @@ Andrej Kramaric 9
 Ante Budimir 14
 Marko Livaja 14
 Mislav Oršic 18
+
+
+
+
 
 
 
@@ -392,7 +397,6 @@ Romário Ibarra 8
 
 
 espanha
-
 Goleiro
 David de Gea 1
 Robert Sanchez 13 
@@ -426,7 +430,6 @@ Ferran Torres 11
 Mikel Oyarzabal 21
 Pablo Sarabia 22
 
-
 estados unidos
 
 Goleiro
@@ -442,6 +445,7 @@ George Bello 21  lateral-esquerdo
 James Sands 16
 Joe Scally 29
 Miles Robinson 12
+Reggie Cannon 2 lateral-direito
 Walker Zimmerman 5
 
 
@@ -507,6 +511,153 @@ Ousmane Dembélé 11
 
 
 gana
+
+Goleiro
+Joe Wollacot 16
+Lawrence Ati-Zigi 12
+Richard Ofori 1
+
+Zagueiro
+Abdul Mumin 26
+Abdul-Rahman 17 Baba  lateral esquerdo
+Alexander Djiku 23
+Andy Yiadom 2
+Daniel Amartey 18
+Denis Odoi 3
+Gideon Mensah 14 lateral esquerdo
+Joseph Aidoo 14
+
+Meia 
+Daniel-Kofi Kyereh 8
+Edmund Addo 6
+Iddrisu Baba 21
+Jeffrey Schlupp 25
+Kamaldeen Sulemana 22
+Mohammed Kudus 20
+Samuel Owusu 19
+Thomas Partey 5
+
+Atacante
+Abdul Fatawu Issahaku 7
+André Ayew 10
+Caleb Ekuban 8
+Emmanuel Boateng 21
+Felix Afena-Gyan 13
+Jordan Ayew 9
+
+holanda
+
+Goleiro
+Jasper Cillessen 1
+Justin Bijlow 1
+Mark Flekken 1
+
+Zagueiro
+Daley Blind 17 lateral-esquerdo
+Denzel Dumfries 22 lateral-direita
+Jurrien Timber 25
+Matthijs de Ligt 3
+Nathan Aké 4 lateral-esquerdo
+Stefan de Vrij 6
+Tyrell Malacia 12 lateral-esquerdo
+Virgil van Dijk 4
+
+Meia
+Davy Klaassen 14
+Frenkie de Jong 21
+Georginio Wijnaldum 8
+Marten de Roon 15
+Ryan Gravenberch 16
+Teun Koopmeiners 24
+
+Atacante
+Arnaut Danjuma 9
+Cody Gakpo 26
+Donyell Malen 18
+Memphis Depay 10
+Steven Berghuis 7
+Steven Bergwijn 7
+Vincent Janssen 9
+Wout Weghorst 19
+
+
+inglaterra
+
+Goleiro
+Aaron Ramsdale 13
+Jordan Pickford 1
+ Sam Johnstone 23
+
+
+Zagueiro
+Ben Chilwell 21 lateral-esquerdo
+Conor Coady 16
+Harry Maguire 6
+John Stones 5
+Kieran Trippier 12
+Kyle Walker 2  lateral-direito
+Luke Shaw 3 lateral-esquerdo
+Reece James 24 lateral-direito
+Tyrone Mings 15
+
+
+Meia 
+Bukayo Saka 25 
+Declan Rice 4
+Jack Grealish 7
+Jadon Sancho 17
+Jordan Henderson 8 
+Jude Bellingham 26
+Kalvin Phillips 14
+Mason Mount 19
+Phil Foden 20
+
+
+Atacante
+
+Harry Kane 9
+Marcus Rashford 11
+Raheem Sterling 10
+Tammy Abraham 22
+
+ira
+
+Goleiro
+Alireza Beiranvand 1
+Amir Abedzadeh 22
+Hossein Hosseini 12
+
+Zagueiro
+Abolfazl Jalali 16
+Hossein Kanaanizadegan 13
+Majid Hosseini 19
+Milad Mohammadi 5
+Ramin Rezaeian
+Shojae Khalilzadeh 4
+Sadegh Moharrami 2
+
+Meia
+Ahmad Nourollahi 8
+Ali Gholizadeh 17
+Ehsan Hajsafi 3
+Omid Noorafkan 21
+Hamed Lak 10
+Milad Sarlak chiva  18
+Saeid Ezatolahi 6
+
+Atacante
+Alireza Jahanbakhsh 18
+Allahyar Sayyad 10
+Jafar Salmani 15
+Karim Ansarifard 10
+Mehdi Taremi 17
+Sardar Azmoun 20
+Saman Ghoddos 14
+Vahid Amiri 11
+
+
+japao
+
 Goleiro
 
 
@@ -517,10 +668,9 @@ Meia
 
 
 Atacante
-holanda
-inglaterra
-ira
-japao
+
+
+
 marrocos
 mexico
 pais de gales
@@ -532,9 +682,4 @@ servia
 suiça
 tunisia
 uruguai
-
-
-
-
-
 

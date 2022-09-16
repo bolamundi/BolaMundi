@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['nome'])){
+    $nome=$_SESSION['nome'];
+    $recepcao=$_SESSION['nome'];
+    $perfil=$_SESSION['perfil'];
+   }else{
+   $nome="Usuário não logado";
+     $recepcao="";
+    $perfil="";
+   }
+
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -6,11 +23,12 @@
       
     <title>Bola Mundi - Seleções Mandantes</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/menu.css" > 
     <link rel="stylesheet" href="css/selecoesmandantes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     
     <style>
 
-    /* Button used to open the chat form - fixed at the bottom of the page */
     .open-button {
         background-color: #555;
         color: white;
@@ -26,7 +44,6 @@
         font-family: Arial;
     }
 
-    /* The popup chat - hidden by default */
     .chat-popup {
       display: none;
       position: fixed;
@@ -38,7 +55,6 @@
       font-family: Arial;
     }
 
-    /* Add styles to the form container */
     .form-container {
       max-width: 390px;
       padding: 10px;
@@ -50,7 +66,6 @@
     }
 
 
-    /* Set a style for the submit/send button */
     .form-container .btn {
       background-color: #ff4d4d;
       color: white;
@@ -63,13 +78,11 @@
       font-family: Arial;
     }
 
-    /* Add a red background color to the cancel button */
     .form-container .cancel {
       background-color: red;
       border-radius: 10px;
     }
     
-    /* Add some hover effects to buttons */
     .form-container .btn:hover, .open-button:hover {
       opacity: 1;
     }
@@ -80,10 +93,53 @@
   
   <body>
       
+     <input type="checkbox" id="check">
+    
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3>BOLA MUNDI </h3>
+      </div>
+    </header>
+    
+    <div class="mobile_nav">
+      <div class="nav_bar">
+        
+        <i class="fa fa-bars nav_btn"></i>
+      </div>
+      <div class="mobile_nav_items">
+          <a href="../index.php"><i class="fas fa-desktop"></i><span>Index</span></a>
+          <a href="../historiadacopa.php"><i class="fas fa-book"></i><span>História da Copa</span></a>
+          <a href="../friendsarena.php"><i class="fas fa-th"></i><span>Friends Arena</span></a>
+          <a href="../selecoes/todasaselecoes.php"><i class="fas fa-language"></i><span>Todas as Seleções</span></a>
+          <a href="../selecoes/selecoesmandantes.php"><i class="fas fa-award"></i><span>Seleções Mandantes</span></a>
+          <a href="../loja/loja.php"><i class="fas fa-money-bill"></i><span>Loja</span></a>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="profile_info">
+         <?php
+         if(isset($_SESSION['nome'])){
+          echo  "<img src='../loja/images/" .$perfil."' class='profile_image' alt=''>";
+         }
+        ?>
+        <h4 style = "color: white;"><?php echo $recepcao; ?> </h4>
+      </div>
+      <a href="../index.php"><i class="fas fa-desktop"></i><span>Index</span></a>
+      <a href="../historiadacopa.php"><i class="fas fa-book"></i><span>História da Copa</span></a>
+      <a href="../friendsarena.php"><i class="fas fa-th"></i><span>Friends Arena</span></a>
+      <a href="../selecoes/todasaselecoes.php"><i class="fas fa-language"></i><span>Todas as Seleções</span></a>
+      <a href="../selecoes/selecoesmandantes.php"><i class="fas fa-award"></i><span>Seleções Mandantes</span></a>
+      <a href="../loja/loja.php"><i class="fas fa-money-bill"></i><span>Loja</span></a>
+    </div> 
+    
+    <div class="content"> 
+      
      <div class = selecoes>
           
-      <h1>Seleções Mandantes</h1>
-      
       <div class="gallery" style = "width: 10%; height:5%; position:fixed; left:55%; top:47%; transform: translate(-50%, -50%);">
         <a target="_blank" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=32">
             <img src="../bandeiras/bandeiraUruguai2.png" alt="Uruguai">
@@ -171,6 +227,8 @@
             <img src="../img/selecoes/escalação.png" alt="Escalação">
             <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
         </form>
+     </div>
+     
      </div>
      
      <script>
