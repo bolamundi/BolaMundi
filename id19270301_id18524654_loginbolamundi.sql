@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 12-Set-2022 às 02:28
+-- Tempo de geração: 17-Set-2022 às 04:04
 -- Versão do servidor: 10.5.16-MariaDB
 -- versão do PHP: 7.3.32
 
@@ -83,7 +83,9 @@ INSERT INTO `avaliacoes` (`Id`, `Estrelas`, `Id_usuario`, `Id_selecao`) VALUES
 (41, 5, 57, 2),
 (42, 5, 57, 1),
 (43, 5, 57, 1),
-(44, 5, 57, 1);
+(44, 5, 57, 1),
+(45, 5, 57, 1),
+(46, 5, 57, 1);
 
 -- --------------------------------------------------------
 
@@ -177,7 +179,8 @@ INSERT INTO `comentarios` (`Id`, `Comentario`, `Nome`, `Data`, `Id_usuario`, `Id
 (174, 'SFJF', 'Lucas', '2022-08-17', 57, 1),
 (175, 'uepa', 'Lucas', '2022-08-31', 57, 6),
 (176, 'teste', 'Lucas', '2022-09-07', 57, 1),
-(177, 'thffg', 'Lucas', '2022-09-08', 57, 1);
+(177, 'thffg', 'Lucas', '2022-09-08', 57, 1),
+(179, 'vinicius', 'Lucas', '2022-09-14', 57, 1);
 
 -- --------------------------------------------------------
 
@@ -219,6 +222,25 @@ INSERT INTO `contato` (`id`, `nome`, `email`, `assunto`, `conteudo`) VALUES
 (19, 'e', 'e@gmail.com', 'e', 'eeee'),
 (20, 'testando', 'testando@gmail.com', 'testando', 'testandooo'),
 (21, 'teste', 'teste@teste.com', 'flamengo', 'flamengo ');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `denuncia`
+--
+
+CREATE TABLE `denuncia` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `mensagem` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `denuncia`
+--
+
+INSERT INTO `denuncia` (`id`, `nome`, `mensagem`) VALUES
+(1, 'Lucas', 'teste');
 
 -- --------------------------------------------------------
 
@@ -570,7 +592,180 @@ INSERT INTO `jogadores` (`Id`, `Nome`, `Pais`, `Numero`, `Posicao`, `Id_selecao`
 (331, 'Jordy Caicedo', 'Equador', 26, 'Atacante', 13),
 (332, 'Romário Ibarra', 'Equador', 8, 'Atacante', 13),
 (333, 'Alan Franco', 'Equador', 21, 'Meia', 13),
-(334, 'Leonardo Campana', 'Equador', 9, 'Atacante', 13);
+(334, 'Leonardo Campana', 'Equador', 9, 'Atacante', 13),
+(335, 'David de Gea', 'Espanha', 1, 'Goleiro', 14),
+(336, 'Robert Sanchez', 'Espanha', 13, 'Goleiro', 14),
+(337, 'Unai Simon', 'Espanha', 23, 'Goleiro', 14),
+(338, 'Aymeric Laporte', 'Espanha', 24, 'Zagueiro', 14),
+(339, 'César Azpilicueta', 'Espanha', 2, 'Zagueiro', 14),
+(340, 'Daniel Carvajal', 'Espanha', 20, 'Lateral-direito', 14),
+(341, 'Diego Llorente', 'Espanha', 3, 'Zagueiro', 14),
+(342, 'Eric Garcia', 'Espanha', 12, 'Zagueiro', 14),
+(343, 'Inigo Martinez', 'Espanha', 16, 'Zagueiro', 14),
+(344, 'Pau Torres', 'Espanha', 4, 'Zagueiro', 14),
+(345, 'Jordi Alba', 'Espanha', 18, 'Lateral-esquerdo', 14),
+(346, 'José Luis Gayà', 'Espanha', 14, 'Lateral-esquerdo', 14),
+(347, 'Sergio Ramos', 'Espanha', 4, 'Zagueiro', 14),
+(348, 'Gavi', 'Espanha', 9, 'Meia', 14),
+(349, 'Koke', 'Espanha', 8, 'Meia', 14),
+(350, 'Marcos Llorente', 'Espanha', 6, 'Meia', 14),
+(351, 'Pedri', 'Espanha', 26, 'Meia', 14),
+(352, 'Sergio Busqutes', 'Espanha', 5, 'Meia', 14),
+(353, 'Thiago Alcântara', 'Espanha', 10, 'Meia', 14),
+(354, 'Adama Traoré', 'Espanha', 20, 'Atacante', 14),
+(355, 'Álvaro Morata', 'Espanha', 7, 'Atacante', 14),
+(356, 'Dani Olmo', 'Espanha', 19, 'Atacante', 14),
+(357, 'Ferran Torres', 'Espanha', 11, 'Atacante', 14),
+(358, 'Mikel Oyarzabal', 'Espanha', 21, 'Atacante', 14),
+(359, 'Pablo Sarabia', 'Espanha', 22, 'Atacante', 14),
+(360, 'Ethan Horvath ', 'Estados Unidos', 1, 'Goleiro', 15),
+(361, 'Matt Turner', 'Estados Unidos', 1, 'Goleiro', 15),
+(362, 'Zack Steffen', 'Estados Unidos', 12, 'Goleiro', 15),
+(363, 'Antonee Robinson', 'Estados Unidos', 17, 'Lateral-esquerdo', 15),
+(364, 'Chris Richards', 'Estados Unidos', 15, 'Zagueiro', 15),
+(365, 'DeAndre Yedlin', 'Estados Unidos', 2, 'Lateral-direito', 15),
+(366, 'George Bello', 'Estados Unidos', 21, 'Lateral-esquerdo', 15),
+(367, 'James Sands', 'Estados Unidos', 16, 'Zagueiro', 15),
+(368, 'Joe Scally', 'Estados Unidos', 29, 'Zagueiro', 15),
+(369, 'Miles Robinson', 'Estados Unidos', 12, 'Zagueiro', 15),
+(370, 'Walker Zimmerman', 'Estados Unidos', 5, 'Zagueiro', 15),
+(371, 'Cristian Roldan', 'Estados Unidos', 10, 'Meia', 15),
+(372, 'Kellyn Acosta', 'Estados Unidos', 23, 'Meia', 15),
+(373, 'Luca de la Torre', 'Estados Unidos', 14, 'Meia', 15),
+(374, 'Paul Arriola', 'Estados Unidos', 7, 'Meia', 15),
+(375, 'Tyler Adams', 'Estados Unidos', 4, 'Meia', 15),
+(376, 'Weston McKennie', 'Estados Unidos', 8, 'Meia', 15),
+(377, 'Brenden Aaronson', 'Estados Unidos', 11, 'Atacante', 15),
+(378, 'Christian Pulisic', 'Estados Unidos', 10, 'Atacante', 15),
+(379, 'Giovanni Reyna', 'Estados Unidos', 7, 'Atacante', 15),
+(380, 'Jordan Morris', 'Estados Unidos', 13, 'Atacante', 15),
+(381, 'Malik Tillman', 'Estados Unidos', 9, 'Atacante', 15),
+(382, 'Ricardo Pepi', 'Estados Unidos', 9, 'Atacante', 15),
+(383, 'Timothy Weah', 'Estados Unidos', 21, 'Atacante', 15),
+(384, 'Reggie Cannon', 'Estados Unidos', 2, 'Lateral-direito', 15),
+(385, 'Alphonse Areola', 'França', 23, 'Goleiro', 16),
+(386, 'Hugo Lloris ', 'França', 1, 'Goleiro', 16),
+(387, 'Mike Maignan', 'França', 23, 'Goleiro', 16),
+(388, 'Benjamin Pavard ', 'França', 2, 'Lateral-direito', 16),
+(389, 'Dayot Upamecano', 'França', 18, 'Zagueiro', 16),
+(390, 'Jules Kounde', 'França', 25, 'Zagueiro', 16),
+(391, 'Kurt Zouma', 'França', 15, 'Zagueiro', 16),
+(392, 'Leo Dubois', 'França', 24, 'Lateral-direito', 16),
+(393, 'Lucas Digne', 'França', 18, 'Lateral-esquerdo', 16),
+(394, 'Lucas Hernandez', 'França', 21, 'Zagueiro', 16),
+(395, 'Presnel Kimpembe', 'França', 3, 'Zagueiro', 16),
+(396, 'Raphaël Varane', 'França', 4, 'Zagueiro', 16),
+(397, 'Theo Hernandez', 'França', 22, 'Lateral-esquerdo', 16),
+(398, 'Adrien Rabiot', 'França', 14, 'Meia', 16),
+(399, 'Antoine Griezmann', 'França', 7, 'Meia', 16),
+(400, 'Jordan Veretout', 'França', 17, 'Meia', 16),
+(401, 'Matteo Guendouzi', 'França', 6, 'Meia', 16),
+(402, 'N\'Golo Kanté ', 'França', 13, 'Meia', 16),
+(403, 'Paul Pogba', 'França', 6, 'Meia', 16),
+(404, 'Thomas Lemar', 'França', 8, 'Meia', 16),
+(405, 'Christopher Nkunku', 'França', 12, 'Atacante', 16),
+(406, 'Karim Benzema', 'França', 19, 'Atacante', 16),
+(407, 'Kingsley Coman', 'França', 20, 'Atacante', 16),
+(408, 'Kylian Mbappé ', 'França', 10, 'Atacante', 16),
+(409, 'Ousmane Dembélé', 'França', 11, 'Atacante', 16),
+(410, 'Joe Wollacot', 'Gana', 16, 'Goleiro', 17),
+(411, 'Lawrence Ati-Zigi', 'Gana', 12, 'Goleiro', 17),
+(412, 'Richard Ofori', 'Gana', 1, 'Goleiro', 17),
+(413, 'Abdul Mumin', 'Gana', 26, 'Zagueiro', 17),
+(414, 'Abdul-Rahman', 'Gana', 17, 'Lateral-esquerdo', 17),
+(415, 'Alexander Djiku', 'Gana', 23, 'Zagueiro', 17),
+(416, 'Andy Yiadom', 'Gana', 2, 'Zagueiro', 17),
+(417, 'Daniel Amartey', 'Gana', 18, 'Zagueiro', 17),
+(418, 'Denis Odoi', 'Gana', 3, 'Zagueiro', 17),
+(419, 'Gideon Mensah ', 'Gana', 14, 'Lateral-esquerdo', 17),
+(420, 'Joseph Aidoo', 'Gana', 14, 'Zagueiro', 17),
+(421, 'Daniel-Kofi Kyereh', 'Gana', 8, 'Meia', 17),
+(422, 'Edmund Addo', 'Gana', 6, 'Meia', 17),
+(423, 'Iddrisu Baba', 'Gana', 21, 'Meia', 17),
+(424, 'Jeffrey Schlupp', 'Gana', 25, 'Meia', 17),
+(425, 'Kamaldeen Sulemana', 'Gana', 22, 'Meia', 17),
+(426, 'Mohammed Kudus', 'Gana', 20, 'Meia', 17),
+(427, 'Samuel Owusu', 'Gana', 19, 'Meia', 17),
+(428, 'Thomas Partey', 'Gana', 5, 'Meia', 17),
+(429, 'Abdul Fatawu Issahaku', 'Gana', 7, 'Atacante', 17),
+(430, 'André Ayew', 'Gana', 10, 'Atacante', 17),
+(431, 'Caleb Ekuban', 'Gana', 8, 'Atacante', 17),
+(432, 'Emmanuel Boateng', 'Gana', 21, 'Atacante', 17),
+(433, 'Felix Afena-Gyan', 'Gana', 13, 'Atacante', 17),
+(434, 'Jordan Ayew ', 'Gana', 9, 'Atacante', 17),
+(435, 'Jasper Cillessen', 'Holanda', 1, 'Goleiro', 18),
+(436, 'Justin Bijlow', 'Holanda', 1, 'Goleiro', 18),
+(437, 'Mark Flekken', 'Holanda', 1, 'Goleiro', 18),
+(438, 'Daley Blind', 'Holanda', 17, 'Lateral-esquerdo', 18),
+(439, 'Denzel Dumfries', 'Holanda', 22, 'Lateral-direito', 18),
+(440, 'Jurrien Timber ', 'Holanda', 25, 'Zagueiro', 18),
+(441, 'Matthijs de Ligt', 'Holanda', 3, 'Zagueiro', 18),
+(442, 'Nathan Aké', 'Holanda', 4, 'Lateral-esquerdo', 18),
+(443, 'Stefan de Vrij', 'Holanda', 6, 'Zagueiro', 18),
+(444, 'Tyrell Malacia', 'Holanda', 12, 'Lateral-esquerdo', 18),
+(445, 'Virgil van Dijk', 'Holanda', 4, 'Zagueiro', 18),
+(446, 'Davy Klaassen', 'Holanda', 14, 'Meia', 18),
+(447, 'Frenkie de Jong', 'Holanda', 21, 'Meia', 18),
+(448, 'Georginio Wijnaldum', 'Holanda', 8, 'Meia', 18),
+(449, 'Marten de Roon', 'Holanda', 15, 'Meia', 18),
+(450, 'Ryan Gravenberch', 'Holanda', 16, 'Meia', 18),
+(451, 'Teun Koopmeiners', 'Holanda', 24, 'Meia', 18),
+(452, 'Arnaut Danjuma', 'Holanda', 9, 'Atacante', 18),
+(453, 'Cody Gakpo', 'Holanda', 26, 'Atacante', 18),
+(454, 'Donyell Malen', 'Holanda', 18, 'Atacante', 18),
+(455, 'Memphis Depay', 'Holanda', 10, 'Atacante', 18),
+(456, 'Steven Berghuis', 'Holanda', 7, 'Atacante', 18),
+(457, 'Steven Bergwijn', 'Holanda', 7, 'Atacante', 18),
+(458, 'Vincent Janssen', 'Holanda', 9, 'Atacante', 18),
+(459, 'Wout Weghorst', 'Holanda', 19, 'Atacante', 18),
+(460, 'Aaron Ramsdale', 'Inglaterra', 13, 'Goleiro', 19),
+(461, 'Jordan Pickford', 'Inglaterra', 1, 'Goleiro', 19),
+(462, 'Sam Johnstone', 'Inglaterra', 23, 'Goleiro', 19),
+(463, 'Ben Chilwell', 'Inglaterra', 21, 'Lateral-esquerdo', 19),
+(464, 'Conor Coady ', 'Inglaterra', 16, 'Zagueiro', 19),
+(465, 'Harry Maguire', 'Inglaterra', 6, 'Zagueiro', 19),
+(466, 'John Stones ', 'Inglaterra', 5, 'Zagueiro', 19),
+(467, 'Kieran Trippier', 'Inglaterra', 12, 'Zagueiro', 19),
+(468, 'Kyle Walker', 'Inglaterra', 2, 'Lateral-direito', 19),
+(469, 'Luke Shaw', 'Inglaterra', 3, 'Lateral-esquerdo', 19),
+(470, 'Reece James', 'Inglaterra', 24, 'Lateral-direito', 19),
+(471, 'Tyrone Mings', 'Inglaterra', 15, 'Zagueiro', 19),
+(472, 'Bukayo Saka', 'Inglaterra', 25, 'Meia', 19),
+(473, 'Declan Rice', 'Inglaterra', 4, 'Meia', 19),
+(474, 'Jack Grealish', 'Inglaterra', 7, 'Meia', 19),
+(475, 'Jadon Sancho ', 'Inglaterra', 17, 'Meia', 19),
+(476, 'Jordan Henderson', 'Inglaterra', 8, 'Meia', 19),
+(477, 'Jude Bellingham ', 'Inglaterra', 26, 'Meia', 19),
+(478, 'Kalvin Phillips', 'Inglaterra', 14, 'Meia', 19),
+(479, 'Mason Mount ', 'Inglaterra', 19, 'Meia', 19),
+(480, 'Phil Foden', 'Inglaterra', 20, 'Meia', 19),
+(481, 'Harry Kane', 'Inglaterra', 9, 'Atacante', 19),
+(482, 'Marcus Rashford', 'Inglaterra', 11, 'Atacante', 19),
+(483, 'Raheem Sterling', 'Inglaterra', 10, 'Atacante', 19),
+(484, 'Tammy Abraham', 'Inglaterra', 22, 'Atacante', 19);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `palpites`
+--
+
+CREATE TABLE `palpites` (
+  `Id` int(11) NOT NULL,
+  `Palpite` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `Id_usuario` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `palpites`
+--
+
+INSERT INTO `palpites` (`Id`, `Palpite`, `Id_usuario`) VALUES
+(3, 'nada', 57),
+(6, 'nada', 57),
+(7, 'nada', 57),
+(13, 'Flamengo campeão da libertadores', 57),
+(14, 'Flamengo campeão da copa do brasil', 57);
 
 -- --------------------------------------------------------
 
@@ -699,7 +894,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Status`, `País`, `PaísTorcedor`, `Nível`, `Rank`, `Saldo`, `Xp`, `RecompensaTimestamp`, `Validador`, `Perfil`) VALUES
-(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 0, '0', 140, 210, '2022-09-07 17:58:38', 0, 'p5.jpg'),
+(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 0, '0', 150, 230, '2022-09-14 08:20:29', 0, 'p1.jpg'),
 (58, 'Carol', 'general@bolamundi.com', 'gabigol9', 'Admin', '2022-07-17', 'Ativo', '', '', 0, '0', 5, 0, '2022-08-05 11:52:12', 0, NULL),
 (59, 'Dj Regerinho', 'djrogerinho@gmail.com', '$2y$10$ck1xzNc7eAwIwUn7/kUqme1BJMFXpWkXkC5LO/2tmBwP/AqHA7G02', 'Admin', '2022-07-18', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0, NULL),
 (61, 'Vinícius Junior', 'vinijr@gmail.com', '$2y$10$UoSoa8AD0ArFqKDCEDq8.ulIMZieh4sb.fHwS.zkLrd6Us6Xgkude', 'Admin', '2022-07-21', 'Ativo', '', '', 0, '0', 10, 0, '2022-08-08 07:47:00', 0, NULL),
@@ -741,9 +936,21 @@ ALTER TABLE `contato`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `denuncia`
+--
+ALTER TABLE `denuncia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `jogadores`
 --
 ALTER TABLE `jogadores`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Índices para tabela `palpites`
+--
+ALTER TABLE `palpites`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -778,13 +985,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `avaliacoes`
 --
 ALTER TABLE `avaliacoes`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
 
 --
 -- AUTO_INCREMENT de tabela `contato`
@@ -793,10 +1000,22 @@ ALTER TABLE `contato`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
+-- AUTO_INCREMENT de tabela `denuncia`
+--
+ALTER TABLE `denuncia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de tabela `jogadores`
 --
 ALTER TABLE `jogadores`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=335;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=485;
+
+--
+-- AUTO_INCREMENT de tabela `palpites`
+--
+ALTER TABLE `palpites`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
