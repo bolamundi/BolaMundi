@@ -12,7 +12,7 @@ semanas[i-1]="Semana " +i+ " de "+<?php echo $year; ?>;
 }
 
 var pieChart= new Chart(ctx, {
-    type: "pie",
+    type: "bar",
     data: {labels: semanas , 
     datasets: [
 {

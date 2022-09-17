@@ -7,26 +7,43 @@ $idsel=$_GET["id"];
 $_SESSION["idsel"]=$idsel;
 require 'media.php';
 
+if(isset($_SESSION['nome'])){
+    $nome=$_SESSION['nome'];
+    $recepcao=$_SESSION['nome'];
+    $perfil=$_SESSION['perfil'];
+   }else{
+   $nome="Usuário não logado";
+     $recepcao="";
+   }
+
 include 'puxarSelecao.php';
+
+
 
 
 ?>
 
-<html>
+<!DOCTYPE html>
+
+<html lang="pt-br" dir="ltr">
     
- <head> 
-    
-    <title>Seleção</title>
+  <head>
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção - Bola Mundi</title>
     <link rel="stylesheet" href="css/selecao.css" > 
-    <link rel="stylesheet" href="../menu.css" > 
+    <link rel="stylesheet" href="css/menu.css" > 
     <script src="js/selecao.js"></script>
-
- </head>
-
- <body>
-     
-     <input type="checkbox" id="check">
-    <!--header area start-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    
+  </head>
+  
+  <body>
+      
+   <input type="checkbox" id="check">
+    
     <header>
       <label for="check">
         <i class="fas fa-bars" id="sidebar_btn"></i>
@@ -35,40 +52,41 @@ include 'puxarSelecao.php';
         <h3>BOLA MUNDI </h3>
       </div>
     </header>
-    <!--header area end-->
-    <!--mobile navigation bar start-->
+    
     <div class="mobile_nav">
       <div class="nav_bar">
-        <img src="1.png" class="mobile_profile_image" alt="">
+        
         <i class="fa fa-bars nav_btn"></i>
       </div>
       <div class="mobile_nav_items">
-        <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-        <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-        <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-        <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-        <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+              <a href="../index.php"><i class="fas fa-desktop"></i><span>Index</span></a>
+      <a href="../historiadacopa.php"><i class="fas fa-book"></i><span>História da Copa</span></a>
+      <a href="../friendsarena.php"><i class="fas fa-th"></i><span>Friends Arena</span></a>
+      <a href="../selecoes/todasaselecoes.php"><i class="fas fa-language"></i><span>Todas as Seleções</span></a>
+      <a href="../selecoes/selecoesmandantes.php"><i class="fas fa-award"></i><span>Seleções Mandantes</span></a>
+      <a href="../loja/loja.php"><i class="fas fa-money-bill"></i><span>Loja</span></a>
       </div>
     </div>
-    <!--mobile navigation bar end-->
-    <!--sidebar start-->
+
     <div class="sidebar">
       <div class="profile_info">
-        <img src="1.png" class="profile_image" alt="">
-        <h4>Jessica</h4>
+        <?php
+         if(isset($_SESSION['nome'])){
+          echo  "<img src='../loja/images/" .$perfil."' class='profile_image' alt=''>";
+         }
+        ?>
+        <h4 style = "color: white;"><?php echo $recepcao; ?> </h4>
       </div>
-      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-    </div>
-    <!--sidebar end-->
-
-
-   <div class = "tabela">   
+      <a href="../index.php"><i class="fas fa-desktop"></i><span>Index</span></a>
+      <a href="../historiadacopa.php"><i class="fas fa-book"></i><span>História da Copa</span></a>
+      <a href="../friendsarena.php"><i class="fas fa-th"></i><span>Friends Arena</span></a>
+      <a href="../selecoes/todasaselecoes.php"><i class="fas fa-language"></i><span>Todas as Seleções</span></a>
+      <a href="../selecoes/selecoesmandantes.php"><i class="fas fa-award"></i><span>Seleções Mandantes</span></a>
+      <a href="../loja/loja.php"><i class="fas fa-money-bill"></i><span>Loja</span></a>
+    </div> 
+    
+    <div class="content">
+         <div class = "tabela">   
     <?php 
     if($status){
     
@@ -82,7 +100,6 @@ include 'puxarSelecao.php';
     }
    
    ?>
-   
    
     <!--Mostra o total da avaliação-->
     <center>
@@ -205,10 +222,11 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
     <button class="open-button" onclick="openForm()">Denuncie</button>
 
     <div class="chat-popup" id="myForm">
-     <form action="/action_page.php" class="form-container">
+     <form action="registradenuncia.php" method="POST" class="form-container">
         <h1>Denuncie</h1>
-        <label for="msg"><b>Coloque o nick e copie a mensagem</b></label>
-        <textarea placeholder="Se ver algum comentário maldoso que nós não tenhamos apagado, escreva para a gente e ajude o site ser um lugar saudável para todos!" name="msg" required></textarea>
+        <label for="idnome">Seu Nome de usuario:</label><input type="text" id="idnome" name="nome"><br>
+        <label for="msg">Sua denuncia:</label>
+        <textarea placeholder="Se ver algum comentário maldoso que nós não tenhamos apagado, escreva para a gente e ajude o site ser um lugar saudável para todos! Por favor descreva o motivo e o usuario a ser denunciado" name="msg" required></textarea>
         <button type="submit" class="btn">Enviar</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
 
@@ -221,10 +239,17 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
  </body>
 
 </html>
+    </div>
 
-<script>
-
-var h3= document.getElementById("h3")
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+    
+    var h3= document.getElementById("h3")
 var form= document.getElementById("form")
 var btnavaliar=document.getElementById("btnavaliar"); 
  var avisoRecompensa=document.getElementById('avisoRecompensa');
@@ -284,4 +309,8 @@ avisoRecompensa.style.display='none';
 limiteRecompensa.style.display='none';
     
 }
-</script>
+
+    </script>
+
+  </body>
+</html>

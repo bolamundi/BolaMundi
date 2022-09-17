@@ -11,6 +11,7 @@
    header('Location:/index.php');
       exit; 
    }
+  
 
  
 
@@ -55,17 +56,14 @@
         <!-- Informações básicas do usuário -->    
       	<div class="w3-white w3-text-grey w3-card-4">
         	<div class="w3-display-container">
-          	<?php echo "<img src='../loja/images/".$_SESSION['perfil']."' style='width:100%;' alt='Avatar'>" ?>
-          	<section class='inventario'>
-          	    
-          	   <?php include 'inventario.php';?> 
-          	    
-          	</section>
+          	<?php echo "<img src='../loja/images/".$_SESSION['perfil']."' style='width:100%;' alt='Avatar'> " ?>
           	<div class="w3-display-bottomleft w3-container w3-text-black">
             	<h2><?php echo $nome; ?><i onclick="document.getElementById('id03').style.display='block'" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>
+            	<i onclick="document.getElementById('id04').style.display='block'" class="fa fa-image fa-fw w3-large w3-text-red" style = "margin-left: 250px;"></i>
             	</h2>
           	</div>
         	</div>
+        	
         	<div class="w3-container">
           		<p><i class="fa fa-caret-right fa-fw w3-margin-right w3-large w3-text-red"></i>Torcedor do </p>
           		<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>Brasil</p>
@@ -89,7 +87,7 @@
             <div class="w3-container w3-center w3-round-xlarge w3-red" style="width:75%">75%</div>
           </div>
           <p>Palpites</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
+          <div  class="w3-light-grey w3-round-xlarge w3-small">
             <div class="w3-container w3-center w3-round-xlarge w3-red" style="width:50%">50%</div>
           </div>
           <br>
@@ -124,23 +122,21 @@
 
         <div id="modal01" class="w3-modal w3-animate-zoom w3-center" onclick="this.style.display='none'">
             <img class="w3-modal-content" src="ranks/ranks.jpg" alt="Ranks">
-            <p style="background-color: white; width: 900px; border: 1px dashed red; padding: 50px; left: 200%; "> teste</p>
+            <p style="background-color: white; width: 900px; border: 1px dashed red; padding: 50px; left: 20%; "> teste</p>
         </div>
         <h3>Seu Xp: <?php echo $xp; ?></h3> 
       </div>
 
       <div class="w3-container w3-card w3-white">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-bookmark fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Palpites</h2>
-        <div id="myDIV" class="header">
+        <form action='palpitar.php' method='post' id="myDIV" class="header">
   		<h2 style="margin:5px">Meus Palpites</h2>
-  		<input type="text" id="myInput" placeholder="Vai acontecer...">
-  		<span onclick="newElement()" class="addBtn">Add</span>
-	  </div>
+  		<input type="text" id="myInput" placeholder="Vai acontecer..." name='palpite' >
+  		<button class="addBtn">Postar</button>
+	  </form>
 	    <ul id="myUL">
- 	      <li>Flamengo ganhando Brasileirão</li>
-  		  <li>Flamengo ganhando Copa do Brasil</li>
-          <li>Flamengo ganhnado Libertadores</li>
-          <li>Flamengo ganhando Supercopa</li>
+ 	      
+          <?php include 'mostrarPalpites.php'; ?>
        </ul>
 
       </div>
@@ -213,6 +209,15 @@
 		</div>
       </div>
       
+      <!-- Modal mudar foto-->
+      <div id="id04" class="w3-modal">
+    	<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+    	    
+      		<div class="w3-center"><br>
+      		   <h3>Selecione a sua foto de perfil abaixo:</h3>
+          	   <?php include 'inventario.php';?> 
+        		<span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      		</div>
     	<script type="text/javascript" src="js/jspalpites.js"></script>
       <script>
 

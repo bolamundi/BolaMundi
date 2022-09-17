@@ -12,9 +12,15 @@ if ($result->num_rows>0){
     $sqlTrocarFoto="UPDATE usuarios SET Perfil='$imagem' WHERE Id='$idUsuario'";
     if ($conn->query($sqlTrocarFoto)){
         $_SESSION['perfil']=$imagem;
-         header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php");
+         header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+   echo '<script> window.alert("Foto de perfil alterada com sucesso") </script>'; 
  
-  echo '<script> window.alert("Foto de perfil alterada com sucesso") </script>';
+    exit;
+        
+    }else{
+            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+ 
+  echo '<script> window.alert("Foto de perfil não foi alterada") </script>';
     exit;
         
     }
