@@ -1,0 +1,108 @@
+body {
+	background-color: #f0f1f6;
+}
+
+header {
+	background-color:  white;
+	height: 80px;
+}
+
+h1 {
+	font-family: Arial;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 97%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  overflow: hidden;
+  border: solid white 3px;
+   -webkit-border-radius: 25px;
+       -moz-border-radius: 25px;
+            border-radius: 25px;
+}
+
+td, th {
+  padding: 7px;
+  text-align: center;
+}
+
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #e60000;
+  color: white;
+}
+
+
+
+.cards {
+	background-color: white;
+	float: left;
+	width: 22%;
+	height:  40%;
+	margin-right: 2%;
+	margin-left: 1%;
+	border-radius: 25;
+}
+
+.icon {
+	font-size: 90px; 
+	float: left; 
+	margin-bottom: 20px;
+}
+
+
+.cards h1 {
+	font-size: 60px;
+	float: center;
+	margin-bottom: 0px;
+}
+
+.cards h2 {
+	margin-top: 0px;
+	color: grey;
+	font-size: 25px;
+}
+
+.container {
+	background-color: white;
+	border-radius: 12px 12px 12px 12px;
+	margin-left: 1%;
+	margin-right: 2%;
+}
+
+.container h1 {
+	margin-left: 1.5%;
+}
+
+.tabelausuarios {
+	margin-left:  0.5%;
+	float: left;
+	margin-right: 0.7%;
+}
+
+.pagination {
+	margin-left: 2.35%;
+}
+
+.pag {
+	display: inline-block;
+	background-color: #e60000;
+	color: white;
+	border-radius: 5px;
+	padding: 2px 12px 5px;
+	margin-right: 0.5%;
+	margin-bottom: 1.5%;
+}
+
+.chartusuarioacesso {
+	margin-top: 1.5%;
+    margin-right: 1.5%;
+    width: 42.7%;
+	float: right;
+}
+

@@ -11,10 +11,11 @@ if ($result->num_rows>0){
     switch($xp){
     
     case $xp>=250:
-        echo 'Master';
-        echo 'lv25';
-        $sqlAtualizar="UPDATE usuarios SET Nivel='25' Rank='Master' WHERE Id='$idUsuario'";
-        if ($conn->query($sqlAtualizar)){
+       $lvl=25;
+        $rank='Master';
+       $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
+    
+       if ($conn->query($sqlAtualizar)){
             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Rank atualizado") </script>';
@@ -27,13 +28,15 @@ if ($result->num_rows>0){
     exit;
             
         }
-        
+       
+       
         break;
         
         case $xp>=200:
-        echo 'Diamante';
-        echo 'lv20';
-       $sqlAtualizar="UPDATE usuarios SET Nivel='20' Rank='Diamante' WHERE Id='$idUsuario'";
+       $lvl=20;
+        $rank='Diamante';
+       $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
+    
        if ($conn->query($sqlAtualizar)){
             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
@@ -52,21 +55,70 @@ if ($result->num_rows>0){
         break;
         
         case $xp>=150:
-        echo 'Ouro';
-        echo 'lv15';
-        
+         $lvl=15;
+        $rank='Ouro';
+       $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
+    
+       if ($conn->query($sqlAtualizar)){
+            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+ 
+  echo '<script> window.alert("Rank atualizado") </script>';
+    exit;
+            
+        }else{
+             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+ 
+  echo '<script> window.alert("Erro ao atualizar o rank") </script>';
+    exit;
+            
+        }
+       
+       
         break;
+       
         
         case $xp>=100:
-        echo 'Prata';
-        echo 'lv10';
-        
+         $lvl=10;
+        $rank='Prata';
+       $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
+    
+       if ($conn->query($sqlAtualizar)){
+            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+ 
+  echo '<script> window.alert("Rank atualizado") </script>';
+    exit;
+            
+        }else{
+             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+ 
+  echo '<script> window.alert("Erro ao atualizar o rank") </script>';
+    exit;
+            
+        }
+       
+       
         break;
     
         case $xp>=50:
-        echo 'Bronze';
-        echo 'lv5';
-        
+         $lvl=5;
+        $rank='Bronze';
+       $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
+    
+       if ($conn->query($sqlAtualizar)){
+            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+ 
+  echo '<script> window.alert("Rank atualizado") </script>';
+    exit;
+            
+        }else{
+             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+ 
+  echo '<script> window.alert("Erro ao atualizar o rank") </script>';
+    exit;
+            
+        }
+       
+       
         break;
     
     

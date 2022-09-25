@@ -201,84 +201,84 @@
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=20">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=20">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/21.png)"></div>
           <div class="card__content">
             <p class="card__category">اینجا کلیک کنید</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=21">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=21">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/22.png)"></div>
           <div class="card__content">
             <p class="card__category">ここをクリック</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=22">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=22">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/23.png)"></div>
           <div class="card__content">
             <p class="card__category">انقر هنا</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=23">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=23">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/24.png)"></div>
           <div class="card__content">
             <p class="card__category">Haga clic aquí</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=24">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=24">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/25.png)"></div>
           <div class="card__content">
             <p class="card__category">Click here</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=25">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=25">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/26.png)"></div>
           <div class="card__content">
             <p class="card__category">Kliknij tutaj</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=26">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=26">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/27.png)"></div>
           <div class="card__content">
             <p class="card__category">Clique aqui</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=28">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=28">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/28.png)"></div>
           <div class="card__content">
             <p class="card__category">Cliquez ici</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=29">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=29">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/29.png)"></div>
           <div class="card__content">
             <p class="card__category">Кликните овде</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=30">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=30">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/30.png)"></div>
           <div class="card__content">
             <p class="card__category">Klick hier</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=31">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=31">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/31.png)"></div>
           <div class="card__content">
             <p class="card__category">انقر هنا</p>
           </div>
         </a>
         
-        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=32">
+        <a class="card" href="https://bolamundi2022.000webhostapp.com/selecoes/selecao2.php?id=32">
           <div class="card__background" style="background-image: url(../img/selecoes/cards/32.png)"></div>
           <div class="card__content">
             <p class="card__category">Haga clic aquí</p>

@@ -27,11 +27,12 @@ $resultado=password_verify($camposenha,$row["Senha"]);
 			$_SESSION['idusuario'] = $row["Id"];
 			$_SESSION['moeda'] = $row["Saldo"];
 			$_SESSION['xp'] = $row["Xp"];
-			$_SESSION['nível'] = $row["Nível"];
-			$_SESSION['país'] = $row["País"];
+			$_SESSION['nivel'] = $row["Nivel"];
+			$_SESSION['pais'] = $row["Pais"];
 			$_SESSION['rank'] = $row["Rank"];
 			$_SESSION['data'] = $row["Data"];
 			$_SESSION['perfil']=$row['Perfil'];
+			$_SESSION['paisTorcedor']=$row['PaisTorcedor'];
             header('Location: /index.php');
             exit;
         }else{

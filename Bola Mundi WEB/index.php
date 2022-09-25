@@ -97,6 +97,7 @@
                               <ul class="dropdown-menu">
                                <li><a href="perfil/perfil.php">Seu Perfil</a></li>
                                <li onclick="document.getElementById('id01').style.display='block'">Configurações</li>
+                               <li><a href="admin/admindocker.php?pag=1" id="controle">Admin</a></li> 
                                <li><a href="controle.php?pag=1" id="controle">Controle</a></li> 
                                <li><a class="page-scroll" id="login" href="acesso/login/login.html">Login</a></li>
                                <li><a class="page-scroll" id="deslogar" href="acesso/login/deslogar.php">Deslogar</a></li>

@@ -65,3 +65,4 @@ Lucas - DELETE FROM usuarios WHERE id=81 - 18/08/2022 - 14:02:06
 Lucas - DELETE FROM usuarios WHERE id=82 - 18/08/2022 - 14:02:17
 Lucas - DELETE FROM usuarios WHERE id=83 - 18/08/2022 - 14:19:02
 Lucas - DELETE FROM usuarios WHERE id=84 - 18/08/2022 - 14:51:54
+Lucas - INSERT INTO usuarios(nome,email,senha,acesso,data) values('Carol','caroline@bolamundi.com','$2y$10$538mFy9JYHW0IZOZCf8AkuAWpBWiMTGL.wjlatyddWDCgf/c938zS','Admin','2022-09-21') - 21/09/2022 - 14:37:43

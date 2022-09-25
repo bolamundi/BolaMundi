@@ -1,36 +1,31 @@
 <?php
 session_start();
 
-include_once("../conexao.php");
+include_once("conexao.php");
 
-$denuncia = filter_input(INPUT_POST, 'msg', FILTER_SANITIZE_STRING);
-$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+if(isset($_SESSION['nome'])){
+    $nome=$_SESSION['nome'];
+    $recepcao=$_SESSION['nome'];
+    $perfil=$_SESSION['perfil'];
+   }else{
+   $nome="Usuário não logado";
+     $recepcao="";
+   }
 
-$sqlUser = "SELECT Id FROM usuarios where nome='$nome'";
+$msg = filter_input(INPUT_POST, 'msg', FILTER_SANITIZE_STRING);
 
-$res = $conn->query($sqlUser) ;
+$sqlID = "SELECT id FROM usuarios WHERE nome = '$nome'";
 
-$row = $res->fetch_assoc();
 
-$idusuario = $row["Id"];
+$sql = "INSERT INTO denuncia (nome, mensagem) value ('$nome', '$msg')";
 
-if(!empty($idusuario)){
-    $sqlReg = "INSERT INTO denuncia (nome, mensagem) values ('$nome', '$denuncia')";
+    if(mysqli_query($conn, $sql)){
+        $_SESSION['msg'] = "Sua denuncia foi enviada!"; 
+        header("Location: /selecoes/selecao.php?id=1");
+    } else {
+        echo "erro";
+    }
     
-
-}else{
-    echo "não funcionou";
-    //header("Location: selecao.php");
-}
-
-//$sql = "INSERT INTO contato (nome, email, assunto, conteudo) values ('$nome', '$email', '$assunto', '$conteudo')";
-
-  //  if(mysqli_query($conn, $sql)){
-    //    $_SESSION['msg'] = "Sua mensagem foi enviada!"; 
-      //  header("Location: ../index.php#contact");
-//    } else {
-  //      header("Location: ../index.php#contact");
-    //}
-    //mysqli_close($conn);
+    mysqli_close($conn);
 
 ?>

@@ -24,7 +24,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="../index.php">
-            <img src="images/logo.png" alt="" /><span>
+       <span>
               Bola Mundi
             </span>
           </a>
@@ -177,8 +177,8 @@
   <!-- PRODUTOS -->
   <section class="products_section">
     <div class="heading_container">
-      <h2></h2>
-      <p></p>
+  
+
     </div>
     <div class="container layout_padding">
       <div class="product_container">
