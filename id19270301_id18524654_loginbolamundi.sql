@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 17-Set-2022 às 04:04
+-- Tempo de geração: 25-Set-2022 às 02:34
 -- Versão do servidor: 10.5.16-MariaDB
 -- versão do PHP: 7.3.32
 
@@ -240,7 +240,26 @@ CREATE TABLE `denuncia` (
 --
 
 INSERT INTO `denuncia` (`id`, `nome`, `mensagem`) VALUES
-(1, 'Lucas', 'teste');
+(5, 'Lucas', 'teste'),
+(6, 'Lucas', 'a'),
+(7, 'Lucas', 'as2'),
+(8, 'Lucas', 'asdsed'),
+(9, 'Lucas', 'Ae'),
+(10, 'Lucas', 'asdasd'),
+(11, 'Lucas', 'fasdf'),
+(12, 'Lucas', 'dsfgadsfg'),
+(13, 'Carol', 'Ai Pedro'),
+(14, 'Carol', 'Ai Pedro'),
+(15, 'Carol', 'Ai Pedro'),
+(16, 'Carol', 'Ai Pedro'),
+(17, 'Carol', 'Ai Pedro'),
+(18, 'Carol', 'Ai Pedro'),
+(19, 'Carol', 'Ai Pedro'),
+(20, 'Carol', 'Ai Pedro'),
+(21, 'Carol', 'Ai Pedro'),
+(22, 'Carol', 'Ai Pedro'),
+(23, 'Carol', 'Ai Pedro'),
+(24, 'Carol', 'Ai Pedro');
 
 -- --------------------------------------------------------
 
@@ -747,6 +766,105 @@ INSERT INTO `jogadores` (`Id`, `Nome`, `Pais`, `Numero`, `Posicao`, `Id_selecao`
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `jogadores2`
+--
+
+CREATE TABLE `jogadores2` (
+  `Id` int(11) NOT NULL,
+  `Nome` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Pais` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Numero` int(11) NOT NULL,
+  `Posicao` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Id_selecao` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `jogadores2`
+--
+
+INSERT INTO `jogadores2` (`Id`, `Nome`, `Pais`, `Numero`, `Posicao`, `Id_selecao`) VALUES
+(485, 'Alireza Beiranvand', 'Irã', 1, 'Goleiro', 20),
+(486, 'Amir Abedzadeh', 'Irã', 22, 'Goleiro', 20),
+(487, 'Hossein Hosseini', 'Irã', 12, 'Goleiro', 20),
+(488, 'Abolfazl Jalali', 'Irã', 16, 'Zagueiro', 20),
+(489, 'Hossein Kanaanizadegan', 'Irã', 13, 'Zagueiro', 20),
+(490, 'Majid Hosseini', 'Irã', 19, 'Zagueiro', 20),
+(491, 'Milad Mohammadi', 'Irã', 5, 'Lateral-esquerdo', 20),
+(492, 'Ramin Rezaeian', 'Irã', 23, 'Lateral-direito', 20),
+(493, 'Sadegh Moharrami', 'Irã', 2, 'Zagueiro', 20),
+(494, 'Shojae Khalilzadeh', 'Irã', 4, 'Zagueiro', 20),
+(495, 'Ahmad Nourollahi', 'Irã', 8, 'Meia', 20),
+(496, 'Ali Gholizadeh', 'Irã', 17, 'Meia', 20),
+(497, 'Ehsan Hajsafi', 'Irã', 3, 'Meia', 20),
+(498, 'Omid Noorafkan', 'Irã', 21, 'Meia', 20),
+(499, 'Hamed Lak', 'Irã', 10, 'Meia', 20),
+(500, 'Milad Sarlak chiva', 'Irã', 18, 'Meia', 20),
+(501, 'Saeid Ezatolahi', 'Irã', 6, 'Meia', 20),
+(502, 'Alireza Jahanbakhsh', 'Irã', 18, 'Atacante', 20),
+(503, 'Allahyar Sayyad', 'Irã', 10, 'Atacante', 20),
+(504, 'Jafar Salmani', 'Irã', 15, 'Atacante', 20),
+(505, 'Karim Ansarifard', 'Irã', 10, 'Atacante', 20),
+(506, 'Mehdi Taremi', 'Irã', 17, 'Atacante', 20),
+(507, 'Sardar Azmoun', 'Irã', 20, 'Atacante', 20),
+(508, 'Saman Ghoddos ', 'Irã', 14, 'Atacante', 20),
+(509, 'Vahid Amiri', 'Irã', 11, 'Atacante', 20),
+(510, 'Daniel Schmidt', 'Japão', 23, 'Goleiro', 21),
+(511, 'Eiji Kawashima', 'Japão', 1, 'Goleiro', 21),
+(512, 'Shuichi Gonda', 'Japão', 12, 'Goleiro', 21),
+(513, 'Hiroki Sakai', 'Japão', 19, 'Lateral-direito', 21),
+(514, 'Ko Itakura ', 'Japão', 4, 'Zagueiro', 21),
+(515, 'Maya Yoshida', 'Japão', 22, 'Zagueiro', 21),
+(516, 'Miki Yamane  ', 'Japão', 2, 'Lateral-direito', 21),
+(517, 'Naomichi Ueda', 'Japão', 5, 'Zagueiro', 21),
+(518, 'Sogo Taniguchi', 'Japão', 5, 'Zagueiro', 21),
+(519, 'Takehiro Tomiyasu', 'Japão', 16, 'Zagueiro', 21),
+(520, 'Yuta Nakayama', 'Japão', 20, 'Lateral-esquerdo', 21),
+(521, 'Yuto Nagatomo', 'Japão', 5, 'Lateral-esquerdo', 21),
+(522, 'Ao Tanaka', 'Japão', 17, 'Meia', 21),
+(523, 'Daichi Kamada', 'Japão', 9, 'Meia', 21),
+(524, 'Gaku Shibasaki', 'Japão', 7, 'Meia', 21),
+(525, 'Genki Haraguchi', 'Japão', 8, 'Meia', 21),
+(526, 'Hidemasa Morita', 'Japão', 13, 'Meia', 21),
+(527, 'Wataru Endo', 'Japão', 6, 'Meia', 21),
+(528, 'Ayase Ueda', 'Japão', 25, 'Atacante', 21),
+(529, 'Junya Ito', 'Japão', 14, 'Atacante', 21),
+(530, 'Kyogo Furuhashi', 'Japão', 19, 'Atacante', 21),
+(531, 'Takefusa Kubo', 'Japão', 11, 'Atacante', 21),
+(532, 'Takuma Asano', 'Japão', 18, 'Atacante', 21),
+(533, 'Takumi Minamino', 'Japão', 10, 'Atacante', 21),
+(534, 'Yago Pikachu', 'Japão', 27, 'Atacante', 21),
+(535, 'Yuya Osako ', 'Japão', 15, 'Atacante', 21),
+(536, 'Ali Mhamdi', 'Marrocos', 12, 'Goleiro', 22),
+(537, 'Anas Zniti', 'Marrocos', 1, 'Goleiro', 22),
+(538, 'Yassine Bounou', 'Marrocos', 1, 'Goleiro', 22),
+(539, 'Achraf Hakimi ', 'Marrocos', 2, 'Lateral-direito', 22),
+(540, 'Adam Masina', 'Marrocos', 3, 'Zagueiro', 22),
+(541, 'Nayef Aguerd ', 'Marrocos', 5, 'Zagueiro', 22),
+(542, 'Romain Saïss', 'Marrocos', 6, ' Zagueiro', 22),
+(543, 'Samy Mmaee ', 'Marrocos', 20, 'Zagueiro', 22),
+(544, 'Yahia Attiyat Allah', 'Marrocos', 14, 'Lateral-esquerdo', 22),
+(545, 'Adel Taarabt', 'Marrocos', 49, 'Meia', 22),
+(546, 'Amine Harit', 'Marrocos', 10, '\r\nMeia', 22),
+(547, 'Aymen Barkok', 'Marrocos', 16, 'Meia', 22),
+(548, 'Azzedine Ounahi', 'Marrocos', 8, 'Meia', 22),
+(549, 'Fayçal Fajr', 'Marrocos', 11, 'Meia', 22),
+(550, 'Ilias Chair', 'Marrocos', 13, 'Meia', 22),
+(551, 'Imran Louza', 'Marrocos', 7, 'Meia', 22),
+(552, 'Selim Amallah', 'Marrocos', 15, 'Meia', 22),
+(553, 'Sofyan Amrabat', 'Marrocos', 4, 'Meia', 22),
+(554, 'Yahya Jabrane ', 'Marrocos', 13, 'Meia', 22),
+(555, 'Ayoub El Kaabi', 'Marrocos', 14, 'Atacante', 22),
+(556, 'Munir El Haddadi', 'Marrocos', 10, 'Atacante', 22),
+(557, 'Sofiane Boufal', 'Marrocos', 17, 'Atacante', 22),
+(558, 'Tarik Tissoudali', 'Marrocos', 9, 'Atacante', 22),
+(559, 'Youssef El-Arabi', 'Marrocos', 11, 'Atacante', 22),
+(560, 'Youssef En-Nesyri', 'Marrocos', 19, 'Atacante', 22),
+(561, 'Romain Saïss', 'Marrocos', 6, 'Zagueiro', 22),
+(562, 'Amine Hari', 'Marrocos', 10, 'Meia', 22);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `palpites`
 --
 
@@ -765,7 +883,10 @@ INSERT INTO `palpites` (`Id`, `Palpite`, `Id_usuario`) VALUES
 (6, 'nada', 57),
 (7, 'nada', 57),
 (13, 'Flamengo campeão da libertadores', 57),
-(14, 'Flamengo campeão da copa do brasil', 57);
+(14, 'Flamengo campeão da copa do brasil', 57),
+(15, 'mengão meu campeão!!!!', 57),
+(16, 'teste', 57),
+(17, 'Vasco da Gama campeão da Libertadores 2024', 99);
 
 -- --------------------------------------------------------
 
@@ -878,14 +999,14 @@ CREATE TABLE `usuarios` (
   `Acesso` varchar(10) NOT NULL,
   `Data` date NOT NULL,
   `Status` varchar(100) NOT NULL DEFAULT 'Ativo',
-  `País` varchar(20) DEFAULT NULL,
-  `PaísTorcedor` varchar(20) DEFAULT NULL,
-  `Nível` int(11) NOT NULL DEFAULT 0,
-  `Rank` varchar(100) NOT NULL DEFAULT '0',
+  `Pais` varchar(20) DEFAULT NULL,
+  `PaisTorcedor` varchar(20) DEFAULT NULL,
+  `Nivel` int(11) NOT NULL DEFAULT 0,
+  `Rank` varchar(100) DEFAULT NULL,
   `Saldo` int(100) NOT NULL DEFAULT 0,
   `Xp` int(100) NOT NULL DEFAULT 0,
   `RecompensaTimestamp` timestamp NULL DEFAULT '0000-00-00 00:00:00',
-  `Validador` int(11) NOT NULL,
+  `Validador` int(11) DEFAULT NULL,
   `Perfil` varchar(60) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -893,9 +1014,8 @@ CREATE TABLE `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Status`, `País`, `PaísTorcedor`, `Nível`, `Rank`, `Saldo`, `Xp`, `RecompensaTimestamp`, `Validador`, `Perfil`) VALUES
-(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 0, '0', 150, 230, '2022-09-14 08:20:29', 0, 'p1.jpg'),
-(58, 'Carol', 'general@bolamundi.com', 'gabigol9', 'Admin', '2022-07-17', 'Ativo', '', '', 0, '0', 5, 0, '2022-08-05 11:52:12', 0, NULL),
+INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Status`, `Pais`, `PaisTorcedor`, `Nivel`, `Rank`, `Saldo`, `Xp`, `RecompensaTimestamp`, `Validador`, `Perfil`) VALUES
+(57, 'Lucas', 'lucas@bolamundi.com', '$2y$10$Xy28YXMQKSMfokA2wJuituQMH70kU9urrbTeSyVBgppEc5B/zoES6', 'Admin', '2022-07-07', 'Ativo', '', '', 20, 'Diamante', 150, 230, '2022-09-14 08:20:29', 0, 'p5.jpg'),
 (59, 'Dj Regerinho', 'djrogerinho@gmail.com', '$2y$10$ck1xzNc7eAwIwUn7/kUqme1BJMFXpWkXkC5LO/2tmBwP/AqHA7G02', 'Admin', '2022-07-18', 'Ativo', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 0, NULL),
 (61, 'Vinícius Junior', 'vinijr@gmail.com', '$2y$10$UoSoa8AD0ArFqKDCEDq8.ulIMZieh4sb.fHwS.zkLrd6Us6Xgkude', 'Admin', '2022-07-21', 'Ativo', '', '', 0, '0', 10, 0, '2022-08-08 07:47:00', 0, NULL),
 (72, 'salmandra', 'salmandra@gmail.com', '$2y$10$Rm19xYOO.5O02mgeGn7LP.MgxUkiiejKVYqLGNxaNf15tVen16Cle', 'Usuario', '2022-08-09', 'aguardando', '', '', 0, '0', 0, 0, '0000-00-00 00:00:00', 22634477, NULL),
@@ -911,7 +1031,11 @@ INSERT INTO `usuarios` (`Id`, `Nome`, `Email`, `Senha`, `Acesso`, `Data`, `Statu
 (87, 'anya', 'anacsouza2005@gmail.com', '$2y$10$ubNdXMaiseIcRDx6z8lRnOZSyjfNOFN/05W9wlcevufRrJ3uVfsIe', 'Usuario', '2022-08-22', 'Ativo', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 88971765, NULL),
 (90, 'teste', 'teste@teste.com', '$2y$10$ZiWVr4hBFUIgNB88il5DyOSEWNCtkUWw1jKRB/lYg5HGaIGxEXcCK', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 61711407, NULL),
 (91, 'Guilherme', 'guilherme.chafim@gmail.com', '$2y$10$CJVKH0leh7LKlqJqjxj8y.eMmZkem7j4YNCT/DFmqsQlFcLYkeA72', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 23164674, NULL),
-(93, 'south', 'anasofianorth@gmail.com', '$2y$10$.2y0pqZWiL5HorZ4DmFSY.bdPkmtfoeE9U2AfaOF5Mrl6C6wxE4y2', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 75476145, NULL);
+(93, 'south', 'anasofianorth@gmail.com', '$2y$10$.2y0pqZWiL5HorZ4DmFSY.bdPkmtfoeE9U2AfaOF5Mrl6C6wxE4y2', 'Usuario', '2022-08-31', 'aguardando', NULL, NULL, 0, '0', 0, 0, '0000-00-00 00:00:00', 75476145, NULL),
+(96, 'Carol', 'caroline@bolamundi.com', '$2y$10$538mFy9JYHW0IZOZCf8AkuAWpBWiMTGL.wjlatyddWDCgf/c938zS', 'Admin', '2022-09-21', 'Ativo', NULL, NULL, 0, NULL, 0, 0, '0000-00-00 00:00:00', NULL, NULL),
+(97, 'Ai Pedro', 'l2727544@gmail.com', '$2y$10$WoS58lUw85pW/.XtHGJD1.zpjZNupbE9l8hqRoX3fRsAEmWm69mlu', 'Usuario', '2022-09-21', 'aguardando', NULL, NULL, 0, NULL, 0, 0, '0000-00-00 00:00:00', 86570270, NULL),
+(98, 'Line', '215327.aluno@iserj.edu.br', '$2y$10$R0oGFvWkkHyJ5Ih/VdFti.tRdqX5gfuZSeoowLySzZUpslRUCGHlK', 'Usuario', '2022-09-21', 'aguardando', NULL, NULL, 0, NULL, 0, 0, '0000-00-00 00:00:00', 52223398, NULL),
+(99, 'Sosososo', 'sofia@bolamundi.com', '$2y$10$lRp83loG9l8WguRboCN3u.MmzatcgkV2go5MWO3873lWiwFxt3dFG', 'Usuario', '2022-09-21', 'aguardando', NULL, NULL, 0, NULL, 0, 0, '0000-00-00 00:00:00', 56860507, NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -945,6 +1069,12 @@ ALTER TABLE `denuncia`
 -- Índices para tabela `jogadores`
 --
 ALTER TABLE `jogadores`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Índices para tabela `jogadores2`
+--
+ALTER TABLE `jogadores2`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -1003,19 +1133,25 @@ ALTER TABLE `contato`
 -- AUTO_INCREMENT de tabela `denuncia`
 --
 ALTER TABLE `denuncia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de tabela `jogadores`
 --
 ALTER TABLE `jogadores`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=485;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=509;
+
+--
+-- AUTO_INCREMENT de tabela `jogadores2`
+--
+ALTER TABLE `jogadores2`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=563;
 
 --
 -- AUTO_INCREMENT de tabela `palpites`
 --
 ALTER TABLE `palpites`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
@@ -1039,7 +1175,7 @@ ALTER TABLE `selecoes`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
