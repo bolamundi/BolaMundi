@@ -1,7 +1,21 @@
 <?php 
 
  session_start();
- $id_usuario=$_SESSION['idusuario'];
+ $id_usuario=$_GET['id'];
+
+ 
+  
+ if (!isset($id_usuario)){
+      $id_usuario=$_SESSION['idusuario'];
+ }
+ $_SESSION["BuscarUsuario"]=$id_usuario;
+ if ($_SESSION["BuscarUsuario"]==$_SESSION['idusuario']){
+     $modoVizualizacao=false;
+     
+ }else{
+     $modoVizualizacao=true;
+ }
+ 
    if(isset($_SESSION['nome']) and isset($_SESSION['email'])){
     $nome=$_SESSION['nome'];
     $email=$_SESSION['email'];
@@ -12,7 +26,7 @@
       exit; 
    }
   
-
+include 'buscarUsuario.php';
  
 
 ?>
@@ -56,10 +70,19 @@
         <!-- Informações básicas do usuário -->    
       	<div class="w3-white w3-text-grey w3-card-4">
         	<div class="w3-display-container">
-          	<?php echo "<img src='../loja/images/".$_SESSION['perfil']."' style='width:100%;' alt='Avatar'> " ?>
+          	<?php echo "<img src='../loja/images/".$perfil."' style='width:100%;' alt='Avatar'> " ?>
           	<div class="w3-display-bottomleft w3-container w3-text-black">
-            	<h2><?php echo $nome; ?><i onclick="document.getElementById('id03').style.display='block'" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>
-            	<i onclick="document.getElementById('id04').style.display='block'" class="fa fa-image fa-fw w3-large w3-text-red" style = "margin-left: 250px;"></i>
+            	<h2><?php echo $nome; ?>
+            	<?php
+  		if (!$modoVizualizacao){
+  		echo '<i onclick="document.getElementById("id03").style.display="block" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>';
+  		} ?>
+            	
+          <?php
+  		if (!$modoVizualizacao){
+  		echo '<i onclick="document.getElementById("id04").style.display="block" class="fa fa-image fa-fw w3-large w3-text-red" style = "margin-left: 250px;"></i>';
+  		} ?>  	
+            	
             	</h2>
           	</div>
         	</div>
@@ -67,8 +90,19 @@
         	<div class="w3-container">
           		<p><i class="fa fa-caret-right fa-fw w3-margin-right w3-large w3-text-red"></i>Torcedor do </p>
           		<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>Brasil</p>
-          		<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i><?php echo $email; ?><i onclick="document.getElementById('id01').style.display='block'" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i></p>
-          		<p><i class="fa fa-lock fa-fw w3-margin-right w3-large w3-text-red"></i>*********<i onclick="document.getElementById('id02').style.display='block'" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i></p>
+          		<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i><?php echo $email; ?>
+          		<?php
+  		if (!$modoVizualizacao){
+  		echo '	<i onclick="document.getElementById("id01").style.display="block" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>';
+  		} ?>
+          		</p>
+          		
+          		
+          			<?php
+  		if (!$modoVizualizacao){
+  		echo '	<p><i class="fa fa-lock fa-fw w3-margin-right w3-large w3-text-red"></i>*********<i onclick="document.getElementById("id02").style.display="block" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i></p>';
+  		} ?>
+          		
           	<hr>
           <!-- Interações -->
           <p class="w3-large"><b><i class="fa fa-comment fa-fw w3-margin-right w3-text-red"></i>Interações</b></p>
@@ -117,22 +151,25 @@
     <div class="w3-twothird">
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Seu Rank</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Rank</h2>
         <img src="ranks/ranks.jpg" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity" style="width:99.9%" alt="Ranks">
 
         <div id="modal01" class="w3-modal w3-animate-zoom w3-center" onclick="this.style.display='none'">
             <img class="w3-modal-content" src="ranks/ranks.jpg" alt="Ranks">
             <p style="background-color: white; width: 900px; border: 1px dashed red; padding: 50px; left: 20%; "> teste</p>
         </div>
-        <h3>Seu Xp: <?php echo $xp; ?></h3> 
+        <h3>Xp: <?php echo $xp; ?></h3> 
       </div>
 
       <div class="w3-container w3-card w3-white">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-bookmark fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Palpites</h2>
         <form action='palpitar.php' method='post' id="myDIV" class="header">
   		<h2 style="margin:5px">Meus Palpites</h2>
-  		<input type="text" id="myInput" placeholder="Vai acontecer..." name='palpite' >
-  		<button class="addBtn">Postar</button>
+  		<?php
+  		if (!$modoVizualizacao){
+  		echo '<input type="text" id="myInput" placeholder="Vai acontecer..." name="palpite" >
+  		<button class="addBtn">Postar</button>';
+  		} ?>
 	  </form>
 	    <ul id="myUL">
  	      
