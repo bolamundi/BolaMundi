@@ -76,7 +76,7 @@ if($contagem%$total==0){
     <h5>Dashboard</h5>
   </div>
   <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bar-chart fa-fw"></i>  Dashboard</a>
+    <a href="../admin/admindocker.php?pag=1" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bar-chart fa-fw"></i>  Dashboard</a>
   </div>
   <div class="w3-container">
     <h5>Páginas Principais</h5>
@@ -98,8 +98,10 @@ if($contagem%$total==0){
     <h5>Admin</h5>
   </div>
   <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Jogadores</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Loja</a>    
+    <a href="../admin/admindockerjogadores.php?pag=1" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Jogadores</a>
+    <a href="../admin/admindockerprodutos.php?pag=1" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Loja</a>
+    <a href="../contato/msgAdmin.php?ordem=id+ASC" class="w3-bar-item w3-button w3-padding"><i class="fa fa-comment fa-fw"></i>  Comentários</a>
+    <a href="../selecoes/dncAdmin.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-exclamation fa-fw"></i>  Denuncie</a>    
   </div>    
   
 </nav>
@@ -123,7 +125,7 @@ if($contagem%$total==0){
          <i class="fa fa-user fa-fw" style = "color: #00BFFF;"></i>
         </div>
         <h1 style = "color: #00BFFF;"> 10 </h1>
-        <h2>Usuários</h2>
+        <h2 style = "font-size: 27px;">Comum</h2>
       </div>
     </div>
 
@@ -133,7 +135,7 @@ if($contagem%$total==0){
          <i class="fa fa-user fa-fw" style = "color: #FF0000;"></i>
         </div>
         <h1 style = "color: #FF0000;"> 06 </h1>
-        <h2>Admins</h2>
+        <h2 style = "font-size: 27px;">Admins</h2>
       </div>
     </div>
 
@@ -142,8 +144,8 @@ if($contagem%$total==0){
         <div class = "icon">
          <i class="fa fa-user fa-fw" style = "color: #FFD700;"></i>
         </div>
-        <h1 style = "color: #FFD700;"> 832 </h1>
-        <h2>Jogadores</h2>
+        <h1 style = "color: #FFD700; font-size: 50px;"> 832 </h1>
+        <h2 style = "font-size: 27px;">Atletas</h2>
       </div>
     </div>
 
@@ -153,13 +155,13 @@ if($contagem%$total==0){
          <i class="fa fa-user fa-fw" style = "color: #90EE90;"></i>
         </div>
         <h1 style = "color: #90EE90;"> 32 </h1>
-        <h2>Seleções</h2>
+        <h2 style = "font-size: 27px;">Países</h2>
       </div>
     </div>
 
-    <div class = "chartprincipal" style = "margin-top: 14%;">
+    <div class = "chartprincipal" style = "margin-top: 20%;">
        <div class = "container">
-         <h1>Usuários cadastrados na semana</h1>
+         <h1 style = "padding: 20px 20px 10px 10px;">USUÁRIOS CADASTRADOS NA SEMANA</h1>
          <hr size=7>
          <div class="wrapper" style = "margin-left:2%; margin-right:2%">
            <canvas id="chartPorTempo" height='120'></canvas>
@@ -169,7 +171,7 @@ if($contagem%$total==0){
 
     <div class = "tabelausuarios" style = "margin-top: 1.5%;">
       <div class = "container" style = "padding: 10px 10px 10px 10 px;">
-         <h1> Controlar Usuários </h1>
+         <h1 style = "padding: 20px 20px 10px 10px;"> CONTROLAR USUÁRIOS </h1>
          <hr size=7>
         <table>
           <tr>
@@ -187,7 +189,7 @@ if($contagem%$total==0){
 
             echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["Acesso"] . "</td><td>" . $row["Status"] . "</td><td>" . $row["Data"] . "</td>";
 
-            echo "<td><a href='../controleusuario/usuarioeditarform.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/editar.png' alt='Editar Usuário'></a></td><td><a href='../controleusuario/usuarioexcluir.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/excluir.png' alt='Excluir Usuário'></a></td><td><a href='../controleusuario/bloquearusuario.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/bloquear.png' alt='Bloquear Usuário'></a></td></tr>";
+            echo "<td><a href='../admin/controleusuario/usuarioeditarform.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/editar.png' alt='Editar Usuário'></a></td><td><a href='../admin/controleusuario/usuarioexcluir.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/excluir.png' alt='Excluir Usuário'></a></td><td><a href='../admin/controleusuario/bloquearusuario.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/bloquear.png' alt='Bloquear Usuário'></a></td></tr>";
 
               }
           ?>         
@@ -198,14 +200,14 @@ if($contagem%$total==0){
             } 
           ?>
 
-         <a href="../controleusuario/addusuario.php"><img src='../img/controleusuario/incluir.png' alt='Add Usuário' style="width:3%; float:right; margin-right: 3.2%"></a>
+         <a href="../admin/controleusuario/addusuario.php"><img src='../img/controleusuario/incluir.png' alt='Add Usuário' style="width:3%; float:right; margin-right: 3.2%"></a>
         </div>
       </div>
     </div>
-
-    <div class = "chartusuarioacesso">
+	
+    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: right; margin-right: 3%;">
       <div class = "container">
-        <h1>Tipos dos usuários</h1>
+        <h1 style = "padding: 20px 20px 10px 10px;">TIPOS DE USUÁRIOS</h1>
         <hr size=7>
         <div class="wrapper">
           <canvas id="myChart" height='170'></canvas>
@@ -214,22 +216,19 @@ if($contagem%$total==0){
       </div>
     </div>
 
-    <div class = "chartusuarioacesso">
+    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: left; margin-left:1.1%">
       <div class = "container">
-        <h1>Ranks</h1>
-         <div class="wrapper">
-        <canvas id="chartPorTempo" height='300'></canvas>
-       </div>
+        <h1 style = "padding: 20px 20px 10px 10px;">RANKS</h1>
         <hr size=7>
         <div class="wrapper">
-          <canvas id="chartRank" height='170'></canvas>
+          <canvas id="myChart" height='170'></canvas>
         </div>
         <hr size=7>
       </div>
     </div>
+	
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-  <script src="../relatorios/chartRank.php"></script>
   
     <script src="../relatorios/chartcontrole.php"></script>
  

@@ -6,3 +6,4 @@
  - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='penguimgeneral@gmail.com' and validador=39203068 - 31/08/2022 - 19:42:45
  - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='penguimgeneral@gmail.com' and validador=39203068 - 31/08/2022 - 19:43:19
  - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='penguimgeneral@gmail.com' and validador=39203068 - 31/08/2022 - 19:43:34
+ - UPDATE usuarios SET Status='Ativo' WHERE Status='aguardando' and email='lucas.castelano27@gmail.com' and validador=30246132 - 09/10/2022 - 02:28:24

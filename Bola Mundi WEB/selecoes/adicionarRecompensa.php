@@ -18,6 +18,7 @@ $result=$conn->query($sqlPegarMoeda);
 $rowSaldo=$result->fetch_assoc();
 $saldo=$rowSaldo['Saldo'];
 $saldo+=5;
+$totalGanho+=5;
 //pegar o xp atual 
 $sqlPegarXp="SELECT Xp FROM usuarios WHERE id=".$id_usuario;
 $result=$conn->query($sqlPegarXp);
@@ -38,7 +39,7 @@ if(floor($proxRecompensa/3600)>=24){
 
     
 $atualizarTemp="UPDATE usuarios SET RecompensaTimestamp='$agora' WHERE id=".$id_usuario;
-$addMoeda= "UPDATE usuarios SET Saldo=$saldo WHERE id=".$id_usuario;
+$addMoeda= "UPDATE usuarios SET Saldo=$saldo , TotalGanho='$totalGanho' WHERE id=".$id_usuario;
 $addXp= "UPDATE usuarios SET Xp=$xp WHERE id=".$id_usuario;
 
 if($conn->query($atualizarTemp)){

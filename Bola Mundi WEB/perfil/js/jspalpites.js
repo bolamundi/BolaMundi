@@ -3,7 +3,7 @@ var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+ // var txt = document.createTextNode("\u00D7"); comentado para parar de add o x o js e add no php
   span.className = "close";
   span.appendChild(txt);
   myNodelist[i].appendChild(span);

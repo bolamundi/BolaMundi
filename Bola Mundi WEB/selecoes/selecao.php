@@ -5,7 +5,7 @@ session_start();
 $idsel=$_GET["id"];
 
 $_SESSION["idsel"]=$idsel;
-require 'media.php';
+
 
 if(isset($_SESSION['nome'])){
     $nome=$_SESSION['nome'];
@@ -104,11 +104,12 @@ echo $_SESSION['msg'];
     <!--Mostra o total da avaliação-->
     <center>
     <div id="avaliacaovizualizador" style = "margin-bottom: 10px;">
-       <h3>Avaliação</h3>
+     
         <div id="estrelavizualizador">
         <?php
-  
+  include 'media.php';
         if($result->num_rows > 0){
+            echo '<h3>Avaliação</h3>';
             $media= round($media,0);
         switch($media){
             case 1:
@@ -126,10 +127,14 @@ echo $_SESSION['msg'];
             case 5:
                 echo "<img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'>";
                 break;
+            case 0: 
+                echo "<p>Sem avaliação</p>";
+                break;
+                
         }
 
         }else{
-            echo "<p>Nenhum resultado encontrado</p>";
+            echo "<p>Sem avaliação</p>";
         }
    
         ?>
@@ -206,16 +211,7 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
  
     require "mostrarcomentario.php";
 
-    while($row = $res->fetch_assoc()){
-          if(isset($_SESSION['nome']) and $row["Nome"]==$_SESSION['nome']){
-              echo "<div class='coments' ><h4> Você <a type='button' href='excluircomentario.php?id=". $row["Id"] ."&idsel=". $idsel ."' >Excluir</a></h4> " . " <p>" . $row["Comentario"] . "</p> <p>" . $row["Data"] . "</p> <br><br> </div>";
-          }else if($_SESSION["acesso"]=="Admin"){
-            echo "<div class='coments' > <h4><a href='../perfil/perfil.php?id=". $row['Id_usuario'] ."'>" . $row["Nome"] . "</a><a type='button' href='excluircomentario.php?id=". $row["Id_usuario"] ."&idsel=". $idsel ."' >Excluir</a></h4>" . " <p>" . $row["Comentario"] . "</p> <p>" . $row["Data"] . " </p> <br><br> </div>";
-          }else{
-              echo "<div class='coments' > <h4> <a href='../perfil/perfil.php?id=". $row['Id_usuario'] ."'>" . $row["Nome"] . "</a></h4> <p>" . $row["Comentario"] . "</p> <p>" . $row["Data"] . " </p> <br><br> </div>";
-          }
-      
-      }
+   
 
     ?>
 
@@ -223,7 +219,13 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
 
     <!--Denuncie-->
     <script>
-       
+       var msg = "<?php echo $_SESSION['msg']; ?>"
+       if(msg=="Você precisa estar logado!" || msg=="Sua denuncia foi enviada!"){
+           window.alert(msg);
+           <?php $_SESSION['msg'] = "null"; ?>
+       }else{
+           msg = "nada"
+       }
     </script>
     <button class="open-button" onclick="openForm()">Denuncie</button>
 

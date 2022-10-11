@@ -39,11 +39,11 @@ if($rowemail["Email"]===$campoemail || $rownome["Nome"]===$camponome){
 $validador = rand(10000000,99999999);
 
 //Insere na tabela os valores dos campos
-$sql = "INSERT INTO usuarios(nome,email,senha,acesso, Status,Data,Validador) values('$camponome','$campoemail','$hashsenha','$campoacesso','aguardando','$datacadastro', '$validador')";
+$sql = "INSERT INTO usuarios(nome,email,senha,acesso, Status,Data,Pais,Validador) values('$camponome','$campoemail','$hashsenha','$campoacesso','aguardando','$datacadastro','$campopais', '$validador')";
 
 if($conn->query($sql) === TRUE ){
 	//Se o cadastro acontecer corretamente
-	header("refresh:2 ;url=/index.php");
+	header("refresh:2 ;url=../../../pt-br/index.php");
 	echo "<script>window.alert('Gravado com sucesso')</script>";
 	
 	//Envie email para validar a conta.
@@ -58,7 +58,7 @@ enviaremail($camponome, $campoemail, 'Validar conta', $texto);
 
 	
 }else{
-	header("refresh:5;url=/index.php");
+	header("refresh:5;url=../../../pt-br/index.php");
 	echo "Error: ". $sql . "<br>" . $conn->error;
 }
     

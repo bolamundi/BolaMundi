@@ -14,7 +14,9 @@ if ($result->num_rows>0){
     $rank=$row['Rank'];
     $nivel=$row['Nivel'];
     $pais=$row['Pais'];
-    $paisTorcedor=$row['PaisTorcedor'];
+    $PaisTorcedor=$row['PaisTorcedor'];
+    $TotalGasto=$row['TotalGasto'];
+    $TotalGanho=$row['TotalGanho'];
 }
     
     

@@ -14,7 +14,7 @@ body {
     background-image: url('https://bolamundi2022.000webhostapp.com/img/selecoes/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    background-size: 100% 80%;
+    background-size: 100% 100%;
   
 }
 
@@ -40,7 +40,7 @@ div.tabela h3 {
 #jogadores {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   margin-left: 30px;
   margin-right: 30px;
   overflow:hidden;

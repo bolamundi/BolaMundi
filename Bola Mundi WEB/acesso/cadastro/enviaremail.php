@@ -10,7 +10,7 @@ require './phpmailer/src/Exception.php';
 require './phpmailer/src/PHPMailer.php';
 require './phpmailer/src/SMTP.php';
 
-function enviaremail($nomedestinatario, $emaildestinatario, $assunto, $texto){
+function enviaremail($nomedestinatario, $emaildestinatario, $assunto, $texto,$retorno=''){
 
 //Cria instância da Classe PHPMailer
 $mail = new PHPMailer(true);
@@ -59,8 +59,14 @@ try {
 
     //Envio
     $mail->send();
-    
-    echo 'Messagem enviada com sucesso';
+     header( "refresh:0.0000000000000000000000000000000000000000000000000000001;url=$retorno" );
+          echo "
+          <script>
+          window.alert('Messagem enviada com sucesso')
+
+          
+          </script>";
+   
 } catch (Exception $e) {
     echo "Messagem não foi enviada. Mailer Error: {$mail->ErrorInfo}";
 }

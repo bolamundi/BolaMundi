@@ -12,18 +12,32 @@ if(isset($_SESSION['nome'])){
      $recepcao="";
    }
 
+//Filtro de String
 $msg = filter_input(INPUT_POST, 'msg', FILTER_SANITIZE_STRING);
 
-$sqlID = "SELECT id FROM usuarios WHERE nome = '$nome'";
+//Pegando id do usuario e atribuindo a uma variavel
+$query = "SELECT id FROM usuarios WHERE nome = '$nome'";
 
+$result = mysqli_query($conn, $query);
 
-$sql = "INSERT INTO denuncia (nome, mensagem) value ('$nome', '$msg')";
+$row = $result->fetch_assoc();
 
-    if(mysqli_query($conn, $sql)){
+$idUsuario = $row['id'];
+
+//Inserindo dados no banco
+$sql = "INSERT INTO denuncia (id_usuario, nome, mensagem) value ('$idUsuario' , '$nome', '$msg')";
+
+    if($nome=="Usuario não logado"){
+        $_SESSION['msg'] = "Você precisa estar logado!";
+        header("Location: /selecoes/selecao.php?id=1");
+
+    }elseif(mysqli_query($conn, $sql)){
         $_SESSION['msg'] = "Sua denuncia foi enviada!"; 
         header("Location: /selecoes/selecao.php?id=1");
+        
     } else {
-        echo "erro";
+        $_SESSION['msg'] = "Você precisa estar logado!"; 
+        header("Location: /selecoes/selecao.php?id=1");
     }
     
     mysqli_close($conn);

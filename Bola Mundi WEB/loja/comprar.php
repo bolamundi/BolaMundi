@@ -32,6 +32,7 @@ $result=$conn->query($sqlBuscarProduto);
     $rowUsuario=$result->fetch_assoc();
     $saldo=$rowUsuario['Saldo'];
     $precoProd=$rowProd['Preco'];
+    $totalGasto=$rowUsuario['TotalGasto'];
     if ($saldo<$precoProd){
         
        
@@ -42,12 +43,29 @@ exit;
         
     }else{
         $saldoAtual=$saldo-$precoProd;
+        
+        $totalGasto+=$precoProd;
+        
+        
+       /* $sqlBuscarTotalGasto="SELECT * FROM pedidos WHERE Id_usuario='$idUsuario'";
+       
+         $resBuscarTotalGasto=$conn->query($sqlBuscarTotalGasto);
+        while ($rowTotalGasto=$resBuscarTotalGasto->fetch_assoc){
+            $idProd=$rowTotalGastos['Id_produto'];
+            $sqlPreco="SELECT Preco FROM produtos WHERE Id='$idProd'";
+            $resPreco=$conn->query($sqlPreco);
+            while($rowPreco=$resPreco->fetch_assoc()){
+                $totalGasto+=$rowPreco['Preco'];} }*/
         $sqlComprar="INSERT INTO pedidos (Id_usuario,Id_produto) values('$idUsuario','$idProduto')";
-       $sqlPagar="UPDATE usuarios SET Saldo=$saldoAtual WHERE Id='$idUsuario'";
+       $sqlPagar="UPDATE usuarios SET Saldo=$saldoAtual , TotalGasto='$totalGasto' WHERE Id='$idUsuario'";
         if ($result=$conn->query($sqlComprar) and $result=$conn->query($sqlPagar)){
         
+        
         header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=loja.php");
- echo '<script> window.alert("Compra efetuada") </script>';}else{
+ echo '<script> window.alert("Compra efetuada") </script>';
+            
+            
+        }else{
         $sqlCorrigir="DELETE FROM pedidos WHERE Id_produto='$idProduto' && Id_usuario='$idUsuario'";
         $result=$conn->query($sqlCorrigir);
          header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=loja.php");
