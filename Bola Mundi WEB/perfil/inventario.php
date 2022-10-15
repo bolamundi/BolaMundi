@@ -20,7 +20,7 @@ echo "
 <div class='divImagemEscolha'>
 
 <a href='trocarImagem.php?prod=".$idProd ."' class='quadro'><img class='imagemEscolha' src='../loja/images/".$rowFoto['Imagem']."'></a>
-<p>".$rowFoto['Nome']."</p>
+<p class='nomefoto'>".$rowFoto['Nome']."</p>
 </div>
 
 
@@ -32,5 +32,12 @@ echo "
 
     
 }
-}
+}else{
+echo "
+<div class='divImagemEscolha'>
+<p>Você não possui fotos de perfil disponíveis</p>
+</div>";}
+    
+    
+
 ?>

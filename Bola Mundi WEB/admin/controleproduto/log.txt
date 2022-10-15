@@ -1,0 +1,64 @@
+
+Lucas - INSERT INTO produtos(nome,numero_vendas,preco) values(' Camisa Amarela Gabriel Jesus', '1','50') - 31/08/2022 - 22:22:46
+Lucas - DELETE FROM produtos WHERE id=3 - 31/08/2022 - 22:33:03
+Lucas - INSERT INTO produtos(nome,numero_vendas,preco) values(' Camisa Amarela Gabriel Jesus', '1','50') - 31/08/2022 - 22:47:03
+Lucas - UPDATE produtos SET nome='', numero_vendas='0', preco='50'  WHERE id=4 - 31/08/2022 - 22:48:16
+Lucas - UPDATE produtos SET nome='', numero_vendas='0', preco='50'  WHERE id=4 - 31/08/2022 - 22:48:26
+Lucas - UPDATE produtos SET nome='', numero_vendas='0', preco='50'  WHERE id=4 - 31/08/2022 - 22:48:32
+Lucas - UPDATE produtos SET nome='', numero_vendas='0', preco='50'  WHERE id=4 - 31/08/2022 - 22:48:38
+Lucas - UPDATE produtos SET nome='', numero_vendas='0', preco='50'  WHERE id=4 - 31/08/2022 - 22:52:52
+Lucas - UPDATE produtos SET nome='', numero_vendas='0', preco='50'  WHERE id=4 - 31/08/2022 - 22:53:05
+Lucas - UPDATE produtos SET nome='Camisa Amarela Gabriel Jesus', numero_vendas='0', preco='50'  WHERE id=4 - 31/08/2022 - 22:54:39
+Lucas - DELETE FROM produtos WHERE id=4 - 31/08/2022 - 22:54:42
+Lucas - INSERT INTO produtos(nome,preco) values(' Camisa Amarela Gabriel Jesus','50') - 31/08/2022 - 23:03:16
+Lucas - UPDATE produtos SET nome=' Camisa Amarela Gabriel Jesus', numero_vendas='0', preco='50'  WHERE id=5 - 31/08/2022 - 23:03:25
+Lucas - INSERT INTO produtos(nome,preco,imagem) values(' Camisa Amarela Raphinha','50','p3.jpg') - 05/09/2022 - 11:10:41
+Lucas - UPDATE produtos SET nome='Camisa Amarela Neymar', numero_vendas='4', preco='50',imagem='p6.jpg'  WHERE id=1 - 05/09/2022 - 11:11:09
+Lucas - UPDATE produtos SET nome='Camisa Amarela Neymar', numero_vendas='4', preco='50',imagem='p1.jpg'  WHERE id=1 - 05/09/2022 - 11:11:22
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' fsaef','33','sgs') - 10/10/2022 - 11:23:29
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' fsaef','33','sgs') - 10/10/2022 - 11:24:12
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' fsaef','33','sgs') - 10/10/2022 - 11:24:42
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' fsaef','33','sgs') - 10/10/2022 - 11:24:46
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' sgrgs','3','trr') - 10/10/2022 - 11:25:49
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' sgrgs','3','trr') - 10/10/2022 - 11:26:28
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' sgrgs','3','trr') - 10/10/2022 - 11:26:31
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' sgrgs','3','trr') - 10/10/2022 - 11:26:40
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' e546','3','2342') - 10/10/2022 - 11:27:35
+Beijinho, te amo - INSERT INTO produtos(nome,preco,imagem) values(' 4','435','345') - 10/10/2022 - 11:27:57
+Beijinho, te amo - DELETE FROM produtos WHERE id=16 - 10/10/2022 - 11:28:33
+Beijinho, te amo - DELETE FROM produtos WHERE id=15 - 10/10/2022 - 11:30:41
+Beijinho, te amo - DELETE FROM produtos WHERE id=9 - 10/10/2022 - 11:30:43
+Beijinho, te amo - DELETE FROM produtos WHERE id=10 - 10/10/2022 - 11:30:45
+Beijinho, te amo - DELETE FROM produtos WHERE id=7 - 10/10/2022 - 11:30:47
+Beijinho, te amo - DELETE FROM produtos WHERE id=11 - 10/10/2022 - 11:30:48
+Beijinho, te amo - DELETE FROM produtos WHERE id=14 - 10/10/2022 - 11:30:50
+Beijinho, te amo - DELETE FROM produtos WHERE id=13 - 10/10/2022 - 11:30:52
+Beijinho, te amo - DELETE FROM produtos WHERE id=12 - 10/10/2022 - 11:30:53
+Beijinho, te amo - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 10/10/2022 - 11:31:58
+Beijinho, te amo - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 10/10/2022 - 11:32:04
+Beijinho, te amo - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 10/10/2022 - 11:32:10
+Beijinho, te amo - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 10/10/2022 - 11:33:13
+Beijinho, te amo - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 10/10/2022 - 11:33:55
+Beijinho, te amo - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 10/10/2022 - 11:34:15
+Beijinho, te amo - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 10/10/2022 - 11:34:25
+Beijinho, te amo - DELETE FROM produtos WHERE id=8 - 11/10/2022 - 10:57:38
+Beijinho, te amo  - INSERT INTO produtos(nome,preco,imagem) values(' Lucas','50','ççl') - 14/10/2022 - 23:56:15
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 14/10/2022 - 23:56:24
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 14/10/2022 - 23:56:57
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 14/10/2022 - 23:57:02
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 14/10/2022 - 23:57:17
+Beijinho, te amo  - DELETE FROM produtos WHERE id=17 - 14/10/2022 - 23:57:22
+Beijinho, te amo  - INSERT INTO produtos(nome,preco,imagem) values(' f','66','u') - 14/10/2022 - 23:57:31
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 14/10/2022 - 23:59:49
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 15/10/2022 - 00:00:05
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 15/10/2022 - 00:00:22
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 15/10/2022 - 00:00:25
+Beijinho, te amo  - UPDATE produtos SET nome='',numero_vendas='',preco='',imagem='' WHERE id='' - 15/10/2022 - 00:00:44
+Beijinho, te amo  - UPDATE produtos SET nome='',preco='0',imagem='' WHERE id='18' - 15/10/2022 - 00:04:32
+Beijinho, te amo  - UPDATE produtos SET nome='',preco='0',imagem='' WHERE id='18' - 15/10/2022 - 00:04:59
+Beijinho, te amo  - UPDATE produtos SET nome='',preco='',imagem='' WHERE id='' - 15/10/2022 - 00:10:49
+Beijinho, te amo  - UPDATE produtos SET nome='',preco='',imagem='' WHERE id='' - 15/10/2022 - 00:11:16
+Beijinho, te amo  - UPDATE produtos SET nome='Lucas',preco='9',imagem='u' WHERE id='18' - 15/10/2022 - 00:11:20
+Beijinho, te amo  - UPDATE produtos SET nome='Lucas',preco='9',imagem='u' WHERE id='18' - 15/10/2022 - 00:12:08
+Beijinho, te amo  - UPDATE produtos SET nome='lll',preco='9',imagem='u' WHERE id='18' - 15/10/2022 - 00:12:14
+Beijinho, te amo  - DELETE FROM produtos WHERE id=18 - 15/10/2022 - 00:12:17

@@ -20,8 +20,6 @@ if ($conn->query($sql) === TRUE) {
    $_SESSION['nome']=$novonome;
     
   header('refresh:00000000000000000000000000000000000.1; url=perfil.php');
-} else {
-  echo "Erro:". $conn->error;
 } }else {
     
  header('refresh:00000000000000000000000000000000000.1; url=perfil.php');    

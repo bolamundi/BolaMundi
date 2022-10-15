@@ -53,11 +53,12 @@ th {
 	font-size: 90px; 
 	float: left; 
 	margin-bottom: 20px;
+	margin-right: 5px;
 }
 
 
 .cards h1 {
-	font-size: 60px;
+	font-size: 50px;
 	float: center;
 	margin-bottom: 0px;
 }
@@ -65,7 +66,7 @@ th {
 .cards h2 {
 	margin-top: 0px;
 	color: grey;
-	font-size: 25px;
+	font-size: 15px;
 }
 
 .container {
@@ -80,6 +81,12 @@ th {
 }
 
 .tabelausuarios {
+	margin-left:  0.5%;
+	float: left;
+	margin-right: 0.7%;
+}
+
+.tabelajogadores {
 	margin-left:  0.5%;
 	float: left;
 	margin-right: 0.7%;
@@ -104,5 +111,31 @@ th {
     margin-right: 1.5%;
     width: 42.7%;
 	float: right;
+}
+
+.charts {
+}
+
+select,
+input {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 0;
+    border-width: 1px;
+    border-color: black;
+}
+
+input {
+    cursor: pointer;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.mensagem {
+    text-align: justify;
 }
 

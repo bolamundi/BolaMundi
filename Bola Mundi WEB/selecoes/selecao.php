@@ -5,7 +5,7 @@ session_start();
 $idsel=$_GET["id"];
 
 $_SESSION["idsel"]=$idsel;
-require 'media.php';
+
 
 if(isset($_SESSION['nome'])){
     $nome=$_SESSION['nome'];
@@ -37,7 +37,8 @@ echo $_SESSION['msg'];
     <script src="js/selecao.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   
   <body>
@@ -104,11 +105,12 @@ echo $_SESSION['msg'];
     <!--Mostra o total da avaliação-->
     <center>
     <div id="avaliacaovizualizador" style = "margin-bottom: 10px;">
-       <h3>Avaliação</h3>
+     
         <div id="estrelavizualizador">
         <?php
-  
+  include 'media.php';
         if($result->num_rows > 0){
+            echo '<h3>Avaliação</h3>';
             $media= round($media,0);
         switch($media){
             case 1:
@@ -126,10 +128,14 @@ echo $_SESSION['msg'];
             case 5:
                 echo "<img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'><img src='../img/selecoes/estrela.png'>";
                 break;
+            case 0: 
+                echo "<p>Sem avaliação</p>";
+                break;
+                
         }
 
         }else{
-            echo "<p>Nenhum resultado encontrado</p>";
+            echo "<p>Sem avaliação</p>";
         }
    
         ?>
@@ -156,7 +162,7 @@ echo $_SESSION['msg'];
     <!--Avaliar seleção e enviar comentário-->
     <h3 id="h3">O que achou? Comente aqui embaixo!</h3>
  
-    <input class="btnavaliar" id="btnavaliar" type="button" value="Avalie a seleção ★"  onclick="avaliar()">
+    <input class="btnavaliar" id="btnavaliar" type="button" value="Avalie a seleção ★"   onclick="document.getElementById('id01').style.display='block'">
     <form class="formcoment" action='cadastrarcomentario.php?id=<?php echo $idsel;?>' method="post" id="form">
      
         <textarea   class="texto" name="texto" id="texto" cols="50" rows="7" placeholder="Digite aqui seu comentário" style="resize:none;" required onmouseover='warningMoedasLigar()' onmouseout='warningMoedasDesligar()'></textarea>
@@ -174,11 +180,15 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
     ?>
       <h3 class="avisoRecompensa" id="avisoRecompensa">Você pode comentar para ganhar 5 moedas <?php echo $agora;?></h3>
             <h3 class="limiteRecompensa" id="limiteRecompensa">Você poderá receber mais moedas em <?php echo $tempoRestante;?> horas</h3>
-
-    <form action="cadastraravaliacao.php?id=<?php echo $idsel;?>" method="post" class="sessaoavaliar" id="sessaoavaliar">
-        <div class="divsair">
-    <input class="btnsair" type="button" value="X" onclick="sair()">
-    </div>
+            
+            <div id="id01" class="w3-modal">
+    	<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+      		<div class="w3-center"><br>
+        		<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      		</div>
+          
+    <form action="cadastraravaliacao.php?id=<?php echo $idsel;?>" method="post"  >
+       
       <div class="estrelas">
       <input type="radio" id="cm_star-empty" name="fb" value="0" checked >
       <label for="cm_star-1" ><i class="fa"></i></label>
@@ -191,13 +201,16 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
       <input type="radio" id="cm_star-4" name="fb" value="4"/>
       <label for="cm_star-5" ><i class="fa"></i></label>
       <input type="radio" id="cm_star-5" name="fb" value="5"/>
-      <div class="divenviaravaliacao">
+       <div class="divenviaravaliacao">
        <input type="submit" id="enviaravaliacao" value="Enviar">
         </div>
     </div>
-    
+   
        
   </form>
+      	</div>
+      </div>
+
 
     <!--Mostra comentários-->
     <div>
@@ -206,16 +219,7 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
  
     require "mostrarcomentario.php";
 
-    while($row = $res->fetch_assoc()){
-          if(isset($_SESSION['nome']) and $row["Nome"]==$_SESSION['nome']){
-              echo "<div class='coments' ><h4> Você <a type='button' href='excluircomentario.php?id=". $row["Id"] ."&idsel=". $idsel ."' >Excluir</a></h4> " . " <p>" . $row["Comentario"] . "</p> <p>" . $row["Data"] . "</p> <br><br> </div>";
-          }else if($_SESSION["acesso"]=="Admin"){
-            echo "<div class='coments' > <h4><a href='../perfil/perfil.php?id=". $row['Id_usuario'] ."'>" . $row["Nome"] . "</a><a type='button' href='excluircomentario.php?id=". $row["Id_usuario"] ."&idsel=". $idsel ."' >Excluir</a></h4>" . " <p>" . $row["Comentario"] . "</p> <p>" . $row["Data"] . " </p> <br><br> </div>";
-          }else{
-              echo "<div class='coments' > <h4> <a href='../perfil/perfil.php?id=". $row['Id_usuario'] ."'>" . $row["Nome"] . "</a></h4> <p>" . $row["Comentario"] . "</p> <p>" . $row["Data"] . " </p> <br><br> </div>";
-          }
-      
-      }
+   
 
     ?>
 
@@ -223,7 +227,13 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
 
     <!--Denuncie-->
     <script>
-       
+       var msg = "<?php echo $_SESSION['msg']; ?>"
+       if(msg=="Você precisa estar logado!" || msg=="Sua denuncia foi enviada!"){
+           window.alert(msg);
+           <?php $_SESSION['msg'] = "null"; ?>
+       }else{
+           msg = "nada"
+       }
     </script>
     <button class="open-button" onclick="openForm()">Denuncie</button>
 
@@ -297,7 +307,7 @@ function sair(){
     });
     
 warningMoedasLigar=()=>{ 
-<?php if($tempoRestante == 0){?>
+<?php if($tempoRestante <= 0){?>
 
 avisoRecompensa.style.display='flex';
 

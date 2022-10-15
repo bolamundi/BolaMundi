@@ -18,14 +18,15 @@ if($id!=1){
 $id--;
 
 //Cria o SQL com limites de página ordenado por id
-$sql = "SELECT * FROM usuarios ORDER BY id LIMIT $id, $total";
+$sql = "SELECT * FROM jogadores ORDER BY id LIMIT $id, $total";
 
 //Conta a quantidade total de registros
-$sql1 = "SELECT count(*) as contagem FROM usuarios";
+$sql1 = "SELECT count(*) as contagem FROM jogadores";
 
 //Executa o SQL
 $result = $conn->query($sql);
 $result1 = $conn->query($sql1);
+
 
 //Recupera o resultado da contagem
 $row1 = $result1->fetch_assoc();
@@ -159,73 +160,51 @@ if($contagem%$total==0){
       </div>
     </div>
 
-    <div class = "chartprincipal" style = "margin-top: 20%;">
-       <div class = "container">
-         <h1 style = "padding: 20px 20px 10px 10px;">USUÁRIOS CADASTRADOS NA SEMANA</h1>
-         <hr size=7>
-         <div class="wrapper" style = "margin-left:2%; margin-right:2%">
-           <canvas id="chartPorTempo" height='120'></canvas>
-         </div>
-       </div>
-    </div>
-
     <div class = "tabelausuarios" style = "margin-top: 1.5%;">
       <div class = "container" style = "padding: 10px 10px 10px 10 px;">
-         <h1 style = "padding: 20px 20px 10px 10px;"> CONTROLAR USUÁRIOS </h1>
+         <h1 style = "padding: 20px 20px 10px 10px;"> CONTROLAR JOGADORES </h1>
          <hr size=7>
         <table>
           <tr>
             <th>Id</th>
             <th>Nome</th>
-            <th>Email</th>
-            <th>Acesso</th>
-            <th>Status</th>
-            <th>Data de cadastro</th>
+            <th>Seleção</th>
+            <th>Número</th>
+            <th>Posição</th>
+			<th>Id Seleção</th>
             <th colspan="3">Ações</th>
           </tr>      
           <?php
 
             while($row = $result->fetch_assoc()) {
 
-            echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["Acesso"] . "</td><td>" . $row["Status"] . "</td><td>" . $row["Data"] . "</td>";
+            echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Pais"] . "</td><td>" . $row["Numero"] . "</td><td>" . $row["Posicao"] . "</td><td>" . $row["Id_selecao"] . "</td>";
 
-            echo "<td><a href='../admin/controleusuario/usuarioeditarform.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/editar.png' alt='Editar Usuário'></a></td><td><a href='../admin/controleusuario/usuarioexcluir.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/excluir.png' alt='Excluir Usuário'></a></td><td><a href='../admin/controleusuario/bloquearusuario.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/bloquear.png' alt='Bloquear Usuário'></a></td></tr>";
+            echo "<td><a href='../admin/controlejogador/jogadoreditarform.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/editar.png' alt='Editar Usuário'></a></td><td><a href='../admin/controlejogador/jogadorexcluir.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/excluir.png' alt='Excluir Usuário'></a></td></tr>";
 
               }
           ?>         
         </table>
         <div class="pagination">
           <?php for($i=1; $i <= $contagem; $i++) {
-              echo "<a href='../admin/admindocker.php?pag=$i' class='pag'>$i </a>";
+              echo "<a href='../admin/admindockerjogadores.php?pag=$i' class='pag'>$i </a>";
             } 
           ?>
 
-         <a href="../admin/controleusuario/addusuario.php"><img src='../img/controleusuario/incluir.png' alt='Add Usuário' style="width:3%; float:right; margin-right: 3.2%"></a>
+         <a href="../admin/controlejogador/addjogador.php"><img src='../img/controleusuario/incluir.png' alt='Add Usuário' style="width:3%; float:right; margin-right: 3.2%"></a>
         </div>
       </div>
     </div>
 	
-    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: right; margin-right: 3%;">
+    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: center;">
       <div class = "container">
-        <h1 style = "padding: 20px 20px 10px 10px;">TIPOS DE USUÁRIOS</h1>
+        <h1 style = "padding: 20px 20px 10px 10px;">TIPOS DE JOGADORES</h1>
         <hr size=7>
-        <div class="wrapper">
-          <canvas id="myChart" height='170'></canvas>
-        </div>
+       
         <hr size=7>
       </div>
     </div>
 
-    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: left; margin-left:1.1%">
-      <div class = "container">
-        <h1 style = "padding: 20px 20px 10px 10px;">RANKS</h1>
-        <hr size=7>
-        <div class="wrapper">
-          <canvas id="myChart" height='170'></canvas>
-        </div>
-        <hr size=7>
-      </div>
-    </div>
 	
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>

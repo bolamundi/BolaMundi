@@ -18,10 +18,10 @@ if($id!=1){
 $id--;
 
 //Cria o SQL com limites de página ordenado por id
-$sql = "SELECT * FROM usuarios ORDER BY id LIMIT $id, $total";
+$sql = "SELECT * FROM produtos ORDER BY id LIMIT $id, $total";
 
 //Conta a quantidade total de registros
-$sql1 = "SELECT count(*) as contagem FROM usuarios";
+$sql1 = "SELECT count(*) as contagem FROM produtos";
 
 //Executa o SQL
 $result = $conn->query($sql);
@@ -119,7 +119,7 @@ if($contagem%$total==0){
  
   <div class="w3-row-padding w3-margin-bottom">
 
-    <div class = "cards">
+     <div class = "cards">
       <div class = "usuarios">
         <div class = "icon">
          <i class="fa fa-user fa-fw" style = "color: #00BFFF;"></i>
@@ -159,80 +159,60 @@ if($contagem%$total==0){
       </div>
     </div>
 
-    <div class = "chartprincipal" style = "margin-top: 20%;">
-       <div class = "container">
-         <h1 style = "padding: 20px 20px 10px 10px;">USUÁRIOS CADASTRADOS NA SEMANA</h1>
-         <hr size=7>
-         <div class="wrapper" style = "margin-left:2%; margin-right:2%">
-           <canvas id="chartPorTempo" height='120'></canvas>
-         </div>
-       </div>
-    </div>
-
-    <div class = "tabelausuarios" style = "margin-top: 1.5%;">
+    <div class = "tabelaprodutos" style = "margin-top: 19.5%;">
       <div class = "container" style = "padding: 10px 10px 10px 10 px;">
-         <h1 style = "padding: 20px 20px 10px 10px;"> CONTROLAR USUÁRIOS </h1>
+         <h1 style = "padding: 20px 20px 10px 10px;"> CONTROLAR PRODUTOS </h1>
          <hr size=7>
         <table>
           <tr>
             <th>Id</th>
             <th>Nome</th>
-            <th>Email</th>
-            <th>Acesso</th>
-            <th>Status</th>
-            <th>Data de cadastro</th>
+            <th>Preco</th>
             <th colspan="3">Ações</th>
           </tr>      
           <?php
 
             while($row = $result->fetch_assoc()) {
 
-            echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Email"] . "</td><td>" . $row["Acesso"] . "</td><td>" . $row["Status"] . "</td><td>" . $row["Data"] . "</td>";
+            echo "<tr><td>" . $row["Id"] . "</td><td>" . $row["Nome"] . "</td><td>" . $row["Preco"] . "</td><td>" . "</td>";
 
-            echo "<td><a href='../admin/controleusuario/usuarioeditarform.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/editar.png' alt='Editar Usuário'></a></td><td><a href='../admin/controleusuario/usuarioexcluir.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/excluir.png' alt='Excluir Usuário'></a></td><td><a href='../admin/controleusuario/bloquearusuario.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/bloquear.png' alt='Bloquear Usuário'></a></td></tr>";
+            echo "<td><a href='../admin/controleproduto/produtoeditarform.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/editar.png' alt='Editar Usuário'></a></td><td><a href='../admin/controleproduto/produtoexcluir.php?id=" . $row["Id"] . "'><img src='../img/controleusuario/excluir.png' alt='Excluir Usuário'></a></td></tr>";
 
               }
           ?>         
         </table>
         <div class="pagination">
           <?php for($i=1; $i <= $contagem; $i++) {
-              echo "<a href='../admin/admindocker.php?pag=$i' class='pag'>$i </a>";
+              echo "<a href='../admin/admindockerprodutos.php?pag=$i' class='pag'>$i </a>";
             } 
           ?>
 
-         <a href="../admin/controleusuario/addusuario.php"><img src='../img/controleusuario/incluir.png' alt='Add Usuário' style="width:3%; float:right; margin-right: 3.2%"></a>
+         <a href="../admin/controleproduto/addproduto.php"><img src='../img/controleusuario/incluir.png' alt='Add Usuário' style="width:3%; float:right; margin-right: 3.2%"></a>
         </div>
       </div>
     </div>
 	
-    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: right; margin-right: 3%;">
+    <div class = "chartprodutos" style = "margin-top: 1.5%; float: center; margin-right: 0.%;">
       <div class = "container">
-        <h1 style = "padding: 20px 20px 10px 10px;">TIPOS DE USUÁRIOS</h1>
+        <h1 style = "padding: 20px 20px 10px 10px;">PRODUTOS VENDIDOS</h1>
         <hr size=7>
-        <div class="wrapper">
-          <canvas id="myChart" height='170'></canvas>
-        </div>
+			<div class="wrapper">
+				<canvas id="chartVendas" height='200'></canvas>
+			</div>
         <hr size=7>
       </div>
     </div>
 
-    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: left; margin-left:1.1%">
-      <div class = "container">
-        <h1 style = "padding: 20px 20px 10px 10px;">RANKS</h1>
-        <hr size=7>
-        <div class="wrapper">
-          <canvas id="myChart" height='170'></canvas>
-        </div>
-        <hr size=7>
-      </div>
-    </div>
+
 	
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
   
     <script src="../relatorios/chartcontrole.php"></script>
  
-    <script src="../relatorios/chartcadastroporsemana.php"></script> 
+    <script src="../relatorios/chartcadastroporsemana.php"></script>  
+
+	<script src="../relatorios/chartvendas.php"></script>	
 
   </div>
   

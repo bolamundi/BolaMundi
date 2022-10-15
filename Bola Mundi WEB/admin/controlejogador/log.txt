@@ -1,0 +1,29 @@
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Vinícius Júnior','Brasil','20','Ponta esquerda','1') - 28/06/2022 - 11:34:05
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Alisson','Brasil','1','Goleiro','1') - 29/06/2022 - 11:02:24
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Meioasd','1','203','Goleiro','1') - 29/06/2022 - 11:07:53
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('EFF','Brasil','22','Goleiro','1') - 29/06/2022 - 11:12:14
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('jyg','jgvj','55','Goleiro','1') - 29/06/2022 - 11:13:22
+Lucas - DELETE FROM jogadores WHERE id=5 - 29/06/2022 - 14:44:35
+Lucas - UPDATE jogadores SET nome='Eder Militão', numero='15', pais='Brasil', posicao='Zagueiro'  WHERE id=8 - 01/07/2022 - 00:29:05
+Lucas - UPDATE jogadores SET nome='Eder Militão', numero='14', pais='Brasil', posicao='Zagueiro'  WHERE id=8 - 01/07/2022 - 00:29:25
+Lucas - UPDATE jogadores SET nome='Eder Militão', numero='14', pais='Brasil', posicao='Zagueiro'  WHERE id=8 - 01/07/2022 - 00:30:33
+Lucas - UPDATE jogadores SET nome='Eder Militão', numero='14', pais='Brasil', posicao='Zagueiro'  WHERE id=8 - 01/07/2022 - 00:30:49
+Lucas - UPDATE jogadores SET nome='Gabriel Magalhães', numero='6', pais='Brasil', posicao='Zagueiro'  WHERE id=9 - 01/07/2022 - 00:36:22
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Vinícius Junior','Brasil','20','Ponta esquerda','1') - 17/07/2022 - 03:37:55
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Alisson','Brasil','1','Goleiro','1') - 18/07/2022 - 20:50:32
+Lucas - DELETE FROM jogadores WHERE id=2 - 18/07/2022 - 20:51:11
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Vinícius Junior','Brasil','20','Ponta esquerda','1') - 18/07/2022 - 20:51:24
+Lucas - DELETE FROM jogadores WHERE id=3 - 18/07/2022 - 20:53:45
+Lucas - DELETE FROM jogadores WHERE id=4 - 18/07/2022 - 20:56:54
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Vinícius Junior','Brasil','20','Ponta esquerda','1') - 18/07/2022 - 20:57:04
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Wesley Safadão ','Brasil','20','Ponta esquerda','1') - 18/07/2022 - 20:57:15
+Lucas - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('Lucas','Brasil','14','Ponta esquerda','1') - 18/07/2022 - 20:57:28
+Lucas - UPDATE jogadores SET nome='Wesley Safadão ', numero='33', pais='Brasil', posicao='Ponta esquerda'  WHERE id=6 - 18/07/2022 - 20:57:44
+Beijinho, te amo - UPDATE jogadores SET nome='Tammy Abraham', numero='21', pais='Inglaterra', posicao='Atacante'  WHERE id=484 - 10/10/2022 - 10:06:35
+Beijinho, te amo - UPDATE jogadores SET nome='Tammy Abraham', numero='22', pais='Inglaterra', posicao='Atacante'  WHERE id=484 - 10/10/2022 - 10:06:45
+Beijinho, te amo - INSERT INTO jogadores(nome,pais,numero,posicao,id_selecao) values('SDIJsdijsdijsdjsdiq','DSIJsdijdsjids','22','Goleiro','1') - 10/10/2022 - 10:17:49
+Beijinho, te amo - INSERT INTO jogadores2(nome,pais,numero,posicao,id_selecao) values('Vasco','Brasil','33','Meia','1') - 10/10/2022 - 10:47:14
+Beijinho, te amo - INSERT INTO jogadores2(nome,pais,numero,posicao,id_selecao) values('Vasco','Brasil','33','Meia','1') - 10/10/2022 - 10:49:04
+Beijinho, te amo - DELETE FROM jogadores WHERE id=509 - 10/10/2022 - 10:49:17
+Beijinho, te amo - UPDATE jogadores SET nome='Tamminho Abraham', numero='22', pais='Inglaterra', posicao='Atacante'  WHERE id=484 - 10/10/2022 - 10:54:43
+Beijinho, te amo - UPDATE jogadores SET nome='Tammy Abraham', numero='22', pais='Inglaterra', posicao='Atacante'  WHERE id=484 - 10/10/2022 - 10:55:56

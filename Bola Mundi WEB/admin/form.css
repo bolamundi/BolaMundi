@@ -1,0 +1,68 @@
+body {
+	background-image: url('https://bolamundi2022.000webhostapp.com/admin/backgroundform.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  
+}
+
+
+.container {
+	width: 60%;
+	margin-left: 18%;
+	margin-top: 3%;
+	background-color: white;
+}
+
+.info {
+	float: left;
+}
+.container h1 {
+	font-family: Arial;
+	text-align: left;
+	
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial;
+}
+
+input[type=submit]:hover {
+  background-color:  #cc0000;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}

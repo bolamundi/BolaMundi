@@ -12,7 +12,7 @@ if ($result->num_rows>0){
     
     case $xp>=250:
        $lvl=25;
-        $rank='Master';
+        $rank='masterbm.png';
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
@@ -34,7 +34,7 @@ if ($result->num_rows>0){
         
         case $xp>=200:
        $lvl=20;
-        $rank='Diamante';
+        $rank='diamantebm.png';
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
@@ -56,7 +56,7 @@ if ($result->num_rows>0){
         
         case $xp>=150:
          $lvl=15;
-        $rank='Ouro';
+        $rank='ourobm.png';
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
@@ -79,7 +79,7 @@ if ($result->num_rows>0){
         
         case $xp>=100:
          $lvl=10;
-        $rank='Prata';
+        $rank='pratabm.png';
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
@@ -101,7 +101,7 @@ if ($result->num_rows>0){
     
         case $xp>=50:
          $lvl=5;
-        $rank='Bronze';
+        $rank='bronzebm.png';
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){

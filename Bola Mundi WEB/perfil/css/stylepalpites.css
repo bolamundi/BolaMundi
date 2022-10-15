@@ -103,9 +103,9 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
-  padding: 10px;
+  padding: 8px;
   width: 25%;
-  background: #d9d9d9;
+  background: #eee;
   color: #555;
   float: left;
   text-align: center;
@@ -117,4 +117,15 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+}.apagarPalpite{
+text-decoration:none;
+float:right;
+ position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.apagarPalpite:hover{
+color: #f44336;
+  
 }
