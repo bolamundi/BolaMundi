@@ -96,9 +96,11 @@
                             <li><a class="page-scroll" data-toggle="dropdown" href="#"><?php echo $nome; ?><span class="caret"></span></a>
                               <ul class="dropdown-menu">
                                <li><a href="perfil/perfil.php">Seu Perfil</a></li>
-                               <li onclick="document.getElementById('id01').style.display='block'">Configurações</li>
-                               <li><a href="admin/admindocker.php?pag=1" id="controle">Admin</a></li> 
-                               <li><a href="controle.php?pag=1" id="controle">Controle</a></li> 
+       <?php                        
+                               if(isset($_SESSION['acesso']) and $_SESSION['acesso']=="Admin"){
+     echo '<li><a href="admin/admindocker.php?pag=1" id="admin">Admin</a></li>';
+   } ?>
+                               
                                <li><a class="page-scroll" id="login" href="acesso/login/login.html">Login</a></li>
                                <li><a class="page-scroll" id="deslogar" href="acesso/login/deslogar.php">Deslogar</a></li>
                               </ul>
@@ -112,25 +114,6 @@
 
             </header>
 
-            <!-- ========= FIM HEADER =========-->
-            
-            <!-- ========= INÍCIO DE CONFIGURAÇÕES =========-->
-
-            <div id="id01" class="w3-modal">
-                <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-                    <header class="w3-container w3-red"> 
-                        <span onclick="document.getElementById('id01').style.display='none'" 
-                        class="w3-button w3-red w3-xlarge w3-display-topright">&times;</span>
-                    </header>
-
-            
-
-            <div class="w3-container w3-light-grey w3-padding">
-                <button class="w3-button w3-right w3-white w3-border" 
-                onclick="document.getElementById('id01').style.display='none'">Fechar</button>
-            </div>
-            </div>
-            </div>
 
             <!--========== INÍCIO DO CAROUSEL HOME ==========-->
             
@@ -209,7 +192,7 @@
                                         <div class="selecoescarousel">
                                           <img src="img/selecoes/brasil.jpg" alt="Bandeira do Brasil" style="width:100%"> 
                                           <h2> SELEÇÃO BRASILEIRA </h2>
-                                          <a href="selecoes/selecao.php?id=1"><button type="submit" class="selecoes-inner" style="color: #FFFFFF">Clique Aqui</button></a>              
+                                          <a href="selecoes/selecao.php?id=1&pag=1"><button type="submit" class="selecoes-inner" style="color: #FFFFFF">Clique Aqui</button></a>              
                                         </div>
                                     </blockquote>
                                 </div>
@@ -964,54 +947,6 @@
                </div>
             </section>    
             
-      <!--========== INÍCIO DO CONTADOR ==========--> 
-
-       <!--   <section id="cta-section">
-           <div class="cta">
-                <div class="container">
-                    <div class="row">
-                    
-                        <div class="col-md-9">
-                            <h1>DIAS PARA A COPA DO MUNDO DE 2022<h1>
-                            <div class="contagem">
-                              <table>
-                               <tr>
-                                <td>
-                                  <div class="numero" id="dia"></div>
-                                </td>
-                                <td>
-                                  <div class="numero" id="hora"></div>
-                                </td>
-                                <td>
-                                  <div class="numero" id="minuto"></div>
-                                </td>
-                                <td>
-                                  <div class="numero" id="segundo"></div>
-                                </td>
-                                </tr>
-                                <tr style="height:20px">
-                                 <td>
-                                  <p class="legenda">Dias</p>
-                                 </td>
-                                <td>
-                                  <p class="legenda">Horas</p>
-                                </td>
-                                <td>
-                                  <p class="legenda">Min</p>
-                                </td>
-                                <td>
-                                  <p class="legenda">Seg</p>
-                                </td>
-                                </tr>
-                               </table>
-                            </div>
-                        </div>  
-                    </div> 
-                </div>
-            </div>
-          </section> -->
-
-          <!--========== FIM DO CONTADOR ==========--> 
 
           <!--========== INÍCIO DO CONTATO ==========-->    
 
@@ -1119,7 +1054,8 @@
                 
                 <div class="footer">
                     <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
-                        <p class="copyright">Copyright &copy; 2022 - Designed & Developed by Bola Mundi</p>
+                        <p class="copyright">Créditos para W3schools, Unika </p>
+                        <p class="copyright">Códigos usados apenas para fins acadêmicos.</p>
                     </div>
                 </div>
 
