@@ -13,14 +13,24 @@
   src: url('../fonts/poppins/Poppins-Bold.otf'); 
 }
 
-div.selecoes {
-  background-position: center;
-  background-image: url("https://bolamundi2022.000webhostapp.com/img/selecoes/mandantesselecoes.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 70% 100%;
+body {
+    background-image: url("https://bolamundi2022.000webhostapp.com/img/selecoes/mandantesselecoes.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
 }
 
+background-image {
+     opacity: 0.5;
+}
+
+div.selecoes h1 {
+    color: white;
+    text-align: center;
+    font-family: SourceSansPro-Bold;
+    text-shadow: black 1px 2px 1px;
+    font-size: 60px;
+}
 
 /* Seleções */
 
@@ -109,5 +119,4 @@ div.desc {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-
 

@@ -111,15 +111,6 @@ label #sidebar_btn:hover{
   width: 100%;
 }
 
-.content{
-  width: (100% - 250px);
-  margin-top: 60px;
-  padding: 20px;
-  margin-left: 250px;
-  height: 100vh;
-  transition: 0.5s;
-}
-
 #check:checked ~ .content{
   margin-left: 60px;
 }

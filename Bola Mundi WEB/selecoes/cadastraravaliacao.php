@@ -15,11 +15,11 @@ $sql="INSERT INTO avaliacoes (Estrelas,Id_usuario,Id_selecao) value ('$estrelas'
 
 
 if ( $conn->query($sql) === TRUE){
- header("Location:selecao.php?id=$idsel");  
+ header("Location:selecao.php?id=$idsel&pag=1");  
     
     
 }else if ($nome==null){
-     header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel");
+     header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel&pag=1");
  
   echo '<script> window.alert("O usuário precisa estar logado para avaliar") </script>';
 
@@ -29,7 +29,7 @@ if ( $conn->query($sql) === TRUE){
 
 
 else {
- header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel");
+ header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel&pag=1");
  
   echo '<script> window.alert("Erro ao conectar") </script>';  
     

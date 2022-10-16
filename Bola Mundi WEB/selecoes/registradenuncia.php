@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$idsel=$_SESSION['idsel'];
 include_once("conexao.php");
 
 if(isset($_SESSION['nome'])){
@@ -29,15 +29,15 @@ $sql = "INSERT INTO denuncia (id_usuario, nome, mensagem) value ('$idUsuario' , 
 
     if($nome=="Usuario não logado"){
         $_SESSION['msg'] = "Você precisa estar logado!";
-        header("Location: /selecoes/selecao.php?id=1");
+        header("Location: /selecoes/selecao.php?id=$idsel&pag=1");
 
     }elseif(mysqli_query($conn, $sql)){
         $_SESSION['msg'] = "Sua denuncia foi enviada!"; 
-        header("Location: /selecoes/selecao.php?id=1");
+        header("Location: /selecoes/selecao.php?id=$idsel&pag=1");
         
     } else {
         $_SESSION['msg'] = "Você precisa estar logado!"; 
-        header("Location: /selecoes/selecao.php?id=1");
+        header("Location: /selecoes/selecao.php?id=$idsel&pag=1");
     }
     
     mysqli_close($conn);

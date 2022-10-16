@@ -48,7 +48,7 @@ if($conn->query($atualizarTemp)){
     
 }else{
 $operacao=false;
-    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel");
+    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel&pag=1");
  
   echo '<script> window.alert("Erro ao atualizar seu temporizador") </script>';
 exit;
@@ -58,7 +58,7 @@ exit;
 
 
 if($conn->query($addMoeda) and $conn->query($addXp) and $operacao){
-    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel");
+    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel&pag=1");
  
   echo '<script> window.alert("5 moedas e 10 de xp foram adicionadas ao seu perfil") </script>';
      exit;
@@ -67,14 +67,14 @@ if($conn->query($addMoeda) and $conn->query($addXp) and $operacao){
      $sqlVoltarTempo="UPDATE usuarios SET RecompensaTimestamp='$ultimoResgate' WHERE id=".$id_usuario;
  $conn->query($sqlVoltarTempo);
  
-    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel");
+    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel&pag=1");
 
   echo '<script> window.alert("Erro ao atualizar seu saldo") </script>';
  exit;
     
 }
 }else{
-    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel");
+    header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel&pag=1");
  
   echo '<script> window.alert("Espere 24 horas para resgatar suas moedas e xp") </script>'; 
      exit;

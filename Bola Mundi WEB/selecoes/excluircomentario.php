@@ -10,7 +10,7 @@ require '../conexao.php';
 // Apagar da tabela usuários o registro com o id
 $sql = "DELETE FROM comentarios WHERE Id=$campoid";
 if($conn->query($sql)){
-  header("Location:selecao.php?id=$idsel");
+  header("Location:selecao.php?id=$idsel&pag=1");
     $conn->close();
     
 }

@@ -182,34 +182,34 @@ $tempoRestante=24 - floor($proxRecompensa/3600);}
             <h3 class="limiteRecompensa" id="limiteRecompensa">Você poderá receber mais moedas em <?php echo $tempoRestante;?> horas</h3>
             
             <div id="id01" class="w3-modal">
-    	<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+    	<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:300px; max-height: 300px;">
       		<div class="w3-center"><br>
         		<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
       		</div>
           
-    <form action="cadastraravaliacao.php?id=<?php echo $idsel;?>" method="post"  >
-       
-      <div class="estrelas">
-      <input type="radio" id="cm_star-empty" name="fb" value="0" checked >
-      <label for="cm_star-1" ><i class="fa"></i></label>
-      <input type="radio" id="cm_star-1" name="fb" value="1"/>
-      <label for="cm_star-2"  ><i class="fa"></i></label>
-      <input type="radio" id="cm_star-2" name="fb" value="2"/>
-      <label for="cm_star-3"  ><i class="fa"></i></label>
-      <input type="radio" id="cm_star-3" name="fb" value="3"/>
-      <label for="cm_star-4" ><i class="fa"></i></label>
-      <input type="radio" id="cm_star-4" name="fb" value="4"/>
-      <label for="cm_star-5" ><i class="fa"></i></label>
-      <input type="radio" id="cm_star-5" name="fb" value="5"/>
-       <div class="divenviaravaliacao">
-       <input type="submit" id="enviaravaliacao" value="Enviar">
-        </div>
-    </div>
-   
-       
-  </form>
-      	</div>
-      </div>
+            <form action="cadastraravaliacao.php?id=<?php echo $idsel;?>" method="post">
+               
+              <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="0" checked >
+              <label for="cm_star-1" ><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"  ><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"  ><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4" ><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5" ><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+               <div class="divenviaravaliacao">
+               <input type="submit" id="enviaravaliacao" value="Enviar">
+                </div>
+            </div>
+           
+               
+          </form>
+              	</div>
+              </div>
 
 
     <!--Mostra comentários-->
