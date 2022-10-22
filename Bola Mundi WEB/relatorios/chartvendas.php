@@ -13,7 +13,7 @@ var pieChart= new Chart(ctx2, {
     data: {labels: produto , 
     datasets: [
 {
-label:"Acessos",
+label:"Vendas",
 data: quantidades,
 backgroundColor:[
     "rgba(255, 99, 132, 1)",
@@ -23,8 +23,7 @@ backgroundColor:[
     "rgba(153, 102, 255, 1)",
     ],
     borderWidth: 5 // afeta a cor e a largura da borda 
-
-
+    
 }
 
     ]

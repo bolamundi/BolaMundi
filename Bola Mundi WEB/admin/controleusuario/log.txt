@@ -70,3 +70,20 @@ Lucas - DELETE FROM usuarios WHERE id=59 - 17/09/2022 - 20:39:33
 Lucas - DELETE FROM usuarios WHERE id=90 - 17/09/2022 - 20:40:00
 Lucas - INSERT INTO usuarios(nome,email,senha,acesso,data) values('Ana','ana@bolamundi.com','$2y$10$MCdzEaa.1YVnkHD7/47iDeiAjbHkPDnSPtaCIpdAKcoifUayXWY6a','Admin','2022-09-17') - 17/09/2022 - 20:41:55
 Beijinho, te amo - INSERT INTO usuarios(nome,email,senha,acesso,data) values('y7','vtultufyftj@rjtdr.com','$2y$10$t8fQZN0oWKxkJL4S6b48J.pg9L6xcbNAM.0EWVqqCPXu.uGtDYhe6','','2022-10-10') - 10/10/2022 - 10:09:26
+lucas - DELETE FROM usuarios WHERE id=105 - 19/10/2022 - 10:46:50
+lucas - DELETE FROM usuarios WHERE id=107 - 19/10/2022 - 10:47:18
+lucas - DELETE FROM usuarios WHERE id=101 - 19/10/2022 - 10:47:42
+lucas - DELETE FROM usuarios WHERE id=86 - 19/10/2022 - 10:49:39
+lucas - UPDATE usuarios SET Status='Bloqueado' WHERE id=108 - 19/10/2022 - 10:50:43
+lucas - UPDATE usuarios SET Status='Bloqueado' WHERE id=106 - 19/10/2022 - 10:51:01
+lucas - DELETE FROM usuarios WHERE id=106 - 19/10/2022 - 10:51:13
+lucas - INSERT INTO usuarios(nome,email,senha,acesso,data) values('polly','bolamundi2022@gmail.com','$2y$10$ILN1glI7LSKOoCf3bgUgZuPRRdyO6.VzHb76gZwRtaNApUgVTk5Um','','2022-10-19') - 19/10/2022 - 10:51:32
+lucas - UPDATE usuarios SET nome='', email='', acesso='' WHERE id='' - 19/10/2022 - 10:53:56
+lucas - UPDATE usuarios SET nome='', email='', acesso='' WHERE id='' - 19/10/2022 - 10:54:13
+lucas - UPDATE usuarios SET nome='', email='', acesso='' WHERE id='' - 19/10/2022 - 10:54:24
+lucas - UPDATE usuarios SET nome='', email='', acesso='' WHERE id='' - 19/10/2022 - 10:55:33
+lucas - UPDATE usuarios SET nome='', email='', acesso='' WHERE id='' - 19/10/2022 - 11:00:26
+lucas - UPDATE usuarios SET nome='o time do corinthia', email='bolamundi2022@gmail.com', acesso='Admin' WHERE id='110' - 19/10/2022 - 11:01:38
+lucas - DELETE FROM usuarios WHERE id=103 - 19/10/2022 - 11:01:54
+lucas - INSERT INTO usuarios(nome,email,senha,acesso,data) values('quem eh que te pega firme','','$2y$10$WPWOR5kGLY8Jy6PXDX9W7.NG7Mgpfs.7z02ykuMSQWWakmpOhyiOO','','2022-10-19') - 19/10/2022 - 11:03:16
+lucas - INSERT INTO usuarios(nome,email,senha,acesso,data) values('amor eu sei q vc eh casado','querotedar@euquerodar.com','$2y$10$139IGHS3HBVJX2izf/wF.uJqFdnH44qOz0HYCkmC9pF.sojQqKzJe','Admin','2022-10-19') - 19/10/2022 - 11:06:04

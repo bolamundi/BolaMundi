@@ -1,7 +1,8 @@
 <?php
 session_start();
 //Verifica o acesso.
-  include '../validarAcesso.php';
+$path=2;
+  include '../../validarAcesso.php';
 
 //Dados do formulário
 $id = $_GET["id"];
@@ -9,7 +10,7 @@ $id = $_GET["id"];
 
 
 //Faz a conexão com o BD.
-require '../conexao.php';
+require '../../conexao.php';
 
 
 
@@ -32,7 +33,7 @@ if ($conn->query($sql) === TRUE) {
   fclose($log);
     
     
-  header('refresh:00000000000000000000000000000000000.1; url=../admin/admindocker.php?pag=1.php?pag=1');
+  header('refresh:00000000000000000000000000000000000.1; url=../admindocker.php?pag=1');
 } else {
   echo "Erro: " . $conn->error;
 }

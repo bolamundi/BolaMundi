@@ -1,8 +1,8 @@
 <?php
 
   session_start();
-
-  include '../validarAcesso.php';
+$path=2;
+  include '../../validarAcesso.php';
 
   $camponome=filter_input(INPUT_POST, "nome");
   $campoemail=filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
@@ -47,11 +47,11 @@ require '../../conexao.php';
   
       //Fecha o objeto
       fclose($log);
-	   header("refresh:0.00000000000000000000000000000000000000001;url=../admin/admindocker.php?pag=1");
+	   header("refresh:0.00000000000000000000000000000000000000001;url=../admindocker.php?pag=1");
 	   echo "<script>window.alert('Gravado com sucesso')</script>";
 	
       }else{
-	     header("refresh:5;url=/controle.php?pag=1");
+	     header("refresh:5;url=../admindocker.php?pag=1");
 	     echo "Error: ". $sql . "<br>" . $conn->error;
       }
 

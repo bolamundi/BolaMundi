@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image:url('https://bolamundi2022.000webhostapp.com/perfiljogadoresbr/backgroundgaleria.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+  color: white;
+  text-shadow:  #595959 0.05em 0.05em 0.05em}
+}
+
+
+h2 {
+  color: white;
+  text-shadow:  #595959 0.05em 0.05em 0.05em}
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.50) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+  
+.content img {
+    border-radius: 20px;
+    filter: brightness(90%);  
+    filter: contrast(103%);
+    filter: opacity(94%);
+
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>PERFIL DOS JOGADORES BRASILEIROS</h1>
+<hr>
+
+<h2 style="color:white;   text-shadow:  #595959 0.05em 0.05em 0.05em;}">Conheça mais sobre os guerreiros do hexa:</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Todos os Jogadores</button>
+  <button class="btn" onclick="filterSelection('goleiros')">Goleiros</button>
+  <button class="btn" onclick="filterSelection('defensores')"> Defensores</button>
+  <button class="btn" onclick="filterSelection('meias')"> Meias</button>
+  <button class="btn" onclick="filterSelection('atacantes')">Atacantes</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column goleiros">
+    <div class="content">
+      <img src="/perfiljogadoresbr/fotos de perfil/1.png" alt="Goleiro Alisson" style="width:100%">
+      <h4>Alisson</h4>
+      <p>RS, 30 anos - Está no Liverpool desde 2018.</p>
+    </div>
+  </div>
+  <div class="column goleiros">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/2.png" alt="Goleiro Ederson" style="width:100%">
+      <h4>Ederson</h4>
+      
+         <p>SP, 29 anos - Está no Manchester City desde 2017. </p>
+    </div>
+  </div>
+  <div class="column goleiros">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/3.png" alt="Goleiro Weverton" style="width:100%">
+      <h4>Weverton</h4>
+     
+      <p>AC, 34 anos - Está no Palmeiras desde 2016.</p>
+    </div>
+  </div>
+  
+  <div class="column defensores">
+    <div class="content">
+      <img src="/perfiljogadoresbr/fotos de perfil/4.png" alt="Lateral-Direito Daniel Alves" style="width:100%">
+      <h4>Daniel Alves</h4>
+      
+      <p>BA, 39 anos - Está no Pumas desde 2022.</p>
+    </div>
+  </div>
+  <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/5.png" alt="Lateral-direito Danilo" style="width:100%">
+      <h4>Danilo</h4>
+      <p>MG, 31 anos - Está no Juventus desde 2019.</p>
+     
+    </div>
+  </div>
+  <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/6.png" alt="Zagueiro Eder Militão" style="width:100%">
+      <h4>Eder Militão</h4>
+      <p>SP, 24 anos - Está no Real Madrid desde 2019.</p>
+     
+    </div>
+  </div>
+    <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/7.png" alt="Zagueiro Gabriel Magalhães" style="width:100%">
+      <h4>Gabriel Magalhães</h4>
+      <p>SP, 24 anos - Está no Arsenal desde 2020.</p>
+    </div>
+  </div>
+  <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/8.png" alt="Zagueiro Marquinhos" style="width:100%">
+      <h4>Marquinhos</h4>
+      <p>SP, 28 anos - Está no Paris Saint-Germain desde 2013.</p>
+      
+    </div>
+  </div>
+  <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/9.png" alt="Zagueiro Thiago Silva" style="width:100%">
+      <h4>Thiago Silva</h4>
+      <p>RJ, 38 anos - Está no Chelsea desde 2020.</p>
+      
+    </div>
+  </div>
+  <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/10.png" alt="Lateral-esquerdo Alex Sandro" style="width:100%">
+      <h4>Alex Sandro</h4>
+      <p>SP, 31 anos - Está no Juventus desde 2015.</p>
+      
+    </div>
+  </div>
+  <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/11.png" alt="Lateral-esquerdo Alex Telles" style="width:100%">
+      <h4>Alex Telles</h4>
+      <p>RS, 29 anos - Está no Sevilla desde 2022.</p>
+      
+    </div>
+  </div>
+  <div class="column defensores">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/12.png" alt="Lateral-esquerdo Renan Lodi" style="width:100%">
+      <h4> Renan Lodi</h4>
+      <p>SP, 24 anos - Está no Nottingham Foreste desde 2022.</p>
+     
+    </div>
+  </div>
+
+  <div class="column meias">
+    <div class="content">
+      <img src="/perfiljogadoresbr/fotos de perfil/13.png" alt="Meia Bruno Guimarães" style="width:100%">
+      <h4>Bruno Guimarães</h4>
+      <p>RJ, 24 anos - Está no Newcastle desde 2022.</p>
+      
+    </div>
+  </div>
+  <div class="column meias">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/14.png" alt="Meia Casemiro" style="width:100%">
+      <h4>Casemiro</h4>
+      <p>SP, 30 anos - Está no Manchester United desde 2022.</p>
+     
+    </div>
+  </div>
+  <div class="column meias">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/15.png" alt="Meia Everton Ribeiro" style="width:100%">
+      <h4>Everton Ribeiro</h4>
+      <p>33 anos, SP - Está no Flamengo desde 2017.</p>
+      
+    </div>
+  </div>
+  
+  <div class="column meias">
+    <div class="content">
+      <img src="/perfiljogadoresbr/fotos de perfil/16.png" alt="Meia Fabinho" style="width:100%">
+      <h4>Fabinho</h4>
+      <p>SP, 28 anos - está no Liverpool desde 2018.</p>
+      
+    </div>
+  </div>
+  <div class="column meias">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/17.png" alt="Meia Fred" style="width:100%">
+      <h4>Fred</h4>
+      <p>MG, 29 anos - Está no Manchester United 2018.</p>
+    </div>
+  </div>
+  <div class="column meias">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/18.png" alt="Meia Lucas Paquetá" style="width:100%">
+      <h4>Lucas Paquetá</h4>
+      <p>RJ, 25 anos - Está no Ham Umited desde 2022.</p>
+    </div>
+  </div>
+  
+  <div class="column meias">
+    <div class="content">
+      <img src="/perfiljogadoresbr/fotos de perfil/19.png" alt="Meia Philippe Coutinho" style="width:100%">
+      <h4>Philippe Coutinho</h4>
+      <p>RJ, 30 anos - Está no Aston Villa desde 2022.</p>
+    </div>
+  </div>
+  
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/20.png" alt="Atacante Gabriel Jesus" style="width:100%">
+      <h4>Gabriel Jesus</h4>
+      <p>SP, 25 anos - Está no Arsenal desde 2022.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/21.png" alt="Atacante Gabriel Martinelli" style="width:100%">
+      <h4>Gabriel Martinelli</h4>
+      <p>SP, 21 anos - Está no Arsenal desde 2022.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/22.png" alt="Atacante Matheus Cunha" style="width:100%">
+      <h4>Matheus Cunha</h4>
+      <p>PB, 23 anos - Está no Atlético de Madrid desde 2022.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/23.png" alt="Atacante Neymar Jr" style="width:100%">
+      <h4>Neymar Jr</h4>
+      <p>SP, 30 anos - Está no Paris Saint-Germain desde 2017.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/24.png" alt="Atacante Raphinha" style="width:100%">
+      <h4>Raphinha</h4>
+      <p>RS, 25 anos - Está no Barcelona desde 2022.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/25.png" alt="Atacante Richarlison" style="width:100%">
+      <h4>Richarlison</h4>
+      <p>ES, 25 anos - Está no Tottenham desde 2022.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/26.png" alt="Atacante Rodrygo" style="width:100%">
+      <h4>Rodrygo</h4>
+      <p>SP, 21 anos - Está no Real Madrid desde 2018.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/27.png" alt="Atacante Vinícius Júnior" style="width:100%">
+      <h4>Vinícius Júnior</h4>
+      <p>RJ, 22 anos - Está no Real Madrid desde 2018.</p>
+    </div>
+  </div>
+  <div class="column atacantes">
+    <div class="content">
+    <img src="/perfiljogadoresbr/fotos de perfil/28.png" alt="Atacante Antony" style="width:100%">
+      <h4>Antony</h4>
+      <p>ES, 22 anos - Está no Manchester United desde 2022.</p>
+    </div>
+  </div>
+  
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

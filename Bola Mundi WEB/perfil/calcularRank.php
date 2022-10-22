@@ -16,13 +16,13 @@ if ($result->num_rows>0){
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
-            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+           // header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Rank atualizado") </script>';
     exit;
             
         }else{
-             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+            // header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Erro ao atualizar o rank") </script>';
     exit;
@@ -38,13 +38,13 @@ if ($result->num_rows>0){
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
-            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+          //  header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Rank atualizado") </script>';
     exit;
             
         }else{
-             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+            // header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Erro ao atualizar o rank") </script>';
     exit;
@@ -60,13 +60,13 @@ if ($result->num_rows>0){
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
-            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+           // header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Rank atualizado") </script>';
     exit;
             
         }else{
-             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+             //header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Erro ao atualizar o rank") </script>';
     exit;
@@ -83,13 +83,13 @@ if ($result->num_rows>0){
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
-            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+          //  header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Rank atualizado") </script>';
     exit;
             
         }else{
-             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+             //header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Erro ao atualizar o rank") </script>';
     exit;
@@ -105,13 +105,13 @@ if ($result->num_rows>0){
        $sqlAtualizar="UPDATE usuarios SET nivel='$lvl' , rank='$rank' WHERE Id='$idUsuario'";
     
        if ($conn->query($sqlAtualizar)){
-            header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+           // header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Rank atualizado") </script>';
     exit;
             
         }else{
-             header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
+            // header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=perfil.php?");
  
   echo '<script> window.alert("Erro ao atualizar o rank") </script>';
     exit;

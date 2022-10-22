@@ -59,7 +59,7 @@ exit;
 
 if($conn->query($addMoeda) and $conn->query($addXp) and $operacao){
     header("refresh:0.000000000000000000000000000000000000000000000000000000001;url=selecao.php?id=$idsel&pag=1");
- 
+ include '../perfil/calcularRank.php';
   echo '<script> window.alert("5 moedas e 10 de xp foram adicionadas ao seu perfil") </script>';
      exit;
     

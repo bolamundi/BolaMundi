@@ -1,7 +1,8 @@
 <?php
 session_start();
 //Verifica o acesso.
-  include '../validarAcesso.php';
+$path=2;
+  include '../../validarAcesso.php';
 
 //Dados do formulário
 $campoid = filter_input(INPUT_POST, "id");
@@ -10,9 +11,9 @@ $campoemail = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
 $campoacesso =filter_input(INPUT_POST, "acesso");
 
 //Faz a conexão com o BD.
-require '../conexao.php';
+require '../../conexao.php';
 //Sql que altera um registro da tabela usuários
-$sql = "UPDATE usuarios SET nome='" . $camponome . "', email='" . $campoemail . "', acesso='" . $campoacesso . "' WHERE id=" . $campoid;
+$sql ="UPDATE usuarios SET nome='$camponome', email='$campoemail', acesso='$campoacesso' WHERE id='$campoid'";
 
 //Executa o sql e faz tratamento de erro.
 if ($conn->query($sql) === TRUE) {
@@ -30,7 +31,7 @@ if ($conn->query($sql) === TRUE) {
   fclose($log);
     
     
-  header('refresh:00000000000000000000000000000000000.1; url=..admin/admindocker.php?pag=1.php?pag=1');
+  header('refresh:00000000000000000000000000000000000.1; url=../admindocker.php?pag=1');
 } else {
   echo "Erro: " . $conn->error;
 }

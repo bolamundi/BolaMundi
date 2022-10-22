@@ -2,7 +2,7 @@
 (function ($) {
     "use strict";
 
-    /* VMostra a validação */
+    /* Mostra a validação */
 
     $('.validate-input .input100').each(function(){
         $(this).on('blur', function(){

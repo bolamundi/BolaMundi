@@ -105,6 +105,7 @@
                                <li><a class="page-scroll" id="deslogar" href="acesso/login/deslogar.php">Deslogar</a></li>
                               </ul>
                            </li>
+                           <li><a class="page-scroll" href="../../eng/index.php">ENG</a></li>
                       </ul>
                     </div>
                   </div>
@@ -214,6 +215,15 @@
                                         </div>
                                     </blockquote>
                                 </div>
+                                                                <div class="item">
+                                    <blockquote>
+                                        <div class="selecoescarousel">
+                                          <img src="img/selecoes/perfiljogadores.jpg" alt="Todas as seleções" style="width:100%"> 
+                                          <h2> PERFIL DOS JOGADORES BRASILEIROS </h2>
+                                          <a href="perfiljogadoresbr/galeria.html"><button type="submit" class="selecoes-inner" style="color: #FFFFFF">Clique Aqui</button></a>             
+                                        </div>
+                                    </blockquote>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -233,56 +243,56 @@
                             <div class="devider"></div>
                       </div>
                            
-                	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                       
-            		<center>
-        				<b> <input id="gfg" type="text"placeholder="Search here"> </b>
-        				<br>
-        				<br>
+                    <center>
+                        <b> <input id="gfg" type="text"placeholder="Pesquise aqui a partida que desejar"> </b>
+                        <br>
+                        <br>
                            <table id="table">
-            					<tr>
-               						<th>Seleções</th>
-               						<th>Data</th>
-			   						<th>Horário</th>
-               						<th>Local</th>
-			   						<th>Status</th>
-			   						<th>Vencedor</th>
-							    </tr> 
-            				<tbody id="geeks">
-            					<tr>
+                                <tr>
+                                    <th>Seleções</th>
+                                    <th>Data</th>
+                                    <th>Horário</th>
+                                    <th>Local</th>
+                                    <th>Status</th>
+                                    <th>Vencedor</th>
+                                </tr> 
+                            <tbody id="geeks">
+                                <tr>
                            
-           						    <td>Senegal X Holanda</td>
-            						<td>21/11</td>
-									<td>07:00</td>
-									<td>Al Thumama</td>
-									<td>Não realizado</td>
-            						<td>Sem informação</td>
-		    					</tr>
-            					<tr>
-									<td>Inglaterra X Irã</td>
-           							<td>21/11</td>
-									<td>10:00</td>
-									<td>Khalifa</td>
-									<td>Não realizado</td>
-      								<td>Sem informação</td>
-								</tr>
-    							<tr>
-									<td>Catar X Equador</td>
-      								<td>21/11</td>
-									<td>13:00</td>
-								    <td>Al Bayt Stadium</td>
-									<td>Não realizado</td>
-      								<td>Sem informação</td>
-								</tr>
-								<tr>
-									<td>Estados Unidos x Gales</td>
-      								<td>21/11</td>
-								    <td>16:00</td>
-									<td>Ahmad Bin Ali </td>
-									<td>Não realizado</td>
-      								<td>Sem informação</td>
-								</tr>
-								<tr>
+                                    <td>Senegal X Holanda</td>
+                                    <td>21/11</td>
+                                    <td>07:00</td>
+                                    <td>Al Thumama</td>
+                                    <td>Não realizado</td>
+                                    <td>Sem informação</td>
+                                </tr>
+                                <tr>
+                                    <td>Inglaterra X Irã</td>
+                                    <td>21/11</td>
+                                    <td>10:00</td>
+                                    <td>Khalifa</td>
+                                    <td>Não realizado</td>
+                                    <td>Sem informação</td>
+                                </tr>
+                                <tr>
+                                    <td>Catar X Equador</td>
+                                    <td>21/11</td>
+                                    <td>13:00</td>
+                                    <td>Al Bayt Stadium</td>
+                                    <td>Não realizado</td>
+                                    <td>Sem informação</td>
+                                </tr>
+                                <tr>
+                                    <td>Estados Unidos x Gales</td>
+                                    <td>21/11</td>
+                                    <td>16:00</td>
+                                    <td>Ahmad Bin Ali </td>
+                                    <td>Não realizado</td>
+                                    <td>Sem informação</td>
+                                </tr>
+                                <tr>
                                     <td>Argentina x Arábia Saudita</td>
                                     <td>22/11</td>
                                     <td>07:00</td>
@@ -296,7 +306,7 @@
                                     <td>10:00</td>
                                     <td>Education City</td>
                                     <td>Não realizado</td>
-      								<td>Sem informação</td>
+                                    <td>Sem informação</td>
                                 </tr>
                                 <tr>
                                     <td>México x Polônia</td>
@@ -476,7 +486,7 @@
                                </tr>
                                <tr>
                                     <td>Camarões x Sérvia</td>
-                                    <td>28/11</td>		
+                                    <td>28/11</td>      
                                     <td>07:00</td>
                                     <td>Al Janoub </td>
                                     <td>Não realizado</td>
@@ -508,7 +518,7 @@
                                 </tr>
                                 <tr>
                                     <td>Holanda x Catar</td>
-                                    <td>29/11</td>	
+                                    <td>29/11</td>  
                                     <td>12:00</td>
                                     <td>Al Bayt </td>
                                     <td>Não realizado</td>
@@ -635,11 +645,11 @@
                                     <td>Sem informação</td>
                                 </tr>
                               
-           					</tbody>
-        				</table> 
+                            </tbody>
+                        </table> 
                       </center>
-                 	 </div>
-               	 </div>
+                     </div>
+                 </div>
             
           <!--========== FIM DAS PARTIDAS ==========-->  
             

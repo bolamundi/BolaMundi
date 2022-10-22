@@ -24,7 +24,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="../index.php">
-       <span>
+            <span>
               Bola Mundi
             </span>
           </a>
@@ -115,10 +115,8 @@
           </div>
           
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="sr-only">Next</span>
         </a>
       </div>
     </section>
@@ -177,8 +175,8 @@
   <!-- PRODUTOS -->
   <section class="products_section">
     <div class="heading_container">
-  
-
+      <h2></h2>
+      <p></p>
     </div>
     <div class="container layout_padding">
       <div class="product_container">
@@ -187,9 +185,7 @@
     </div>
   </section>
 
-  <!-- end products section -->
 
-  <!-- find section -->
   <section class="find_section layout_padding-bottom">
     <div class="container-fluid">
       <div class="row">

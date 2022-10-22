@@ -33,7 +33,7 @@ $resultado=password_verify($camposenha,$row["Senha"]);
 			$_SESSION['data'] = $row["Data"];
 			$_SESSION['perfil']=$row['Perfil'];
 			$_SESSION['paisTorcedor']=$row['PaisTorcedor'];
-            header('Location: /index.php');
+            header('Location: ../../../pt-br/index.php');
             exit;
         }else{
            header( "refresh:0.0000000000000000000000000000000000000000000000000000001;url=login.html" );

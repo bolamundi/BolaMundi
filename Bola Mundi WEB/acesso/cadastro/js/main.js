@@ -1,8 +1,6 @@
 
 (function ($) {
-    "use strict";
-
-    /*==================================================================
+    "use strict";    /*==================================================================
     [ VALIDAR APÓS DIGITAR ]*/
     $('.validate-input .input100').each(function(){
         $(this).on('blur', function(){

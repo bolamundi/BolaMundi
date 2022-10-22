@@ -1,13 +1,14 @@
 <?php
 session_start(); 
 //Verifica o acesso.
-  include '../validarAcesso.php';
+$path=2;
+  include '../../validarAcesso.php';
  
 //Faz a leitura do dado passado pelo link.
 $campoid = $_GET["id"];
  
 //Faz a conexão com o BD.
-require '../conexao.php';
+require '../../conexao.php';
 // Apagar da tabela usuários o registro com o id
 $sql = "DELETE FROM usuarios WHERE id=$campoid";
 
@@ -27,7 +28,7 @@ if ($conn->query($sql) === TRUE) {
   fclose($log);
     
   
-   header('Location: ../admin/admindocker.php?pag=1.php?pag=1'); //Redireciona para o controle  
+   header('Location: ../admindocker.php?pag=1'); //Redireciona para o controle  
 } else {
   echo "Erro: " . $conn->error;
 }

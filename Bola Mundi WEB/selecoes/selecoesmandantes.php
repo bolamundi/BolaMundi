@@ -103,13 +103,13 @@
   <body>
       
     <div class="navbar">
-      <a href="#" style="margin-left: 10%; "><i class="fa fa-fw fa-desktop"></i>Index</a> 
-      <a href="#"><i class="fa fa-fw fa-book"></i>História da Copa</a>
-      <a href="#"><i class="fa fa-fw fa-language"></i>Todas as Seleções</a>  
+      <a href="https://bolamundi2022.000webhostapp.com/index.php" style="margin-left: 10%; "><i class="fa fa-fw fa-desktop"></i>Index</a> 
+      <a href="https://bolamundi2022.000webhostapp.com/historiadacopa.php"><i class="fa fa-fw fa-book"></i>História da Copa</a>
+      <a href="https://bolamundi2022.000webhostapp.com/selecoes/todasaselecoes.php"><i class="fa fa-fw fa-language"></i>Todas as Seleções</a>  
       <a class="active" style = "background-color:  #145214;" href="#"><i class="fa fa-fw fa-award"></i>Seleções Mandantes</a> 
-      <a href="#"><i class="fa fa-fw fa-envelope"></i>Seleção Brasileira</a> 
-      <a href="#"><i class="fa fa-fw fa-th"></i>Friends Arena</a>
-      <a href="#"><i class="fa fa-fw fa-money-bill" ></i>Loja</a> 
+      <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=1&pag=1"><i class="fa fa-fw fa-envelope"></i>Seleção Brasileira</a> 
+      <a href="https://bolamundi2022.000webhostapp.com/friendsarena.php"><i class="fa fa-fw fa-th"></i>Friends Arena</a>
+      <a href="https://bolamundi2022.000webhostapp.com/loja/loja.php"><i class="fa fa-fw fa-money-bill" ></i>Loja</a> 
       <a href="#"><i class="fa fa-fw fa-user"></i>Perfil</a> 
     </div>
       

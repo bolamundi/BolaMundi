@@ -55,7 +55,7 @@ require '../../conexao.php';
    
    </div>
    
-      <form action="usuarioeditar.php" style ="margin-left: 50%; margin-top: 10%;">
+      <form action="usuarioeditar.php" method='post' style ="margin-left: 50%; margin-top: 10%;">
 	 
 		<input type="hidden" id="nome" name="id" value="<?php echo $row["Id"]; ?>">
 		

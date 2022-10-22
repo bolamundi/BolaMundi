@@ -13,17 +13,6 @@ body {
   padding: 75px 0;
 }
 
-.layout_padding2 {
-  padding: 50px 0;
-}
-
-.layout_padding2-top {
-  padding-top: 50px;
-}
-
-.layout_padding2-bottom {
-  padding-bottom: 50px;
-}
 
 .layout_padding-top {
   padding-top: 75px;
@@ -33,10 +22,9 @@ body {
   padding-bottom: 75px;
 }
 
-/*header section*/
 .hero_area {
   background-image: url("https://bolamundi2022.000webhostapp.com/loja/images/bgloja.jpg");
-  background-size: 100% 80%;
+  background-size: 100% 100%;
 }
 
 .hero_area.sub_pages {
@@ -46,8 +34,6 @@ body {
 .hero_area.sub_pages {
   height: auto;
 }
-
-.header_section {}
 
 .header_section .container-fluid {
   padding-right: 25px;
@@ -162,17 +148,6 @@ a:focus {
   box-shadow: none;
 }
 
-.custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
-  background-size: 22px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-}
-
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -203,10 +178,6 @@ a:focus {
   background-image: url(../images/menu.png);
   background-size: 55px;
 }
-
-/*end header section*/
-
-/* slider section */
 
 .slider_item-container .row .col-md-6 {
   padding: 0;
@@ -322,9 +293,6 @@ a:focus {
   border-color: transparent;
 }
 
-/* end slider section */
-
-/* detail section */
 .detail_section {
   padding-top: 45px;
 }
@@ -405,9 +373,6 @@ a:focus {
   height: 50px;
 }
 
-/* end detail section */
-
-/* product section */
 .products_section {
   margin-top: -90px;
 }
@@ -472,9 +437,6 @@ a:focus {
   color: #0e7bfa;
 }
 
-/* end product section */
-
-/* find section */
 .find_section {
   text-align: center;
 }
@@ -526,88 +488,21 @@ a:focus {
   margin-top: 10px;
 }
 
-/* end find section */
-
-/* client section */
-.client_section {
-  background-color: #313232;
-}
-
-.client_section h2 {
-  color: #fefefe;
-  text-align: center;
-}
-
-.client_box {
-  background-color: #f6f1ed;
-  padding: 25px;
-  color: #313232;
-}
-
-.client_id-box {
-  display: flex;
-  align-items: center;
-}
-
-.client_id-box .client_img-box {
-  width: 75px;
-  height: 75px;
-  background-color: #313232;
-  display: flex;
-  justify-content: center;
-}
-
-.client_id-box .client_img-box img {
-  height: 100%;
-}
-
-.client_id-box h4 {
-  margin: 0;
-  margin-left: 25px;
-}
-
-.client_detail {
-  margin: 35px 0 50px 0;
-}
-
-.client_section .carousel-control-prev,
-.client_section .carousel-control-next {
-  position: absolute;
-  top: initial;
-  bottom: -50px;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 100%;
-  opacity: 1;
-  background-repeat: no-repeat;
-  background-size: 28px;
-  background-position: center;
-  background-color: #fff;
-  transform: translateY(-50%);
-}
-
-.client_section .carousel-control-prev:hover,
-.client_section .carousel-control-next:hover {
-  background-color: #292727;
-  background-size: 12px;
-}
-
-.client_section .carousel-control-prev {
+.carousel-control-prev {
   left: 0;
   background-image: url(../images/left-black-arrow.png);
 }
 
-.client_section .carousel-control-next {
+.carousel-control-next {
   right: 0;
   background-image: url(../images/right-black-arrow.png);
 }
 
-.client_section .carousel-control-prev:hover {
+.carousel-control-prev:hover {
   background-image: url(../images/prev.png);
 }
 
-.client_section .carousel-control-next:hover {
+.carousel-control-next:hover {
   background-image: url(../images/next.png);
 }
 
@@ -651,42 +546,3 @@ a:focus {
   color: #fefeff;
 }
 
-/* end client section */
-
-/* sign section */
-.sign_section {
-  background-image: url(../images/sign.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fefefe;
-}
-
-.sign_section h3 {
-  text-transform: uppercase;
-}
-
-.sign_section .row {
-  align-items: center;
-}
-
-.sign_section form {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.sign_section form input {
-  width: 75%;
-  border: none;
-  outline: none;
-  padding: 10px 15px;
-}
-
-.sign_section form button {
-  padding: 10px 35px;
-  outline: none;
-  border: none;
-  background-color: #272727;
-  color: #fefeff;
-}
-
-/* end sign section */

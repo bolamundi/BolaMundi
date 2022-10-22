@@ -3,8 +3,8 @@
  // Parâmetros para criar a conexão
  
  $servername = "localhost";
- $username = "id19270301_bolamundi";
- $password = "D6#_D/MgIb-~?G#S";
+ $username = "root";
+ $password = "";
  $dbname = "id19270301_id18524654_loginbolamundi";
 
  // Criando a conexão

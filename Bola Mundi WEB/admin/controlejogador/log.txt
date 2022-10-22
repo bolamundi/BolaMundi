@@ -27,3 +27,8 @@ Beijinho, te amo - INSERT INTO jogadores2(nome,pais,numero,posicao,id_selecao) v
 Beijinho, te amo - DELETE FROM jogadores WHERE id=509 - 10/10/2022 - 10:49:17
 Beijinho, te amo - UPDATE jogadores SET nome='Tamminho Abraham', numero='22', pais='Inglaterra', posicao='Atacante'  WHERE id=484 - 10/10/2022 - 10:54:43
 Beijinho, te amo - UPDATE jogadores SET nome='Tammy Abraham', numero='22', pais='Inglaterra', posicao='Atacante'  WHERE id=484 - 10/10/2022 - 10:55:56
+Beijinho, te amo  - DELETE FROM jogadores WHERE id=484 - 15/10/2022 - 17:01:54
+lucas - DELETE FROM jogadores WHERE id=483 - 19/10/2022 - 11:09:56
+lucas - DELETE FROM jogadores WHERE id=482 - 19/10/2022 - 11:10:05
+lucas - UPDATE jogadores SET nome='Harry Kane', numero='10', pais='Inglaterra', posicao='Atacante'  WHERE id=481 - 19/10/2022 - 11:10:15
+lucas - INSERT INTO jogadores2(nome,pais,numero,posicao,id_selecao) values('PEDRO','BRASIL','21','CENTROAVANTE','1') - 19/10/2022 - 11:11:32

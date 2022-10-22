@@ -64,10 +64,11 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+              width: 18%;
+              height: 53.5%;
+              margin-top: 2%;
               margin-left: 5%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card2 {
@@ -75,10 +76,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+              width: 18%;
+              height: 53.5%;
               margin-left: 28%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card3 {
@@ -86,10 +87,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+              width: 18%;
+              height: 53.5%;
               margin-left: 55%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card4 {
@@ -97,10 +98,11 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+              width: 18%;
+              height: 53.5%;
+              
               margin-left: 79%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }  
             
             .card5 {
@@ -108,10 +110,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+             width: 18%;
+              height: 53.5%;
               margin-left: 5%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card6 {
@@ -119,10 +121,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+                width: 18%;
+              height: 53.5%;
               margin-left: 28%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card7 {
@@ -130,10 +132,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+                width: 18%;
+              height: 53.5%;
               margin-left: 55%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card8 {
@@ -141,10 +143,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+                width: 18%;
+              height: 53.5%;
               margin-left: 79%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             } 
             
             .card9 {
@@ -152,10 +154,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+                width: 18%;
+              height: 53.5%;
               margin-left: 5%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card10 {
@@ -163,10 +165,10 @@
               background-size: 100%;
               position: absolute;
               bottom: 8px;
-              width: 16%;
-              height: 44%;
+               width: 18%;
+              height: 53.5%;
               margin-left: 28%;
-              margin-bottom: 19%;
+              margin-bottom: 15%;
             }
             
             .card11 {
@@ -460,15 +462,13 @@
     
     
     <div class="navbar">
-      <a href="#" style="margin-left: 4.8%; "><i class="fa fa-fw fa-desktop"></i>Index</a> 
-      <a href="#"><i class="fa fa-fw fa-book"></i>História da Copa</a> 
+      <a href="https://bolamundi2022.000webhostapp.com/index.php" style="margin-left: 4.8%; "><i class="fa fa-fw fa-desktop"></i>Index</a> 
+      <a href="https://bolamundi2022.000webhostapp.com/historiadacopa.php"><i class="fa fa-fw fa-book"></i>História da Copa</a> 
       <a class="active" style = "background-color:  #4d0019;" href="#"><i class="fa fa-fw fa-language"></i>Todas as Seleções</a> 
-      <a href="#"><i class="fa fa-fw fa-award"></i> Seleções Mandantes</a> 
-      <a href="#"><i class="fa fa-fw fa-envelope"></i>Seleção Brasileira</a> 
-      <a href="#"><i class="fa fa-fw fa-th"></i>Friends Arena</a>
-      <a href="#"><i class="fa fa-fw fa-money-bill" m></i>Loja</a> 
-      <a href="#"><i class="fa fa-fw fa-user"></i>Perfil</a> 
-      <a href="../playlist/playlists.php"><i class="fa fa-fw fa-music"></i>Playlist</a>       
+      <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecoesmandantes.php"><i class="fa fa-fw fa-award"></i> Seleções Mandantes</a> 
+      <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=1&pag=1"><i class="fa fa-fw fa-envelope"></i>Seleção Brasileira</a> 
+      <a href="https://bolamundi2022.000webhostapp.com/friendsarena.php"><i class="fa fa-fw fa-th"></i>Friends Arena</a>
+       <a href="https://bolamundi2022.000webhostapp.com/playlist/playlists.php"><i class="fa fa-fw fa-th"></i>Playlists</a>
     </div>
     
     <h1 style="text-shadow: #990033 2px 3px 2px;">TODAS AS SELEÇÕES</h1>  
@@ -479,16 +479,16 @@
           <div class="numbertext">1 / 8</div>
           <img src="../img/selecoes/slide/Grupo A.png" style="width:100%">
           <div class="card1">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=27" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: #990033;">انقر هنا</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=27&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: #990033;">انقر هنا</h1></a>
           </div>
           <div class="card2">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=13" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Clic aquí</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=13&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Clic aquí</h1></a>
           </div>
           <div class="card3">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=28" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Cliquez ici</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=28&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Cliquez ici</h1></a>
           </div>
           <div class="card4">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=18" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Klik hier</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=18&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Klik hier</h1></a>
           </div>          
           <div class="text">Qatar - Equador - Senegal - Holanda</div>
         </div>
@@ -497,16 +497,16 @@
           <div class="numbertext">2 / 8</div>
           <img src="../img/selecoes/slide/Grupo B.png" style="width:100%">
           <div class="card5">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=19" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=19&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
           </div>
           <div class="card6">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=20" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">اینجا کلیک کنید</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=20&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">اینجا کلیک کنید</h1></a>
           </div>
           <div class="card7">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=15" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=15&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
           </div>
           <div class="card8">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=24" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Cliciwch yma</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=24&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Cliciwch yma</h1></a>
           </div> 
           <div class="text">Inglaterra - Irã - Estados Unidos - País de Gales</div>
         </div>
@@ -515,16 +515,16 @@
           <div class="numbertext">3 / 8</div>
           <img src="../img/selecoes/slide/Grupo C.png" style="width:100%">
           <div class="card9">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=4" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=4&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
           </div>
           <div class="card10">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=3" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">انقر هنا</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=3&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">انقر هنا</h1></a>
           </div>
           <div class="card11">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=23" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=23&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
           </div>
           <div class="card12">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=25" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Kliknij tutaj</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=25&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Kliknij tutaj</h1></a>
           </div> 
           <div class="text">Argentina - Arábia Saudita - México - Polônia</div>
         </div>
@@ -533,16 +533,16 @@
           <div class="numbertext">4 / 8</div>
           <img src="../img/selecoes/slide/Grupo D.png" style="width:100%">
           <div class="card13">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=16" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Cliquez ici</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=16&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Cliquez ici</h1></a>
           </div>
           <div class="card14">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=5" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=5&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
           </div>
           <div class="card15">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=12" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Klik her</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=12&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Klik her</h1></a>
           </div>
           <div class="card16">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=31" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">انقر هنا</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=31&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">انقر هنا</h1></a>
           </div>           
           <div class="text">França - Austrália - Dinamarca - Tunísia</div>
         </div>
@@ -551,16 +551,16 @@
           <div class="numbertext">5 / 8</div>
           <img src="../img/selecoes/slide/Grupo E.png" style="width:100%">
           <div class="card17">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=14" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=14&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
           </div>
           <div class="card18">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=10" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=10&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
           </div>
           <div class="card19">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=2" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Klick hier</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=2&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Klick hier</h1></a>
           </div>
           <div class="card20">
-          <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=21"style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">ここをクリック</h1></a>
+          <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=21&pag=1"style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">ここをクリック</h1></a>
           </div> 
           <div class="text">Espanha - Costa Rica - Alemanha - Japão</div>
         </div>
@@ -569,16 +569,16 @@
           <div class="numbertext">6 / 8</div>
           <img src="../img/selecoes/slide/Grupo F.png" style="width:100%">
           <div class="card21">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Klik hier</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=6&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Klik hier</h1></a>
           </div>
           <div class="card22">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=8&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
           </div>
           <div class="card23">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">انقر هنا</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=22&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">انقر هنا</h1></a>
           </div>
           <div class="card24">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=11&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">
               Kliknite ovdje</h1></a>
           </div>            
           <div class="text">Bélgica - Canadá - Marrocos - Croácia</div>
@@ -588,16 +588,16 @@
           <div class="numbertext">7 / 8</div>
           <img src="../img/selecoes/slide/Grupo G.png" style="width:100%">
           <div class="card25">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Clique aqui</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=1&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Clique aqui</h1></a>
           </div>
           <div class="card26">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=29" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Кликните овде</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=29&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Кликните овде</h1></a>
           </div>
           <div class="card27">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=30" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Klick hier</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=30&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Klick hier</h1></a>
           </div>
           <div class="card28">
-              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=17" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Click here</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=7&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Cliquez ici</h1></a>
           </div>           
           <div class="text">Brasil - Sérvia - Suíça - Camarões</div>
         </div>
@@ -606,16 +606,16 @@
           <div class="numbertext">8 / 8</div>
           <img src="../img/selecoes/slide/Grupo H.png" style="width:100%">
           <div class="card29">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Clique aqui</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=26&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: white;">Clique aqui</h1></a>
           </div>
           <div class="card30">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Cliquez ici</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=17&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Click here</h1></a>
           </div>
           <div class="card31">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=32&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">Clic aquí</h1></a>
           </div>
           <div class="card32">
-              <a href="" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">여기를 클릭</h1></a>
+              <a href="https://bolamundi2022.000webhostapp.com/selecoes/selecao.php?id=9&pag=1" style="text-decoration: none"><h1 style=" margin-top: 20%;font-size: 25px;color: black;">여기를 클릭</h1></a>
           </div>          
           <div class="text">Portugal - Gana - Uruguai - Coreia do Sul</div>
         </div>

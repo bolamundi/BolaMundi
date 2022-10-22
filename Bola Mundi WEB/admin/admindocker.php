@@ -216,18 +216,6 @@ if($contagem%$total==0){
       </div>
     </div>
 
-    <div class = "chartusuarioacesso" style = "margin-top: 1.5%; float: left; margin-left:1.1%">
-      <div class = "container">
-        <h1 style = "padding: 20px 20px 10px 10px;">RANKS</h1>
-        <hr size=7>
-        <div class="wrapper">
-          <canvas id="myChart" height='170'></canvas>
-        </div>
-        <hr size=7>
-      </div>
-    </div>
-	
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
   
     <script src="../relatorios/chartcontrole.php"></script>

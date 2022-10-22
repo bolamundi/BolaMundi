@@ -53,7 +53,12 @@ session_start();
 		  <option value="canada">Portugal</option>
 		  <option value="usa">Angola</option>
 		</select>
-	  
+	  <label for="acesso">Acesso</label>
+		<select id="acesso" name="acesso">
+		  <option value="Usuario">Usuario</option>
+		  <option value="Admin">Admin</option>
+
+		</select>
 		<input type="submit" value="Cadastrar">
 		
 	  </form>

@@ -99,8 +99,11 @@ include 'buscarUsuario.php';
   		echo '<i onclick="ligarPaisTorcedor()" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>';
   		} ?> </p>
           		
-          		<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i><?php echo $pais; ?></p>
-          		
+          		<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i><?php echo $pais; ?>
+          			<?php
+  		if (!$modoVizualizacao){
+  		echo '<i onclick="ligarPais()" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>';
+  		} ?></p>
           		<?php
   		if (!$modoVizualizacao){
   		echo '<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i>'. $email .'<i onclick="ligarEmail()" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-red"></i>';
@@ -258,6 +261,83 @@ include 'buscarUsuario.php';
 		</div>
       </div>
       
+      <!-- Modal editar País-->
+      <div id="id06" class="w3-modal">
+    	<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+      		<div class="w3-center"><br>
+        		<span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      		</div>
+          
+      		<form class="w3-container" action="mudarPais.php?id=<?php echo $id_usuario?>"  method="post">
+        		<div class="wrap-input100 validate-input m-b-20" data-validate="De qual país você é?">
+				    <label for="Pais">País</label>
+					 <select id="Pais" name="Pais">
+                      <option value="Afeganistão">Afeganistão</option>
+                      <option value="África do Sul">África do Sul</option>
+                      <option value="Alemanha">Alemanha</option>
+                      <option value="Angola">Angola</option>
+                      <option value="usa">Arábia Saudita</option>
+                      <option value="usa">Argentina</option>
+                      <option value="usa">Alemanha</option>
+                      <option value="usa">Argentina</option>
+                      <option value="usa">Austrália</option>
+                      <option value="usa">Bélgica</option>
+                      <option value="usa">Brasil</option>
+                      <option value="Bulgária">Bulgária</option>
+                      <option value="Camarões">Camarões</option>
+                      <option value="Canadá">Canadá</option>
+                      <option value="Chile">Chile</option>
+                      <option value="Congo">Congo</option>
+                      <option value="Coreiadosul">Coreia do Sul</option>
+                     <option value="Costarica">Costa Rica</option>
+                                       <option value="Croácia">Croácia</option>
+                                        <option value="Dinamarca">Dinamarca</option>
+                                            <option value="Equador">Equador</option>
+                                      <option value="Espanha">Espanha</option>
+                                    <option value="estadosunidos">Estados Unidos</option>
+                                        <option value="França">França</option>
+                                     <option value="Finlândia">Finlândia</option>
+                                    <option value="Gana">Gana</option>
+                                      <option value="Grécia">Grécia</option>
+                                     <option value="Holanda">Holanda</option>
+                                    <option value="Índia">Índia</option>
+                                    <option value="Inglaterra">Inglaterra</option>
+                                   <option value="Irã">Irã</option>
+                                      <option value="Irlanda">Irlanda</option>
+                                <option value="Ítália">Ítália</option>
+                                 <option value="Japão">Japão</option>
+                                    <option value="Macedônia">Macedônia</option>
+                                     <option value="Marrocos">Marrocos</option>
+                             <option value="México">México</option>
+                              <option value="Moçambique">Moçambique</option>
+                               <option value="PaísdeGales">País de Gales</option>
+                                <option value="Paraguai">Paraguai</option>
+                                  <option value="Peru">Peru</option>
+                             <option value="Polônia">Polônia</option>
+                           <option value="Portugal">Portugal</option>
+                           <option value="Qatar">Qatar</option>
+                          <option value="Senegal">Senegal</option>
+                         <option value="Sérvia">Sérvia </option>
+                             <option value="Suíça">Suíça</option>
+                           <option value="Tunísia">Tunísia</option>
+                         <option value="Uruguai">Uruguai</option>
+                         <option value="Venezuela">Venezuela</option>
+                    
+                    
+                    <option value="FimdoMundo">Fim do Mundo</option>
+                    <option value="FendadoBiquíni">Fenda do Biquíni</option>
+                    <option value="Hogwarts">Hogwarts</option>
+                    <option value="SãoJanuário">São Januário</option>
+                    <option value="Springfield">Springfield</option>
+                    <option value="Taubaté">Taubaté</option>
+                    <option value="Nárnia">Nárnia</option>
+                    </select>
+                    <button class="w3-button w3-block w3-red w3-section w3-padding" type="submit">Enviar</button>
+				</div>
+      		</form>          
+		</div>
+      </div>
+      
       <!-- Modal editar País Torcedor-->
       <div id="id05" class="w3-modal">
     	<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
@@ -287,47 +367,47 @@ include 'buscarUsuario.php';
                       <option value="Congo">Congo</option>
                       <option value="Coreiadosul">Coreia do Sul</option>
                      <option value="Costarica">Costa Rica</option>
-                   <option value="Croácia">Croácia</option>
-                    <option value="Dinamarca">Dinamarca</option>
-                        <option value="Equador">Equador</option>
-                  <option value="Espanha">Espanha</option>
-                <option value="estadosunidos">Estados Unidos</option>
-                    <option value="França">França</option>
-                 <option value="Finlândia">Finlândia</option>
-                <option value="Gana">Gana</option>
-                  <option value="Grécia">Grécia</option>
-                 <option value="Holanda">Holanda</option>
-                <option value="Índia">Índia</option>
-                <option value="Inglaterra">Inglaterra</option>
-               <option value="Irã">Irã</option>
-                  <option value="Irlanda">Irlanda</option>
-            <option value="Ítália">Ítália</option>
-             <option value="Japão">Japão</option>
-                <option value="Macedônia">Macedônia</option>
-                 <option value="Marrocos">Marrocos</option>
-         <option value="México">México</option>
-          <option value="Moçambique">Moçambique</option>
-           <option value="PaísdeGales">País de Gales</option>
-            <option value="Paraguai">Paraguai</option>
-              <option value="Peru">Peru</option>
-         <option value="Polônia">Polônia</option>
-       <option value="Portugal">Portugal</option>
-       <option value="Qatar">Qatar</option>
-      <option value="Senegal">Senegal</option>
-     <option value="Sérvia">Sérvia </option>
-         <option value="Suíça">Suíça</option>
-       <option value="Tunísia">Tunísia</option>
-     <option value="Uruguai">Uruguai</option>
-     <option value="Venezuela">Venezuela</option>
-
-
-<option value="FimdoMundo">Fim do Mundo</option>
-<option value="FendadoBiquíni">Fenda do Biquíni</option>
-<option value="Hogwarts">Hogwarts</option>
-<option value="SãoJanuário">São Januário</option>
-<option value="Springfield">Springfield</option>
-<option value="Taubaté">Taubaté</option>
-<option value="Nárnia">Nárnia</option>
+                                       <option value="Croácia">Croácia</option>
+                                        <option value="Dinamarca">Dinamarca</option>
+                                            <option value="Equador">Equador</option>
+                                      <option value="Espanha">Espanha</option>
+                                    <option value="estadosunidos">Estados Unidos</option>
+                                        <option value="França">França</option>
+                                     <option value="Finlândia">Finlândia</option>
+                                    <option value="Gana">Gana</option>
+                                      <option value="Grécia">Grécia</option>
+                                     <option value="Holanda">Holanda</option>
+                                    <option value="Índia">Índia</option>
+                                    <option value="Inglaterra">Inglaterra</option>
+                                   <option value="Irã">Irã</option>
+                                      <option value="Irlanda">Irlanda</option>
+                                <option value="Ítália">Ítália</option>
+                                 <option value="Japão">Japão</option>
+                                    <option value="Macedônia">Macedônia</option>
+                                     <option value="Marrocos">Marrocos</option>
+                             <option value="México">México</option>
+                              <option value="Moçambique">Moçambique</option>
+                               <option value="PaísdeGales">País de Gales</option>
+                                <option value="Paraguai">Paraguai</option>
+                                  <option value="Peru">Peru</option>
+                             <option value="Polônia">Polônia</option>
+                           <option value="Portugal">Portugal</option>
+                           <option value="Qatar">Qatar</option>
+                          <option value="Senegal">Senegal</option>
+                         <option value="Sérvia">Sérvia </option>
+                             <option value="Suíça">Suíça</option>
+                           <option value="Tunísia">Tunísia</option>
+                         <option value="Uruguai">Uruguai</option>
+                         <option value="Venezuela">Venezuela</option>
+                    
+                    
+                    <option value="FimdoMundo">Fim do Mundo</option>
+                    <option value="FendadoBiquíni">Fenda do Biquíni</option>
+                    <option value="Hogwarts">Hogwarts</option>
+                    <option value="SãoJanuário">São Januário</option>
+                    <option value="Springfield">Springfield</option>
+                    <option value="Taubaté">Taubaté</option>
+                    <option value="Nárnia">Nárnia</option>
                     </select>
                     <button class="w3-button w3-block w3-red w3-section w3-padding" type="submit">Enviar</button>
 				</div>
@@ -425,7 +505,10 @@ function ligarPaisTorcedor(){
     document.getElementById("id05").style.display="block"
     
 }
-
+function ligarPais(){
+    document.getElementById("id06").style.display="block"
+    
+}
 </script>
 	</body>
   

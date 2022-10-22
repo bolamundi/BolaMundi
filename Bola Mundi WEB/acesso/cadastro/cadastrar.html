@@ -19,16 +19,11 @@
 
   <!-- Plugins CSS -->
 
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 
   <!-- Base CSS -->
 
-	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="../../css/senharequisitos.css">
 
@@ -41,41 +36,44 @@
  <body>
  	 <!-- Fundo do Login -->
    <div class="container-login100" style="background-image: url('images/fundologin.jpg');">
-		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+		<div class="wrap-login100">
 			<form class="login100-form validate-form" action="cadastro.php" method="post">
 				<!-- Título -->
 				<span class="login100-form-title p-b-37"> Cadastrar usuário </span>
 				<!-- Preencher o Nome -->
-					<div class="wrap-input100 validate-input m-b-20" data-validate="Preencha o seu nome">
+					<div class="wrap-input100 validate-input" data-validate="Preencha o seu nome">
 					<input class="input100" type="text" name="nome" placeholder="Nome">
 					<span class="focus-input100"></span>
 				</div>
 				<!-- Preencher o E-mail -->
-				<div class="wrap-input100 validate-input m-b-20" data-validate="Preencha o e-mail">
+				<div class="wrap-input100 validate-input" data-validate="Preencha o e-mail">
 					<input class="input100" type="text" name="email" placeholder="E-mail" >
 					<span class="focus-input100"></span>
 				</div>
         		<!-- Preencher a Senha -->
-				<div class="wrap-input100 validate-input m-b-25" data-validate = "Preencha a senha">
+				<div class="wrap-input100 validate-input" data-validate = "Preencha a senha">
 					<input id="psw" class="input100" type="password" name="senha" placeholder="Senha"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 					<span class="focus-input100"></span>
 				</div>
+
+
+   
 			  <!-- Requisitos da senha -->
 				<div id="message">
-          <h5>A senha precisa conter:</h5>
-          <p id="letter" class="invalid">Uma letra <b>minúscula</b></p>
-          <p id="capital" class="invalid">Uma letra <b>maiúscula</b></p>
-          <p id="number" class="invalid">Um <b>número</b></p>
-          <p id="length" class="invalid">Mínimo de <b>8 caracteres</b></p>
-        </div>
-        <!-- Confirma Cadastro -->
-				<div class="container-login100-form-btn">
-					<button class="login100-form-btn">
-						Enviar
-					</button>
-				</div>
-			</form>          
-     </div>
+                      <h5>A senha precisa conter:</h5>
+                      <p id="letter" class="invalid">Uma letra <b>minúscula</b></p>
+                      <p id="capital" class="invalid">Uma letra <b>maiúscula</b></p>
+                      <p id="number" class="invalid">Um <b>número</b></p>
+                      <p id="length" class="invalid">Mínimo de <b>8 caracteres</b></p>
+                    </div>
+                    <!-- Confirma Cadastro -->
+            				<div class="container-login100-form-btn">
+            					<button class="login100-form-btn">
+            						Enviar
+            					</button>
+            				</div>
+            			</form>          
+                 </div>
 	
 	<div id="dropDownSelect1"></div>
 
@@ -85,10 +83,6 @@
 	<script src="vendor/animsition/js/animsition.min.js"></script>
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js"></script>
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-	<script src="vendor/countdowntime/countdowntime.js"></script>
 
 	<!-- Theme JS -->
 

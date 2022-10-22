@@ -24,11 +24,10 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="../inc/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/arena/fontawesome.css">
-    <link rel="stylesheet" href="../css/arena/arena.css">
-    <link rel="stylesheet" href="../css/arena/owl.css">
-    <link rel="stylesheet" href="../css/arena/lightbox.css">
+    <link href="inc/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/arena/fontawesome.css">
+    <link rel="stylesheet" href="css/arena/arena.css">
+    <link rel="stylesheet" href="css/arena/owl.css">
 
   </head>
 
@@ -50,7 +49,7 @@
 
    <section class="section main-banner" id="top" data-section="section1">
       <video autoplay muted loop id="bg-video">
-          <source src="../img/arena/video2.mp4" type="video/mp4" />
+          <source src="img/arena/video2.mp4" type="video/mp4" />
       </video>
 
       <div class="video-overlay header-text">
@@ -73,9 +72,9 @@
         <div class="col-lg-12">
           <div class="owl-service-item owl-carousel">
           
-            <div class="item" style="background-image: url(../img/arena/item-owl-bg.jpg);">
+            <div class="item" style="background-image: url(img/arena/item-owl-bg.jpg);">
               <div class="icon">
-                <img src="../img/friendsarena/icon-owl.png" alt="">
+                <img src="img/friendsarena/icon-owl.png" alt="">
               </div>
               <div class="down-content">
                 <h4>Instituto Neymar Jr</h4>
@@ -83,9 +82,9 @@
               </div>
             </div>
             
-            <div class="item" style="background-image: url(../img/arena/item-owl-bg.jpg);">
+            <div class="item" style="background-image: url(img/arena/item-owl-bg.jpg);">
               <div class="icon">
-                <img src="../img/friendsarena/icon-owl.png" alt="">
+                <img src="img/friendsarena/icon-owl.png" alt="">
               </div>
               <div class="down-content">
                 <h4>Fundação Gol de Letra</h4>
@@ -93,9 +92,9 @@
               </div>
             </div>
             
-            <div class="item" style="background-image: url(../img/arena/item-owl-bg.jpg);">
+            <div class="item" style="background-image: url(img/arena/item-owl-bg.jpg);">
               <div class="icon">
-                <img src="../img/friendsarena/icon-owl.png" alt="">
+                <img src="img/friendsarena/icon-owl.png" alt="">
               </div>
               <div class="down-content">
                 <h4>Instituto Bola Pra Frente</h4>
@@ -103,9 +102,9 @@
               </div>
             </div>
             
-            <div class="item" style="background-image: url(../img/arena/item-owl-bg.jpg);">
+            <div class="item" style="background-image: url(img/arena/item-owl-bg.jpg);">
               <div class="icon">
-                <img src="../img/friendsarena/icon-owl.png" alt="">
+                <img src="img/friendsarena/icon-owl.png" alt="">
               </div>
               <div class="down-content">
                 <h4>Instituto Futebol de Rua</h4>
@@ -119,7 +118,7 @@
     </div>
   </section>
 
-  <section class="upcoming-meetings" id="meetings" style="background-image: url(../img/arena/ongs.jpg);">
+  <section class="upcoming-meetings" id="meetings" style="background-image: url(img/arena/ongs.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -198,7 +197,7 @@
     </div>
   </section>
 
- <section class="our-facts" style="background-image: url(../img/arena/friendsarena.jpg);">
+ <section class="our-facts" style="background-image: url(img/arena/friendsarena.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -237,8 +236,8 @@
           </div>
         </div> 
         <div class="col-lg-6 align-self-center">
-          <div class="video" style="background-image: url(../img/arena/video-item-bg.jpg);">
-            <a href="https://www.youtube.com/watch?v=3A3YbP9_Ty8" target="_blank"><img src="../img/friendsarena/play-icon.png" alt=""></a>
+          <div class="video" style="background-image: url(img/arena/video-item-bg.jpg);">
+            <a href="https://www.youtube.com/watch?v=3A3YbP9_Ty8" target="_blank"><img src="img/friendsarena/play-icon.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -246,15 +245,14 @@
   </section>
 
 
-    <script src="../inc/vendor/jquery/jquery.min.js"></script>
-    <script src="../inc/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/arena/isotope.min.js"></script>
-    <script src="../js/arena/owl-carousel.js"></script>
-    <script src="../js/arena/lightbox.js"></script>
-    <script src="../js/arena/tabs.js"></script>
-    <script src="../js/arena/video.js"></script>
-    <script src="../js/arena/slick-slider.js"></script>
-    <script src="../js/arena/custom.js"></script>
+    <script src="inc/vendor/jquery/jquery.min.js"></script>
+    <script src="inc/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/arena/isotope.min.js"></script>
+    <script src="js/arena/owl-carousel.js"></script>
+    <script src="js/arena/tabs.js"></script>
+    <script src="js/arena/video.js"></script>
+    <script src="js/arena/slick-slider.js"></script>
+    <script src="js/arena/custom.js"></script>
     
     <script>
     

@@ -30,15 +30,15 @@
     
     <!-- Plugin CSS -->
     
-    <link href="../inc/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="inc/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Base CSS -->
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/arena/fontawesome.css">
-    <link rel="stylesheet" href="../css/arena/arena.css">
-    <link rel="stylesheet" href="../css/arena/owl.css">
-    <link rel="stylesheet" href="../css/arena/lightbox.css">
+    <link rel="stylesheet" href="css/arena/fontawesome.css">
+    <link rel="stylesheet" href="css/arena/arena.css">
+    <link rel="stylesheet" href="css/arena/owl.css">
+    <link rel="stylesheet" href="css/arena/lightbox.css">
 
   </head>
   
@@ -56,7 +56,7 @@
           <div class="row">
               <div class="col-12">
                       <nav class="main-nav">
-                      <a href="../index.php" class="logo"> História da Copa </a>
+                      <a href="index.php" class="logo"> História da Copa </a>
                   </nav>
               </div>
           </div>
@@ -88,7 +88,7 @@
 
   <!--========== INÍCIO HISTÓRICO ==========-->    
     
-  <section class="upcoming-meetings" style="background-image: url(../img/arena/historico.jpg);">
+  <section class="upcoming-meetings" style="background-image: url(img/arena/historico.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -140,7 +140,7 @@
     
   <!--========== INICIO GRANDES JOGADORES ==========-->          
 
-  <section class="apply-now" id="apply" style="background-image: url(../img/arena/grandesjogadores.jpg);">
+  <section class="apply-now" id="apply" style="background-image: url(img/arena/grandesjogadores.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center">
@@ -228,7 +228,7 @@
     
   <!--========== INICIO VENCEDORES ==========-->                
 
-  <section class="our-courses" id="courses" style="background-image: url(../img/arena/vencedores.jpg);">
+  <section class="our-courses" id="courses" style="background-image: url(img/arena/vencedores.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -241,7 +241,7 @@
           <div class="owl-courses-item owl-carousel">
            <!-- 1 -->
             <div class="item">
-              <img src="..//bandeiras/bandeiraUruguai.png" alt="">
+              <img src="bandeiras/bandeiraUruguai.png" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1930</h4>
                 <h4>Uruguai 4x2 Argentina</h4>
@@ -261,7 +261,7 @@
             </div>
             <!-- 2 -->
             <div class="item">
-              <img src="..//bandeiras/bandeiraItalia.jpg" alt="">
+              <img src="bandeiras/bandeiraItalia.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1934</h4>
                 <h4>Itália 2x1 Checoslováquia</h4>
@@ -281,7 +281,7 @@
             </div>
             <!-- 3 -->
             <div class="item">
-              <img src="..//bandeiras/bandeiraItalia.jpg" alt="">
+              <img src="bandeiras/bandeiraItalia.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1938</h4>
                 <h4>Itália 4x2 Hungria</h4>
@@ -302,7 +302,7 @@
             </div>
             <!-- 4 -->            
             <div class="item">
-              <img src="..//bandeiras/bandeiraUruguai.png" alt="">
+              <img src="bandeiras/bandeiraUruguai.png" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1950</h4>
                 <h4>Uruguai 2x1 Brasil</h4>
@@ -323,7 +323,7 @@
             </div>
             <!-- 5 -->            
             <div class="item">
-              <img src="..//bandeiras/bandeiraAlemanha.jpg" alt="">
+              <img src="bandeiras/bandeiraAlemanha.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1954</h4>
                 <h4>Alemanha Ocidental 3x2 Hungria</h4>
@@ -343,7 +343,7 @@
             </div>
             <!-- 6 -->            
             <div class="item">
-              <img src="..//bandeiras/bandeiraBrasil.jpg" alt="">
+              <img src="bandeiras/bandeiraBrasil.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1958</h4>
                 <h4>Brasil 5x2 Suécia</h4>
@@ -363,7 +363,7 @@
             </div>
             <!-- 7 -->
             <div class="item">
-              <img src="..//bandeiras/bandeiraBrasil.jpg" alt="">
+              <img src="bandeiras/bandeiraBrasil.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1962</h4>
                 <h4>Brasil 3x1 Checoslováquia</h4>
@@ -384,7 +384,7 @@
             </div>
             <!-- 8 -->            
             <div class="item">
-              <img src="..//bandeiras/bandeiraInglaterra.png" alt="">
+              <img src="bandeiras/bandeiraInglaterra.png" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1966</h4>
                 <h4>Inglaterra 4x2 Alemanha Oc.</h4>
@@ -404,7 +404,7 @@
             </div>
             <!-- 9 -->            
             <div class="item">
-              <img src="..//bandeiras/bandeiraBrasil.jpg" alt="">
+              <img src="bandeiras/bandeiraBrasil.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1970</h4>
                 <h4>Brasil 4x1 Itália</h4>
@@ -426,7 +426,7 @@
             </div>
             <!-- 10 -->
             <div class="item">
-              <img src="..//bandeiras/bandeiraAlemanha.jpg" alt="">
+              <img src="bandeiras/bandeiraAlemanha.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1974</h4>
                 <h4>Alemanha Ocidental 2x1 Países Baixos</h4>
@@ -447,7 +447,7 @@
             </div>
             <!-- 11 -->            
             <div class="item">
-              <img src="..//bandeiras/bandeiraArgentina.jpg" alt="">
+              <img src="bandeiras/bandeiraArgentina.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1978</h4>
                 <h4>Argentina 3x1 Países Baixos</h4>
@@ -467,7 +467,7 @@
             </div>
             <!-- 12 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraItalia.jpg" alt="">
+              <img src="bandeiras/bandeiraItalia.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1982</h2>
                 <h4>Itália 3x1 Alemanha Ocidental</h4>
@@ -489,7 +489,7 @@
             </div>
             <!-- 13 -->      
             <div class="item">
-              <img src="..//bandeiras/bandeiraArgentina.jpg" alt="">
+              <img src="bandeiras/bandeiraArgentina.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1986</h4>
                 <h4>Argentina 3x2 Alemanha Oc.</h4>
@@ -510,7 +510,7 @@
             </div>
             <!-- 14 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraAlemanha.jpg" alt="">
+              <img src="bandeiras/bandeiraAlemanha.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1990</h4>
                 <h4>Alemanha Oc. 1x0 Argentina</h4>
@@ -532,7 +532,7 @@
             </div>
             <!-- 15 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraBrasil.jpg" alt="">
+              <img src="bandeiras/bandeiraBrasil.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1994</h4>
                 <h4>Brasil 0x0 Itália (3x2 pênaltis)</h4>
@@ -555,7 +555,7 @@
             </div>
             <!-- 16 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraFrança.png" alt="">
+              <img src="bandeiras/bandeiraFrança.png" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 1998</h4>
                 <h4>França 3x0 Brasil</h4>
@@ -575,7 +575,7 @@
             </div>
             <!-- 17 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraBrasil.jpg" alt="">
+              <img src="bandeiras/bandeiraBrasil.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 2002</h4>
                 <h4>Brasil 2x0 Alemanha</h4>
@@ -599,7 +599,7 @@
             </div>
             <!-- 18 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraItalia.jpg" alt="">
+              <img src="bandeiras/bandeiraItalia.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 2006</h4>
                 <h4>Itália 1x1 França (5x3 pênaltis)</h4>
@@ -622,7 +622,7 @@
             </div>
             <!-- 19 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraEspanha.png" alt="">
+              <img src="bandeiras/bandeiraEspanha.png" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 2010</h4>
                 <h4>Espanha 1x0 Holanda</h4>
@@ -642,7 +642,7 @@
             </div>
             <!-- 20 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraAlemanha.jpg" alt="">
+              <img src="bandeiras/bandeiraAlemanha.jpg" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 2014</h4>
                 <h4>Alemanha 1x0 Argentina</h4>
@@ -665,7 +665,7 @@
             </div>
             <!-- 21 -->        
             <div class="item">
-              <img src="..//bandeiras/bandeiraFrança.png" alt="">
+              <img src="bandeiras/bandeiraFrança.png" alt="">
               <div class="down-content">
                 <h4>Copa do Mundo de 2018</h4> 
                 <h4>França 4x2 Croácia</h4>
@@ -684,31 +684,7 @@
                 </div>
               </div>
             </div>
-            <!-- 22 -->        
-            <div class="item">
-              <img src="..//bandeiras/bandeiraBrasil.jpg" alt="">
-              <div class="down-content">
-                <h4>Copa do Mundo de 2022</h4>
-                <h4>Brasil 20x0 França</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>2022</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -717,15 +693,15 @@
     
   <!--========== FIM VENCEDORES ==========-->                  
 
-    <script src="../inc/vendor/jquery/jquery.min.js"></script>
-    <script src="../inc/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/arena/isotope.min.js"></script>
-    <script src="../js/arena/owl-carousel.js"></script>
-    <script src="../js/arena/lightbox.js"></script>
-    <script src="../js/arena/tabs.js"></script>
-    <script src="../js/arena/video.js"></script>
-    <script src="../js/arena/slick-slider.js"></script>
-    <script src="../js/arena/custom.js"></script>
+    <script src="inc/vendor/jquery/jquery.min.js"></script>
+    <script src="inc/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/arena/isotope.min.js"></script>
+    <script src="js/arena/owl-carousel.js"></script>
+    <script src="js/arena/lightbox.js"></script>
+    <script src="js/arena/tabs.js"></script>
+    <script src="js/arena/video.js"></script>
+    <script src="js/arena/slick-slider.js"></script>
+    <script src="js/arena/custom.js"></script>
 
     <script>
       

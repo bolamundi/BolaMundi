@@ -35,9 +35,7 @@
 
 	const Accordion = {
 	  settings: {
-	    // Expand the first item by default
 	    first_expanded: false,
-	    // Allow items to be toggled independently
 	    toggle: false
 	  },
 
@@ -57,13 +55,11 @@
 	  init: function(el) {
 	    const _this = this;
 
-	    // Override default settings with classes
 	    let is_first_expanded = _this.settings.first_expanded;
 	    if (el.classList.contains("is-first-expanded")) is_first_expanded = true;
 	    let is_toggle = _this.settings.toggle;
 	    if (el.classList.contains("is-toggle")) is_toggle = true;
 
-	    // Loop through the accordion's sections and set up the click behavior
 	    const sections = el.getElementsByClassName("accordion");
 	    const all_toggles = el.getElementsByClassName("accordion-head");
 	    const all_contents = el.getElementsByClassName("accordion-body");
@@ -72,15 +68,12 @@
 	      const toggle = all_toggles[i];
 	      const content = all_contents[i];
 
-	      // Click behavior
 	      toggle.addEventListener("click", function(e) {
 	        if (!is_toggle) {
-	          // Hide all content areas first
 	          for (let a = 0; a < all_contents.length; a++) {
 	            _this.closeAccordion(all_toggles[a], all_contents[a]);
 	          }
 
-	          // Expand the clicked item
 	          _this.openAccordion(toggle, content);
 	        } else {
 	          // Toggle the clicked item
@@ -92,7 +85,6 @@
 	        }
 	      });
 
-	      // Expand the first item
 	      if (i === 0 && is_first_expanded) {
 	        _this.openAccordion(toggle, content);
 	      }
@@ -101,7 +93,6 @@
 	};
 
 	(function() {
-	  // Initiate all instances on the page
 	  const accordions = document.getElementsByClassName("accordions");
 	  for (let i = 0; i < accordions.length; i++) {
 	    Accordion.init(accordions[i]);
@@ -150,7 +141,6 @@
 	  })
 	
 
-	// Menu Dropdown Toggle
 	if($('.menu-trigger').length){
 		$(".menu-trigger").on('click', function() {	
 			$(this).toggleClass('active');
@@ -159,7 +149,6 @@
 	}
 
 
-	// Menu elevator animation
 	$('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
@@ -181,7 +170,6 @@
 	$(document).ready(function () {
 	    $(document).on("scroll", onScroll);
 	    
-	    //smoothscroll
 	    $('.scroll-to-section a[href^="#"]').on('click', function (e) {
 	        e.preventDefault();
 	        $(document).off("scroll");
@@ -219,7 +207,6 @@
 	}
 
 
-	// Page loading animation
 	$(window).on('load', function() {
 		if($('.cover').length){
 			$('.cover').parallax({
@@ -240,41 +227,6 @@
 	
 
 	const dropdownOpener = $('.main-nav ul.nav .has-sub > a');
-
-    // Open/Close Submenus
-    if (dropdownOpener.length) {
-        dropdownOpener.each(function () {
-            var _this = $(this);
-
-            _this.on('tap click', function (e) {
-                var thisItemParent = _this.parent('li'),
-                    thisItemParentSiblingsWithDrop = thisItemParent.siblings('.has-sub');
-
-                if (thisItemParent.hasClass('has-sub')) {
-                    var submenu = thisItemParent.find('> ul.sub-menu');
-
-                    if (submenu.is(':visible')) {
-                        submenu.slideUp(450, 'easeInOutQuad');
-                        thisItemParent.removeClass('is-open-sub');
-                    } else {
-                        thisItemParent.addClass('is-open-sub');
-
-                        if (thisItemParentSiblingsWithDrop.length === 0) {
-                            thisItemParent.find('.sub-menu').slideUp(400, 'easeInOutQuad', function () {
-                                submenu.slideDown(250, 'easeInOutQuad');
-                            });
-                        } else {
-                            thisItemParent.siblings().removeClass('is-open-sub').find('.sub-menu').slideUp(250, 'easeInOutQuad', function () {
-                                submenu.slideDown(250, 'easeInOutQuad');
-                            });
-                        }
-                    }
-                }
-
-                e.preventDefault();
-            });
-        });
-    }
 
 
 	function visible(partial) {
