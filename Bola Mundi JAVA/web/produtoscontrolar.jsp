@@ -7,6 +7,45 @@
         <link rel="stylesheet" href="./css/tabela.css">
         <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.png" />
         <title>Lista de Produtos</title>
+         <style>
+             .content {
+                background-color: white;
+                position:absolute;
+                border-radius: 20px;
+                font-family: Arial;
+                margin-left: 25%;
+                margin-top: 5%;
+                width: 50%;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+            
+            .content h1 {
+                margin-top: 25px;
+                color: red;
+                text-align: center;
+            }
+            
+            .content hr {
+                margin-top: 15px;
+                border: 0.5px solid  #f2f2f2;
+                margin-bottom: 25px;
+            }
+            
+            .pagination {
+                margin-left: 2.35%;
+            }
+
+            .pag {
+                    display: inline-block;
+                    background-color: #e60000;
+                    color: white;
+                    border-radius: 5px;
+                    padding: 2px 12px 5px;
+                    margin-right: 0.5%;
+                    margin-bottom: 1.5%;
+            }
+            
+        </style>    
     </head>
     <body>
             <div class="topnav">
@@ -18,7 +57,7 @@
                 int id = Integer.parseInt(pag);
                 
                 //Quantidade de Registros da Página
-                int total = 5;
+                int total = 10;
                 
                 if(id!=1){
                     id = id -1;
@@ -35,9 +74,13 @@
                 }else{
                     contagem=contagem/total + 1;    
                 }
+
+          
+                
             %>
         
-            <h1>Lista de Produtos</h1>
+            <h1 style="text-align:center;">Lista de Produtos</h1>
+            <hr>
             <table>
                 <tr><th>Id</th><th>Nome</th><th>Preço</th><th>Número de Vendas</th><th colspan="2">Ações</th></tr>
                 <c:forEach items="${list}" var="produto">
@@ -56,7 +99,10 @@
                             <a href="produtoscontrolar.jsp?pag=<%=i%>"><%=i%></a>
                     <% } %>
                 </div>  
-        <a href="produtocadastrarform.html"><img src="./imagens/incluir.png" alt="Incluir Produto"></a>
+        <a href="produtocadastrarform.html" style="margin-left: 92%;"><img src="./imagens/incluir.png" alt="Incluir Produto"></a>
     </div>
+                
+
+ 
 </body>
 </html>

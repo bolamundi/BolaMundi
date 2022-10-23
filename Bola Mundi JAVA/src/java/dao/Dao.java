@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import classes.Usuario;
@@ -21,10 +16,6 @@ import java.util.List;
  import java.util.Date;
 import java.util.GregorianCalendar;
 
-/**
- *
- * @author aluno
- */
 public class Dao {
 
     public static Connection getConnection(){
@@ -38,6 +29,12 @@ public class Dao {
         return con;
     
     }
+    
+ /**Método para puxar o usuário pelo id dele
+ * @author Bola Mundi
+ * @param id int - Id do usuário
+ * @return Objeto - Classe usuário
+ */
     
     public static Usuario getUsuarioById(int id){
         Usuario usuario = null;      
@@ -60,6 +57,11 @@ public class Dao {
         return usuario;
     }
     
+ /**Método para criar uma lista de usuários
+ * @author Bola Mundi
+ * @return list de objetos da classe usuário
+ */ 
+    
      public static List<Usuario> getRelatorio() {
 	    List<Usuario> list = new ArrayList<Usuario>();
 	    try{
@@ -79,7 +81,12 @@ public class Dao {
 	    }
 	    return list;
 	    }
-    
+     
+ /**Método para editar os dados do usuário
+ * @author Bola Mundi
+ * @param Objeto da classe usuário
+ * @return boolean - status
+ */   
     
    public static int editarUsuario(Usuario usuario){
        int status = 0;  
@@ -96,6 +103,13 @@ public class Dao {
     }      
        return status;
    }
+   
+ /**Método para criar uma lista dos usuários de acordo com a paginação pré-definida
+ * @author Bola Mundi
+ * @param inicio - int início da paginação
+ * @param total - int total de linhas para aparecer na tabela por página
+ * @return list de objetos da classe usuário
+ */   
     
     public static List<Usuario> getUsuarios(int inicio, int total) {
     List<Usuario> list = new ArrayList<Usuario>();
@@ -118,6 +132,12 @@ public class Dao {
     return list;
     }
     
+ /**Método para excluir os dados do usuário
+ * @author Bola Mundi
+ * @param Objeto da classe usuário
+ * @return boolean - status
+ */
+    
     public static int excluirUsuario(Usuario usuario){
        int status = 0;  
    try{
@@ -131,6 +151,11 @@ public class Dao {
        return status;
    }
     
+ /**Método para cadastrar o usuário
+ * @author Bola Mundi
+ * @param Objeto da classe usuário
+ * @return boolean - status
+ */    
     
    public static int cadastrarUsuario(Usuario usuario){
        int status = 0;  
@@ -147,6 +172,43 @@ public class Dao {
     }      
        return status;
    }
+   
+ /**Método para bloquear o usuário
+ * @author Bola Mundi
+ * @param Objeto da classe usuário
+ * @return boolean - status
+ */   
+   
+   
+     public static int bloquearUsuario(Usuario usuario){
+       int status = 0;  
+       String statusdousuario;
+       
+       if(usuario.getStatus().equals("Ativo")){
+        statusdousuario = "Bloqueado";    
+       }else{
+        statusdousuario = "Ativo";   
+       }
+        try{
+             Connection con = getConnection();
+             PreparedStatement ps = (PreparedStatement) con.prepareStatement("UPDATE usuarios SET Status=? WHERE id=?");
+             ps.setString(1, statusdousuario);
+             ps.setInt(2, usuario.getId());         
+             status = ps.executeUpdate();
+         }catch(Exception erro){
+             System.out.println(erro);
+         }      
+            return status;
+   } 
+
+
+   
+ /**Método para cadastrar os comentários
+ * @author Bola Mundi
+ * @param Objeto da classe comentario
+ * @return boolean - status
+ */
+   
     public static int cadastrarComentario(Comentario comentario){
     int status = 0;  
     //tem que fazer sistema de login para usar a classe usuario aqui
@@ -160,9 +222,7 @@ public class Dao {
         ps.setString(2, "Usuário");
       ps.setString(3,"0000-00-00");  
         ps.setInt(4, 3);
-     
-             // ps.setString(1, comentario.getTexto());
-             
+                  
         status = ps.executeUpdate();
    
     }catch(Exception erro){
@@ -171,6 +231,11 @@ public class Dao {
     
     return status;
     }
+    
+ /**Método para criar uma lista de comentários
+ * @author Bola Mundi
+ * @return list de objetos da classe comentario
+ */     
     
     public static List<Comentario> getComentario() {
     List<Comentario> list = new ArrayList<Comentario>();
@@ -192,6 +257,11 @@ public class Dao {
     return list;
     }
     
+ /**Método para contar o número de usuários comuns
+ * @author Bola Mundi
+ * @return int - numpart (usuário comum)
+ */      
+    
     public static int getParticipante(){
     int numpart=0;
         try{
@@ -211,6 +281,11 @@ public class Dao {
     return numpart;
   
     }
+    
+ /**Método para contar o número de usuários administradores
+ * @author Bola Mundi
+ * @return int - numadm (usuário admin)
+ */    
     
     public static int getAdm(){
     int numadm=0;
@@ -233,6 +308,11 @@ public class Dao {
   
     }
     
+ /**Método para contar o número de usuários 
+ * @author Bola Mundi
+ * @return int - contagem 
+ */     
+    
     public static int getContagem() {
         int contagem = 0;
         try{
@@ -247,39 +327,102 @@ public class Dao {
         }
         return contagem;
     }
-       
-     public static int[] getUsuarioTempo() {
-      int semanasAno[] = null;
-      
-      
-    try{
-        Connection con = getConnection();
-        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT Date FROM usuarios" );
+    
+ /**Método para selecionar a data de criação dos usuários para criar o chart que visualiza a quantidade de usuários cadastrados por semana
+ * @author Bola Mundi
+ * @return semanasAno - int 
+ */     
+    
+        public static int getAmarelaNeymar(){
+    int amarelaNeymar=0;
+    
+        try{
+    Connection con = getConnection();//ele esta ativando a exceção, por isso da erro
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT count(*) as amarelaNeymar FROM pedidos WHERE Id_produto='1'");
         ResultSet rs = ps.executeQuery();
-        while(rs.next()){
-            Usuario usuario = new Usuario();
-         String dataUsuario=rs.getString("data");
-         
-        int mes;
-        int dia;
-       
-        SimpleDateFormat mesFormatado= new SimpleDateFormat("MM");
-        SimpleDateFormat diaFormatado= new SimpleDateFormat("dd");
-        mes= Integer.parseInt(mesFormatado.format(dataUsuario));
-        dia= Integer.parseInt(diaFormatado.format(dataUsuario));
-          int quantidadeDias = (((mes - 1) * 30) + dia);
 
-   
-    int numeroSemana = (quantidadeDias / 7)+1;
+  
+ while(rs.next()){
+                 amarelaNeymar= rs.getInt("amarelaNeymar");
+            }  
             
-            semanasAno[numeroSemana+1]+=1;
-            //achar um metodo para transformar data em semana do ano
-        }
     }catch(Exception erro){
-        System.out.println(erro);
+   
+   System.out.println(erro);
     }
-    return semanasAno;
+      
+    return amarelaNeymar;
+  
     }
+        public static int getAzulNeymar(){
+    int azulNeymar=0;
+    
+        try{
+    Connection con = getConnection();//ele esta ativando a exceção, por isso da erro
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT count(*) as azulNeymar FROM pedidos WHERE Id_produto='2'");
+        ResultSet rs = ps.executeQuery();
+
+  
+ while(rs.next()){
+                 azulNeymar= rs.getInt("azulNeymar");
+            }  
+            
+    }catch(Exception erro){
+   
+   System.out.println(erro);
+    }
+      
+    return azulNeymar;
+  
+    }
+        public static int getAmarelaJesus(){
+    int amarelaJesus=0;
+    
+        try{
+    Connection con = getConnection();//ele esta ativando a exceção, por isso da erro
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT count(*) as amarelaJesus FROM pedidos WHERE Id_produto='5'");
+        ResultSet rs = ps.executeQuery();
+
+  
+ while(rs.next()){
+                 amarelaJesus= rs.getInt("amarelaJesus");
+            }  
+            
+    }catch(Exception erro){
+   
+   System.out.println(erro);
+    }
+      
+    return amarelaJesus;
+  
+    }
+        public static int getAmarelaRaphinha(){
+    int amarelaRaphinha=0;
+    
+        try{
+    Connection con = getConnection();//ele esta ativando a exceção, por isso da erro
+        PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT count(*) as amarelaRaphinha FROM pedidos WHERE Id_produto='6'");
+        ResultSet rs = ps.executeQuery();
+
+  
+ while(rs.next()){
+                 amarelaRaphinha= rs.getInt("amarelaRaphinha");
+            }  
+            
+    }catch(Exception erro){
+   
+   System.out.println(erro);
+    }
+      
+    return amarelaRaphinha;
+  
+    }
+     
+ /**Método para bloquear o usuário
+ * @author Bola Mundi
+ * @param Objeto da classe usuário
+ * @return boolean - status
+ */    
 	public static int BloquearUsuario(Usuario usuario){
        int status = 0;  
        String statusUsuario;
@@ -300,6 +443,12 @@ public class Dao {
     }      
        return status;
    }
+        
+ /**Método para puxar o jogador pelo id dele
+ * @author Bola Mundi
+ * @param id int - Id do usuário
+ * @return Objeto - Classe jogador
+ */        
         
         public static Jogador getJogadorById(int id){
            Jogador jogador=null;
@@ -323,6 +472,13 @@ public class Dao {
       
         return jogador;
     }
+        
+ /**Método para listar os dados do usuário
+ * @author Bola Mundi
+ * @param inicio - int início da paginação
+ * @param total - int total de linhas para aparecer na tabela por página
+ * @return list de objetos da classe jogador
+ */           
 
 public static List<Jogador> getJogadores(int inicio, int total) {
     List<Jogador> list = new ArrayList<Jogador>();
@@ -346,6 +502,12 @@ public static List<Jogador> getJogadores(int inicio, int total) {
     return list;
     }
 
+ /**Método para excluir os dados do jogador
+ * @author Bola Mundi
+ * @param Objeto da classe jogador
+ * @return boolean - status
+ */
+
 public static int excluirJogador(Jogador jogador){
        int status = 0;  
    try{
@@ -358,6 +520,12 @@ public static int excluirJogador(Jogador jogador){
     }      
        return status;
    }
+
+ /**Método para cadastrar o jogador
+ * @author Bola Mundi
+ * @param Objeto da classe jogador
+ * @return boolean - status
+ */
     
     
    public static int cadastrarJogador(Jogador jogador){
@@ -376,6 +544,12 @@ public static int excluirJogador(Jogador jogador){
     }      
        return status;
    }
+   
+/**Método para editar os dados do jogador
+ * @author Bola Mundi
+ * @param Objeto da classe jogador
+ * @return boolean - status
+ */   
 
   public static int editarJogador(Jogador jogador){
        int status = 0;  
@@ -394,6 +568,11 @@ public static int excluirJogador(Jogador jogador){
     }      
        return status;
    }
+  
+ /**Método para contar o número de jogadores 
+ * @author Bola Mundi
+ * @return int - contagem 
+ */
         
    public static int getContagemJogadores() {
         int contagem = 0;
@@ -409,6 +588,12 @@ public static int excluirJogador(Jogador jogador){
         }
         return contagem;
     }
+   
+    /**Método para pegar os produtos pelo id
+ * @author Bola Mundi
+ * @param id - int id do produto
+ * @return Objeto da classe produto
+ */
    
    public static Produto getProdutoById(int id){
            Produto produto=null;
@@ -431,6 +616,13 @@ public static int excluirJogador(Jogador jogador){
         return produto;
     }
 
+      /**Método para fazer a paginação dos produtos
+ * @author Bola Mundi
+ * @param inicio - int início da paginação
+ * @param total - int total de linhas para aparecer na tabela por página 
+ * @return Lista de objetos da classe produto
+ */
+   
 public static List<Produto> getProdutos(int inicio, int total) {
     List<Produto> list = new ArrayList<Produto>();
     try{
@@ -451,6 +643,12 @@ public static List<Produto> getProdutos(int inicio, int total) {
     return list;
     }
 
+ /**Método para excluir os dados do produto
+ * @author Bola Mundi
+ * @param Objeto da classe produto
+ * @return boolean - status
+ */
+
 public static int excluirProduto(Produto produto){
        int status = 0;  
    try{
@@ -463,7 +661,13 @@ public static int excluirProduto(Produto produto){
     }      
        return status;
    }
-    
+
+ /**Método para cadastrar o produto
+ * @author Bola Mundi
+ * @param Objeto da classe produto
+ * @return boolean - status
+ */
+  
     
    public static int cadastrarProduto(Produto produto){
        int status = 0;  
@@ -478,6 +682,12 @@ public static int excluirProduto(Produto produto){
     }      
        return status;
    }
+   
+/**Método para editar os dados do produto
+ * @author Bola Mundi
+ * @param Objeto da classe produto
+ * @return boolean - status
+ */   
 
   public static int editarProduto(Produto produto){
        int status = 0;  
@@ -494,6 +704,11 @@ public static int excluirProduto(Produto produto){
     }      
        return status;
    }
+  
+   /**Método para contar o número de produtos 
+ * @author Bola Mundi
+ * @return int - produto 
+ */
         
    public static int getContagemProdutos() {
         int contagem = 0;
@@ -509,12 +724,40 @@ public static int excluirProduto(Produto produto){
         }
         return contagem;
     }
+   
+ /**Método para logar
+ * @author Bola Mundi
+ * @return Objeto - Classe usuario
+ */   
+   
+       public static Usuario logar(String email, String senha){ 
+        Usuario usuario = new Usuario();    
+        try{
+            Connection con = getConnection();
+            PreparedStatement ps = (PreparedStatement) con.prepareStatement("select * from usuarios where Email=?");
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            //Verifica se a consulta retornou resultado
+            if (rs.next()) {       
+                        if(rs.getString("Senha").equals(senha)){
+                            usuario.setId(rs.getInt("Id"));
+                            usuario.setNome(rs.getString("Nome"));
+                            usuario.setEmail(rs.getString("Email"));         
+                            usuario.setSenha(rs.getString("Senha")); 
+                            usuario.setAcesso(rs.getString("Acesso"));                                   
+                        }else{
+                            //Senha errada
+                            usuario = null;
+                        }
+
+            }else{
+                // E-mail não existe
+                usuario = null; 
+            }
+        }catch(Exception erro){
+            System.out.println(erro);
+        }      
+            return usuario;
+        }
             
 }
-
-
-
-
-
-    
-

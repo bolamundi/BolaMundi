@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**Classe para objetos do tipo Jogador, onde serão contidos, valores e métodos para o mesmo.
+* @author Bola Mundi
+* @version 1.05
+* @since Release 02 da aplicação
+*/
+
 package classes;
 
-/**
- *
- * @author carol
- */
 public class Jogador {
     
     private int id;
@@ -17,8 +14,8 @@ public class Jogador {
     private int numero;
     private String posicao;
     private int idselecao;
-    
 
+    
     public int getId() {
         return id;
     }
